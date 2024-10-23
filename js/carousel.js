@@ -18,6 +18,8 @@ function initCarousel(carouselId, prevBtnId, nextBtnId) {
 
     // 显示下一张幻灯片
     function showNext() {
+        // updateCarousel();
+
         const previousIndex = currentIndex; // 保存当前索引
         currentIndex = (currentIndex + 1) % items.length; // 循环显示幻灯片
 
@@ -32,6 +34,8 @@ function initCarousel(carouselId, prevBtnId, nextBtnId) {
 
     // 显示上一张幻灯片
     function showPrev() {
+        // updateCarousel();
+
         const previousIndex = currentIndex; // 保存当前索引
         currentIndex = (currentIndex - 1 + items.length) % items.length; // 循环显示幻灯片
 
@@ -43,11 +47,7 @@ function initCarousel(carouselId, prevBtnId, nextBtnId) {
         updateCarousel();
 
     }
-    function initAnimation() {
-        items[currentIndex].style.opacity = 1; // 显示当前幻灯片
-        items[currentIndex].classList.add('active'); // 添加活动类
-    }
-    initAnimation();
+
     setInterval(showNext, 5000); // 每5秒自动切换到下一张幻灯片
     // 事件监听
     document.getElementById(nextBtnId).addEventListener('click', showNext);
