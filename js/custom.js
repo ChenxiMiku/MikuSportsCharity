@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  // COUNTER NUMBERS
+  /*// COUNTER NUMBERS
   document.addEventListener('DOMContentLoaded', function() {
     // Detect when elements are visible on the screen (replaces jQuery .appear)
     const counterThumbs = document.querySelectorAll('.counter-thumb');
@@ -15,7 +15,7 @@
     });
 
     counterThumbs.forEach(thumb => observer.observe(thumb));
-  });
+  });*/
 
   // CUSTOM LINK (smooth scroll)
   const smoothScrollLinks = document.querySelectorAll('.smoothscroll');
