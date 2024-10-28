@@ -1,32 +1,29 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <meta name="description" content="">
-        <meta name="author" content="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Miku Sports Charity - Donation</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-        <!-- CSS FILES -->        
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Miku Sports Charity - Donation</title>
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <!-- CSS FILES -->
 
-        <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
 </head>
-    
-    <body>
 
-    </head>
-    
+<body>
+
     <body id="section_1">
 
         <header class="site-header">
             <div class="container">
                 <div class="row">
-                    
+
                     <div class="col-lg-8 col-12 d-flex flex-wrap">
                         <p class="d-flex me-4 mb-0">
                             <i class="bi-geo-alt me-2"></i>
@@ -35,9 +32,8 @@
 
                         <p class="d-flex mb-0">
                             <i class="bi-envelope me-2"></i>
-
-                            <a href="mailto:info@company.com">
-                                contact@charity.mikufans.me
+                            <a href="mailto:charity@mikufans.me">
+                                charity@mikufans.me
                             </a>
                         </p>
                     </div>
@@ -45,23 +41,8 @@
                     <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
                         <ul class="social-icon">
                             <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-twitter"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-facebook"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-instagram"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-youtube"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                <a href="https://github.com/ChenxiMiku/MikuSportsCharity"
+                                    class="social-icon-link bi-github"></a>
                             </li>
                         </ul>
                     </div>
@@ -80,7 +61,8 @@
                     </span>
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -91,11 +73,11 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Donate</a>
+                            <a class="nav-link click-scroll" href="#section_3">Events</a>
                         </li>
 
                         <li class="nav-item">
@@ -103,52 +85,68 @@
                         </li>
 
                         <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn" href="register.html">Register</a>
+                            <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn"
+                                href="login.html">Login</a>
                         </li>
-                        <li class="nav-item ms-4">
-                            <a class="nav-link custom-btn custom-border-btn btn" href="login.html">Login</a>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link custom-btn custom-border-btn btn" id="registerBtn"
+                                href="Register.html">Register</a>
                         </li>
+                        <div id="userAvatar">
+                            <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
+                                height="64">
+                        </div>
 
                     </ul>
                 </div>
             </div>
         </nav>
 
+
         <main>
-            <section class="donate-section">
+            <section class="login-section">
                 <div class="section-overlay"></div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-12 mx-auto">
-                            <form class="custom-form donate-form" action="#" method="get" role="form" novalidate>
-                                <h3 class="mb-4">Login</h3>
-                                <div class="row">
+                        <div class="col-lg-5 col-12 mx-auto">
+                            <form class="custom-form login-form" action="#" method="get" role="form" novalidate>
+                                <h3 class="mb-4 d-flex justify-content-center">Welcome Back</h3>
+                                <class class="row">
                                     <div class="col-lg-12 col-12 mb-2">
-                                        <input type="text" class="form-control" id="name" name="name" placeholder="Username" required aria-label="Username">
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            placeholder="Username" required aria-label="Username">
                                     </div>
                                     <div class="col-lg-12 col-12 mb-2">
-                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password" required aria-label="Password">
+                                        <input type="password" class="form-control" id="password" name="password"
+                                            placeholder="Password" required aria-label="Password">
                                     </div>
-                                    <div class="col-lg-12 col-12 mb-2">
-                                        <button type="submit" class="custom-btn btn">Login</button>
+                                    <div class="col-lg-12 col-12 mb-2 d-flex justify-content-center">
+                                        <button type="login" class="custom-btn btn">Login</button>
                                     </div>
-                                    <div class="col-lg-12 col-12">
-                                        <button type="button" id="googleSignIn" class="custom-btn btn">
-                                            <img src="images/icons/google-logo.png" alt="Google Logo" style="width: 18px; height: 18px; margin-right: 10px;">
-                                            Continue with Google
+                                    <p class="col-lg-12 col-12 mb-2 d-flex justify-content-center without-account">No account yet?
+                                        <a class="register-link ms-2" href="register.html">Register</a>
+                                    </p>
+                                    <div class="col-lg-12 col-12 mb-2 divider-wrapper">
+                                        <span class="divider">或</span>
+                                    </div>
+                                    <div class="col-lg-12 col-12 mb-2 d-flex justify-content-center">
+                                        <button type="login" id="googleSignIn" class="custom-btn btn">
+                                            <i class="bi-google me-2"></i> Continue with Google
                                         </button>
-                                    </div>                                 
-
                                     </div>
-
-                                </div>
+                                    <div class="col-lg-12 col-12 mb-2 d-flex justify-content-center">
+                                        <button type="login" id="githubSignIn" class="custom-btn btn">
+                                            <i class="bi-github me-2"></i> Continue with Github
+                                        </button>
+                                    </div>
+                                </class>
                             </form>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-        
+
 
         <footer class="site-footer">
             <div class="container">
@@ -161,15 +159,16 @@
                         <h5 class="site-footer-title mb-3">Quick Links</h5>
 
                         <ul class="footer-menu">
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Our Story</a></li>
+                            <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">About us</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Newsroom</a></li>
+                            <li class="footer-menu-item"><a href="events.html" class="footer-menu-link">Events</a></li>
 
                             <li class="footer-menu-item"><a href="#" class="footer-menu-link">Causes</a></li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a></li>
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a>
+                            </li>
 
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Partner with us</a></li>
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Make a donation</a></li>
                         </ul>
                     </div>
 
@@ -179,25 +178,28 @@
                         <p class="text-white d-flex mb-2">
                             <i class="bi-telephone me-2"></i>
 
-                            <a href="tel: 120-240-9600" class="site-footer-link">
-                                120-240-9600
+                            <a href="tel: +86 150-9864-6873" class="site-footer-link">
+                                +86 150-9864-6873
                             </a>
                         </p>
 
                         <p class="text-white d-flex">
                             <i class="bi-envelope me-2"></i>
 
-                            <a href="mailto:contact@charity.mikufans.me" class="site-footer-link">
-                                contact@charity.mikufans.me
+                            <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                                charity@mikufans.me
                             </a>
                         </p>
 
                         <p class="text-white d-flex mt-3">
                             <i class="bi-geo-alt me-2"></i>
-                            999 Huchenghuan Road, Pudong New District, Shanghai, China
+
+                            <a href="https://www.google.com/maps/place/999+Hucheng+Huanlu,+Pudong+New+Area,+Shanghai,+China/@30.8868445,121.8956191,17z/data=!3m1!4b1!4m6!3m5!1s0x35ad768034588f11:0x89d232b593411ad6!8m2!3d30.88684!4d121.90049!16s%2Fg%2F11g4fj_p1x?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                                class="site-footer-link">
+                                999 Huchenghuan Road, Pudong New District, Shanghai, China
+                            </a>
                         </p>
 
-                        <a href="#" class="custom-btn btn mt-3">Get Direction</a>
                     </div>
                 </div>
             </div>
@@ -206,36 +208,23 @@
                 <div class="container">
                     <div class="row">
 
-                        <div class="col-lg-6 col-md-7 col-12">
-                            <p class="copyright-text mb-0">Copyright © 2024 <a href="#">Miku Sports</a> Charity Org.
+                        <div class="col-lg-6 col-md-7 col-12 align-items-center">
+                            <p class="copyright-text mb-0 align-items-center">Copyright © 2024 <a href="#">Miku
+                                    Sports</a>
+                                Charity Org.
                         </div>
-                        
-                        <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+
+                        <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-end align-items-center mx-auto">
                             <ul class="social-icon">
                                 <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-linkedin"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-youtube"></a>
+                                    <a href="#" class="social-icon-link bi-github"></a>
                                 </li>
                             </ul>
                         </div>
-                        
                     </div>
+
                 </div>
+            </div>
             </div>
         </footer>
 
@@ -244,6 +233,7 @@
         <script src="js/custom.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="js/thirdlogin.js"></script>
-
+        <script src="js/checklogin.js"></script>
     </body>
+
 </html>
