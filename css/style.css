@@ -13180,8 +13180,8 @@ Login Form
 -----------------------------------------*/
 
 .login-section {
-    /*background-image: url('https://t.alcy.cc/pc/');*/
-    background-image: url('/images/image.png');
+    background-image: url('https://t.alcy.cc/pc/');
+    /*background-image: url('images/image.png');*/
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -13245,7 +13245,7 @@ Login Form
     font-weight: 800;
 }
 
-.custom-form button[type="login"] {
+.custom-form button[type="submit"] {
     width: 100%;
     background: var(--custom-btn-bg-color);
     border: 2px solid var(--primary-color);
@@ -13257,8 +13257,8 @@ Login Form
     margin-bottom: 0;
   }
   
-  .custom-form button[type="login"]:hover,
-  .custom-form button[type="login"]:focus {
+  .custom-form button[type="submit"]:hover,
+  .custom-form button[type="submit"]:focus {
     background: var(--custom-btn-bg-hover-color);
     color: var(--white-color);
     border-color: transparent;
