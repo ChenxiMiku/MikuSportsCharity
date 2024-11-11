@@ -16,6 +16,7 @@ let getSettings_Side = document.querySelector("#Settings-Side")
 let getProfile_Side = document.querySelector("#Profile-Side")
 let getProjects_Side = document.querySelector("#Projects-Side")
 let getFiles_Side = document.querySelector("#Files-Side")
+let getDashPro = document.querySelector("#dash-pro")
 let activePage = window.location.pathname;
 let getSideBarStatus = false;
 let Display_Page = getDashboard; // Default displayed page is Dashboard
@@ -45,6 +46,8 @@ getSettings_Side.onclick = () => switchPage(getSettings);
 getProfile_Side.onclick = () => switchPage(getProfile);
 getProjects_Side.onclick = () => switchPage(getProjects);
 getFiles_Side.onclick = () => switchPage(getFiles);
+getDashPro.onclick = () => switchPage(getProfile);
+
 
 window.addEventListener("resize", (e) => {
   if (getSideBarStatus === true) {
