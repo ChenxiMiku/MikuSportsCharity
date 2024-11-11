@@ -1468,7 +1468,7 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
   font-family: var(--fa-style-family-classic);
   content: "\f00c";
   font-weight: 900;
-  font-size: 0.9rem;
+  font-size: 0.6rem;
   background-color: var(--blue-color);
   transform: scale(0) rotate(360deg);
   -webkit-transform: scale(0) rotate(360deg);
@@ -1503,7 +1503,7 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
   + label::after {
   border-color: var(--blue-color);
   transform: scale(1);
-  -webkit-transform: scale(1);
+  -webkit-transform: scale(0.8);
   -moz-transform: scale(1);
   -ms-transform: scale(1);
   -o-transform: scale(1);
