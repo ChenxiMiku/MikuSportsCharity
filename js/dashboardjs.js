@@ -9,12 +9,12 @@ let getSidebarLink = document.querySelectorAll(".sidebar-link");
 let getDashboard = document.querySelector("#Dashboard")
 let getSettings = document.querySelector("#Settings")
 let getProfile = document.querySelector("#Profile")
-let getProjects = document.querySelector("#Projects")
+let getEvents = document.querySelector("#Events")
 let getFiles = document.querySelector("#Files")
 let getDashboard_Side = document.querySelector("#Dashboard-Side")
 let getSettings_Side = document.querySelector("#Settings-Side")
 let getProfile_Side = document.querySelector("#Profile-Side")
-let getProjects_Side = document.querySelector("#Projects-Side")
+let getEvents_Side = document.querySelector("#Events-Side")
 let getFiles_Side = document.querySelector("#Files-Side")
 let getDashPro = document.querySelector("#dash-pro")
 let activePage = window.location.pathname;
@@ -44,7 +44,7 @@ function switchPage(page) {
 getDashboard_Side.onclick = () => switchPage(getDashboard);
 getSettings_Side.onclick = () => switchPage(getSettings);
 getProfile_Side.onclick = () => switchPage(getProfile);
-getProjects_Side.onclick = () => switchPage(getProjects);
+getEvents_Side.onclick = () => switchPage(getEvents);
 getFiles_Side.onclick = () => switchPage(getFiles);
 getDashPro.onclick = () => switchPage(getProfile);
 
