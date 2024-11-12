@@ -24,6 +24,7 @@ a {
   --green-color: #22c55e;
   --eee-color: #eee;
   --ccc-color: #ccc;
+  --custom-grey-color: #44525d;
   --main-margin: 30px;
   --secondary-margin: 20px;
   --third-margin: 15px;
@@ -2620,4 +2621,11 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
 }
 .main-content .plans-boxes .plan-box ul li:last-child p {
   color: var(--third-color);
+}
+
+.copyright-dash-text {
+  color: var(--custom-grey-color);
+  padding: var(--third-padding) 0;
+  text-align: center;
+  font-size: 0.8rem;
 }
