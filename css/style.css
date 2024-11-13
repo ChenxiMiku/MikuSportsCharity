@@ -3698,7 +3698,7 @@ fieldset:disabled .btn {
 
 .dropdown-menu {
     --bs-dropdown-zindex: 1000;
-    --bs-dropdown-min-width: 10rem;
+    --bs-dropdown-min-width: 8rem;
     --bs-dropdown-padding-x: 0;
     --bs-dropdown-padding-y: 0.5rem;
     --bs-dropdown-spacer: 0.125rem;
@@ -3736,7 +3736,7 @@ fieldset:disabled .btn {
     background-color: var(--bs-dropdown-bg);
     background-clip: padding-box;
     border: var(--bs-dropdown-border-width) solid var(--bs-dropdown-border-color);
-    border-radius: var(--bs-dropdown-border-radius)
+    border-radius: var(--bs-dropdown-border-radius);
 }
 
 .dropdown-menu[data-bs-popper] {
@@ -12064,6 +12064,14 @@ strong {
     font-weight: var(--font-weight-bold);
 }
 
+/*---------------------------------------
+INDEX             
+-----------------------------------------*/
+.vertical-line {
+    border-left: 2px solid var(--white-color); /* 设置竖线的颜色和宽度 */
+    height: auto; /* 设置竖线的高度 */
+}
+
 
 /*---------------------------------------
 SECTION               
@@ -12101,6 +12109,7 @@ CUSTOM BLOCK
     position: relative;
     overflow: hidden;
     transition: all 0.5s;
+    
 }
 
 .custom-block-wrap:hover {
@@ -12317,12 +12326,11 @@ NAVIGATION
 
 .dropdown-item {
     display: inline-block;
-    color: var(--p-bg-color);
+    color: var(--bs-dropdown-header-color);
     font-size: var(--menu-font-size);
     font-weight: var(--font-weight-medium);
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 20px 20px;
 }
 
 .dropdown-menu li:last-child .dropdown-item {
@@ -12762,10 +12770,10 @@ DONATE
 
 
 /*---------------------------------------
-NEWS         
+events         
 -----------------------------------------*/
-.news-detail-header-section {
-    background-image: url('../images/news/close-up-volunteer-oganizing-stuff-donation.jpg');
+.events-detail-header-section {
+    background-image: url('../images/events/close-up-volunteer-oganizing-stuff-donation.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -12774,13 +12782,13 @@ NEWS
     padding-bottom: 150px;
 }
 
-.news-block-top {
+.events-block-top {
     border-radius: var(--border-radius-medium);
     position: relative;
     overflow: hidden;
 }
 
-.news-block-two-col-image-wrap {
+.events-block-two-col-image-wrap {
     border-radius: var(--border-radius-small);
     position: relative;
     overflow: hidden;
@@ -12788,7 +12796,7 @@ NEWS
     margin-right: 20px;
 }
 
-.news-category-block {
+.events-category-block {
     background: var(--secondary-color);
     position: absolute;
     bottom: 0;
@@ -12797,21 +12805,21 @@ NEWS
     padding: 10px 20px;
 }
 
-.news-category-block .category-block-link {
+.events-category-block .category-block-link {
     color: var(--white-color);
     margin-right: 10px;
 }
 
-.news-block-info {
+.events-block-info {
     padding-top: 10px;
     padding-bottom: 10px;
 }
 
-.news-block-title-link {
+.events-block-title-link {
     color: var(--dark-color);
 }
 
-.news-detail-image {
+.events-detail-image {
     display: block;
     border-radius: var(--border-radius-medium);
 }
@@ -13579,7 +13587,7 @@ RESPONSIVE STYLES
         height: 60px;
     }
 
-    .news-detail-header-section {
+    .events-detail-header-section {
         padding-top: 100px;
         padding-bottom: 100px;
     }
@@ -17495,7 +17503,7 @@ RESPONSIVE STYLES
     content: "\f4a2";
 }
 
-.bi-newspaper::before {
+.bi-eventspaper::before {
     content: "\f4a3";
 }
 

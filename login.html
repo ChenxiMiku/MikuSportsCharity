@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Miku Sports Charity - Donation</title>
+    <title>Miku Sports Charity Platform - Donation</title>
 
     <!-- CSS FILES -->
 
@@ -54,9 +54,9 @@
         <nav class="navbar navbar-expand-lg bg-light shadow-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" class="logo img-fluid" alt="Miku Sports Charity">
+                    <img src="images/logo.png" class="logo img-fluid" alt="Miku Sports Charity Platform">
                     <span>
-                        Miku Sports Charity
+                        Miku Sports Charity Platform
                         <small>Let the Fun of Sports Be Accessible to Everyone</small>
                     </span>
                 </a>
@@ -88,11 +88,22 @@
                             <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn"
                                 href="login.html">Login</a>
                         </li>
-                        <div id="userAvatar">
-                            <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
-                                height="64">
+                        <!-- 用户头像和下拉菜单 -->
+                        <div id="userAvatar" style="display: none; position: relative;">
+                            <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64" height="64"
+                                style="cursor: pointer;">
+                            <!-- 下拉菜单 -->
+                            <div id="dropdownMenu" style="display: none; position: absolute; top: 70px; right: 0; 
+                                background-color: white; border: 1px solid #ddd; box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
+                                z-index: 1; width: 120px;">
+                                <a href="dashboard.html" style="display: block; padding: 10px; text-decoration: none; color: black;">
+                                    个人中心
+                                </a>
+                                <a href="#" id="logoutBtn" style="display: block; padding: 10px; text-decoration: none; color: black;">
+                                    登出
+                                </a>
+                            </div>
                         </div>
-
                     </ul>
                 </div>
             </div>
@@ -120,7 +131,7 @@
                                         <button type="submit" id="SigninBtn" class="custom-btn btn">Login</button>
                                     </div>
                                     <p class="col-lg-12 col-12 d-flex justify-content-center without-account">No account yet?</p>
-                                    <a class="col-lg-12 col-12 mb-2 d-flex justify-content-center without-account register-link" href="register.html">Become a volunteer</a>
+                                    <a class="col-lg-12 col-12 mb-2 d-flex justify-content-center without-account register-link" href="register.html">Sign Up</a>
                                     <div class="col-lg-12 col-12 mb-2 divider-wrapper">
                                         <span class="divider">OR</span>
                                     </div>
