@@ -15,11 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return false;
     }
 
-    // 在顶部先声明 isLoggedIn 变量
-    const isLoggedIn = getLoginStatusFromCookie();
-    console.log(isLoggedIn);
-
-
     // 登出功能
     logoutBtn.addEventListener('click', function(event) {
         event.preventDefault();
@@ -38,10 +33,4 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('userAvatar').style.display = 'none';
     }
 
-    // 点击页面其他地方时隐藏菜单
-    window.addEventListener('click', function(event) {
-        if (!avatarImg.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.style.display = 'none';
-        }
-    });
 });

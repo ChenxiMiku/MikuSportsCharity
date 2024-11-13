@@ -56,15 +56,12 @@ function handleNextButtonClick() {
     setTimeout(() => {
         eventSection.style.display = "none";
         formSection.classList.remove("slide-in-right");
+        eventSection.classList.add("slide-out-left");
         formSection.classList.add("active");
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        document.documentElement.scrollTop = 0;
     }, 500);
 }
-
 // "上一步"按钮点击事件处理
 function handlePreviousButtonClick() {
     const eventSection = document.getElementById("event-section");
@@ -78,12 +75,10 @@ function handlePreviousButtonClick() {
     setTimeout(() => {
         formSection.style.display = "none";
         eventSection.classList.remove("slide-in-left");
+        formSection.classList.add("slide-out-right");
         eventSection.classList.add("active");
 
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        document.documentElement.scrollTop = 0;
     }, 500);
 }
 

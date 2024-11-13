@@ -5016,7 +5016,7 @@ fieldset:disabled .btn {
     margin-left: -1px
 }
 
-.page-item:first-child .page-link {
+.page-item:first-child .screen-link {
     border-top-left-radius: var(--bs-pagination-border-radius);
     border-bottom-left-radius: var(--bs-pagination-border-radius)
 }
@@ -12110,7 +12110,7 @@ CUSTOM BLOCK
     position: relative;
     overflow: hidden;
     transition: all 0.5s;
-    
+    min-height: 83px;
 }
 
 .custom-block-wrap:hover {
@@ -12264,10 +12264,14 @@ CUSTOM BUTTON
 NAVIGATION              
 -----------------------------------------*/
 .navbar {
-    background: var(--white-color);
-    z-index: 9;
-    padding-top: 0;
-    padding-bottom: 0;
+    background-color: rgba(255, 255, 255, 0.75); 
+    backdrop-filter: blur(10px); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    position: sticky; 
+    top: 0; 
+    z-index: 9; 
+    padding-top: 0; 
+    padding-bottom: 0; 
 }
 
 .navbar-brand {

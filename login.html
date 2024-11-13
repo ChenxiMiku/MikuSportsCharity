@@ -8,107 +8,98 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Miku Sports Charity Platform - Donation</title>
+    <title>Miku Sports Charity Platform - Let the Fun of Sports Be Accessible to Everyone</title>
 
     <!-- CSS FILES -->
-
-
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/checklogin.js"></script>
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="container">
+            <div class="row">
 
-    <body id="section_1">
+                <div class="col-lg-8 col-12 d-flex flex-wrap">
+                    <p class="d-flex me-4 mb-0">
+                        <i class="bi-geo-alt me-2"></i>
+                        999 Huchenghuan Road, Pudong New District, Shanghai, China
+                    </p>
 
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-lg-8 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-geo-alt me-2"></i>
-                            999 Huchenghuan Road, Pudong New District, Shanghai, China
-                        </p>
-
-                        <p class="d-flex mb-0">
-                            <i class="bi-envelope me-2"></i>
-                            <a href="mailto:charity@mikufans.me">
-                                charity@mikufans.me
-                            </a>
-                        </p>
-                    </div>
-
-                    <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
-                        <ul class="social-icon">
-                            <li class="social-icon-item">
-                                <a href="https://github.com/ChenxiMiku/MikuSportsCharity"
-                                    class="social-icon-link bi-github"></a>
-                            </li>
-                        </ul>
-                    </div>
-
+                    <p class="d-flex mb-0">
+                        <i class="bi-envelope me-2"></i>
+                        <a href="mailto:charity@mikufans.me">
+                            charity@mikufans.me
+                        </a>
+                    </p>
                 </div>
-            </div>
-        </header>
 
-        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" class="logo img-fluid" alt="Miku Sports Charity Platform">
-                    <span>
-                        Miku Sports Charity Platform
-                        <small>Let the Fun of Sports Be Accessible to Everyone</small>
-                    </span>
-                </a>
-
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="index.html">Home</a>
+                <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                    <ul class="social-icon">
+                        <li class="social-icon-item">
+                            <a href="https://github.com/ChenxiMiku/MikuSportsCharity"
+                                class="social-icon-link bi-github"></a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3">Events</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Volunteer</a>
-                        </li>
-
-                        <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn"
-                                href="login.html">Login</a>
-                        </li>
-                        <!-- 用户头像和下拉菜单 -->
-                        <div id="userAvatar" style="display: none; position: relative;">
-                            <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64" height="64"
-                                style="cursor: pointer;">
-                            <!-- 下拉菜单 -->
-                            <div id="dropdownMenu" style="display: none; position: absolute; top: 70px; right: 0; 
-                                background-color: white; border: 1px solid #ddd; box-shadow: 0 8px 16px rgba(0,0,0,0.2); 
-                                z-index: 1; width: 120px;">
-                                <a href="dashboard.html" style="display: block; padding: 10px; text-decoration: none; color: black;">
-                                    个人中心
-                                </a>
-                                <a href="#" id="logoutBtn" style="display: block; padding: 10px; text-decoration: none; color: black;">
-                                    登出
-                                </a>
-                            </div>
-                        </div>
                     </ul>
                 </div>
-            </div>
-        </nav>
 
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg shadow-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" class="logo img-fluid" alt="Miku Sports Charity Platform">
+                <span>
+                    Miku Sports Charity Platform
+                    <small>Let the Fun of Sports Be Accessible to Everyone</small>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="#top">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="events.html">Events</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link click-scroll" href="volunteer.html">Volunteer</a>
+                    </li>
+
+                    <li class="nav-item ms-3">
+                        <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn" href="login.html">Login</a>
+                    </li>
+                    <!-- 用户头像和下拉菜单 -->
+                    <div id="userAvatar" class="dropdown avatar-image">
+                        <a class="dropdown-toggle" href="#"">
+                            <img id=" avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
+                            height="64" class="rounded-circle">
+                        </a>
+                        <!-- 下拉菜单 -->
+                        <div class="dropdown-menu" aria-labelledby="avatarDropdown">
+                            <a class="dropdown-item d-flex" href="dashboard.html">Your Profile</a>
+                            <a class="dropdown-item d-flex" href="#" id="logoutBtn">Log out</a>
+                        </div>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
 
         <main>
             <section class="login-section">
@@ -131,7 +122,7 @@
                                         <button type="submit" id="SigninBtn" class="custom-btn btn">Login</button>
                                     </div>
                                     <p class="col-lg-12 col-12 d-flex justify-content-center without-account">No account yet?</p>
-                                    <a class="col-lg-12 col-12 mb-2 d-flex justify-content-center without-account register-link" href="register.html">Sign Up</a>
+                                    <a class="col-lg-12 col-12 mb-2 d-flex justify-content-center without-account register-link" href="volunteer.html">Sign Up</a>
                                     <div class="col-lg-12 col-12 mb-2 divider-wrapper">
                                         <span class="divider">OR</span>
                                     </div>
