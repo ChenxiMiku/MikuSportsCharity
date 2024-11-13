@@ -11941,6 +11941,7 @@ fieldset:disabled .btn {
 /*---------------------------------------
 CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
+
 :root {
     --white-color: #ffffff;
     --primary-color: #5bc1ac;
@@ -12287,6 +12288,12 @@ NAVIGATION
     line-height: normal;
     text-transform: uppercase;
 }
+
+.logo-small {
+    width: 60px;
+    height: auto;
+}
+
 
 .logo {
     width: 80px;
