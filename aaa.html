@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Miku Sports Charity - Dashboard</title>
+
+    <!-- CSS FILES -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dash-all.min.css" />
+    <link rel="stylesheet" href="css/dash-style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+    <body id="section_1">
+
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12 d-flex flex-wrap">
+                        <p class="d-flex me-4 mb-0">
+                            <i class="bi-geo-alt me-2"></i>
+                            999 Huchenghuan Road, Pudong New District, Shanghai, China
+                        </p>
+
+                        <p class="d-flex mb-0">
+                            <i class="bi-envelope me-2"></i>
+                            <a href="mailto:charity@mikufans.me">
+                                charity@mikufans.me
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="https://github.com/ChenxiMiku/MikuSportsCharity"
+                                    class="social-icon-link bi-github"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="user-dashboard">
+                <div class="page-content index-page">
+                    <div class="sidebar">
+                        <div class="brand">
+                            <i class="fa-solid fa-xmark xmark"></i>
+                            <p class="d-flex me-4 mb-0">
+                                <a href="index.html">
+                                    <img src="images/logo.png" class="logo-small img-fluid" alt="Miku Sports Charity">
+                                </a>
+                            </p>
+
+                        </div>
+                        <ul>
+                            <li id="Dashboard-Side">
+                                <a class="sidebar-link">
+                                    <i class="fa-regular fa-chart-bar fa-fw"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li id="Profile-Side">
+                                <a class="sidebar-link">
+                                    <i class="fa-regular fa-user fa-fw"></i><span>Profile</span>
+                                </a>
+                            </li>
+
+                            <li id="Events-Side">
+                                <a class="sidebar-link">
+                                    <i class="fa-solid fa-diagram-project fa-fw"></i><span>Events</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="col-lg-12 col-md-12 col-12 text-center">
+                            <p>Copyright © 2024 <br><a href="index.html">Miku Sports</a><br>Charity Org.</br></br>
+                            </p>
+                        </div>
+                    </div>
+                    <main id="Dashboard" hidden>
+                        <div class="header">
+                            <i class="fa-solid fa-bars bar-item"></i>
+                            <div class="search">
+                                <input type="search" placeholder="Type A Keyword" />
+                            </div>
+
+                            <div class="profile">
+                                <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
+                                <img src="./images/avatar.png" alt="No Image" class="avatar" id="avatar1" />
+                            </div>
+                        </div>
+                        <div class="main-content">
+                            <div class="title">
+                                <h1>Dashboard</h1>
+                            </div>
+                            <div class="main-content-boxes">
+                                <div class="box first-box">
+                                    <div class="box-section1">
+                                        <div class="box-title">
+                                            <h3>Welcome</h3>
+                                            <p>X-X-X</p>
+                                        </div>
+                                        <div class="box-image">
+                                            <img src="./images/welcome.png" alt="No image" />
+                                        </div>
+                                        <img src="./images/avatar.png" alt="No image" class="avatar" id="avatar2" />
+                                    </div>
+                                    <div class="box-section2">
+                                        <ul>
+                                            <li>
+                                                <span>X-X-X Organization</span>
+                                                <p>Admin</p>
+                                            </li>
+                                            <li>
+                                                <span>80</span>
+                                                <p>Events</p>
+                                            </li>
+                                            <li>
+                                                <span>$8500</span>
+                                                <p>Recieved</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a id="dash-pro">Profile </a>
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-section1">
+                                        <div class="box-title">
+                                            <h3>Progress</h3>
+                                            <p>Recently Targets of Your Organization</p>
+                                        </div>
+                                    </div>
+                                    <div class="third-box-section2">
+                                        <div class="third-box-section2-details">
+                                            <div class="icon">
+                                                <i class="fa-solid fa-dollar-sign fa-lg"></i>
+                                            </div>
+                                            <div class="third-box-info">
+                                                <ul>
+                                                    <li>Donates</li>
+                                                    <li>$20.000</li>
+                                                    <li>
+                                                        <span><span class="tipTop">80%</span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="third-box-section2-details">
+                                            <div class="icon">
+                                                <i class="fa-solid fa-code fa-lg"></i>
+                                            </div>
+                                            <div class="third-box-info">
+                                                <ul>
+                                                    <li>Events</li>
+                                                    <li>24</li>
+                                                    <li>
+                                                        <span><span class="tipTop">55%</span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="third-box-section2-details">
+                                            <div class="icon">
+                                                <i class="fa-solid fa-user fa-lg"></i>
+                                            </div>
+                                            <div class="third-box-info">
+                                                <ul>
+                                                    <li>Volunteers</li>
+                                                    <li>12</li>
+                                                    <li>
+                                                        <span><span class="tipTop">75%</span></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-section1">
+                                        <div class="box-title">
+                                            <h3>Admission Statistics</h3>
+                                            <p>Everything About Admission</p>
+                                        </div>
+                                    </div>
+                                    <div class="fourth-box-section2">
+                                        <div class="small-box">
+                                            <i class="fa-regular fa-rectangle-list fa-2x mb-10"></i>
+                                            <span>2500</span>
+                                            <p>Total</p>
+                                        </div>
+
+                                        <div class="small-box">
+                                            <i class="fa-solid fa-spinner fa-2x mb-10"></i>
+                                            <span>500</span>
+                                            <p>Reviewing</p>
+                                        </div>
+
+                                        <div class="small-box">
+                                            <i class="fa-regular fa-circle-check fa-2x mb-10"></i>
+                                            <span>1900</span>
+                                            <p>Accepted</p>
+                                        </div>
+
+                                        <div class="small-box">
+                                            <i class="fa-regular fa-rectangle-xmark fa-2x mb-10"></i>
+                                            <span>100</span>
+                                            <p>Rejected</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="box">
+                                    <div class="box-section1">
+                                        <div class="box-title">
+                                            <h3>Latest Posted Events</h3>
+                                        </div>
+                                    </div>
+                                    <div class="latest-news-section2">
+                                        <img src="./images/news-01.png" alt="" />
+                                        <div class="latest-news-section2-info">
+                                            <h4>Event 1</h4>
+                                            <p>Sample</p>
+                                        </div>
+                                        <span>3 Days Ago</span>
+                                    </div>
+
+                                    <div class="latest-news-section2">
+                                        <img src="./images/news-02.png" alt="" />
+                                        <div class="latest-news-section2-info">
+                                            <h4>Event 2</h4>
+                                            <p>Sample</p>
+                                        </div>
+                                        <span>5 Days Ago</span>
+                                    </div>
+
+                                    <div class="latest-news-section2">
+                                        <img src="./images/news-03.png" alt="" />
+                                        <div class="latest-news-section2-info">
+                                            <h4>Event 3</h4>
+                                            <p>Sample</p>
+                                        </div>
+                                        <span>7 Days Ago</span>
+                                    </div>
+
+                                    <div class="latest-news-section2">
+                                        <img src="./images/news-04.png" alt="" />
+                                        <div class="latest-news-section2-info">
+                                            <h4>Event 4</h4>
+                                            <p>Sample</p>
+                                        </div>
+                                        <span>9 Days Ago</span>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="box-section1">
+                                        <div class="box-title">
+                                            <h3>Latest Tasks</h3>
+                                        </div>
+                                    </div>
+                                    <div class="latest-tasks-section2">
+                                        <div class="latest-tasks-section2-info">
+                                            <h4>Record One New Video</h4>
+                                            <p>Record some Ad-Videos</p>
+                                        </div>
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+
+                                    <div class="latest-tasks-section2">
+                                        <div class="latest-tasks-section2-info">
+                                            <h4>Write Article</h4>
+                                            <p>Write some articles</p>
+                                        </div>
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+
+                                    <div class="latest-tasks-section2">
+                                        <div class="latest-tasks-section2-info">
+                                            <h4>Finish Project</h4>
+                                            <p>Finish last program</p>
+                                        </div>
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+
+                                    <div class="latest-tasks-section2">
+                                        <div class="latest-tasks-section2-info">
+                                            <h4>Finish Lesson</h4>
+                                            <p>Finish teaching volunteers</p>
+                                        </div>
+                                        <i class="fa-regular fa-trash-can"></i>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="box-section1">
+                                        <div class="box-title">
+                                            <h3>Top Search Items</h3>
+                                        </div>
+                                    </div>
+                                    <div class="top-search-items">
+                                        <div class="top-search-items-info">
+                                            <p>Keyword</p>
+                                            <p>Search Count</p>
+                                        </div>
+
+                                        <div class="top-search-items-info">
+                                            <h4>Programming</h4>
+                                            <span>220</span>
+                                        </div>
+                                        <div class="top-search-items-info">
+                                            <h4>Volunteer</h4>
+                                            <span>180</span>
+                                        </div>
+                                        <div class="top-search-items-info">
+                                            <h4>Charity</h4>
+                                            <span>160</span>
+                                        </div>
+                                        <div class="top-search-items-info">
+                                            <h4>Event</h4>
+                                            <span>145</span>
+                                        </div>
+                                        <div class="top-search-items-info">
+                                            <h4>Donate</h4>
+                                            <span>110</span>
+                                        </div>
+                                        <div class="top-search-items-info">
+                                            <h4>Logic</h4>
+                                            <span>95</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="box-section1">
+                                        <div class="box-title">
+                                            <h3>Last Event Progress</h3>
+                                        </div>
+                                    </div>
+                                    <div class="last-project-progress">
+                                        <div class="last-project-progress-info">
+                                            <ul>
+                                                <li><span></span> Got The Project</li>
+                                                <li><span></span> Started The Project</li>
+                                                <li><span></span> The Project About To Finish</li>
+                                                <li><span></span> Test The Project</li>
+                                                <li><span></span> Finish The Project & Get Money</li>
+                                            </ul>
+                                        </div>
+                                        <img src="./images/project.png" alt="" />
+                                    </div>
+                                </div>
+                                <!-- <div class="box">
+                            <div class="box-section1">
+                              <div class="box-title">
+                                <h2>Reminders</h2>
+                              </div>
+                            </div>
+                            <div class="reminders-section2">
+                              <div class="reminders">
+                                <h4>Check My Tasks List</h4>
+                                <p>28/09/2022 - 12:00am</p>
+                              </div>
+                              <div class="reminders">
+                                <h4>Check My Projects</h4>
+                                <p>26/10/2022 - 12:00am</p>
+                              </div>
+                              <div class="reminders">
+                                <h4>Call All My Clients</h4>
+                                <p>05/11/2022 - 12:00am</p>
+                              </div>
+                              <div class="reminders">
+                                <h4>Finish The Development Workshop</h4>
+                                <p>20/12/2022 - 12:00am</p>
+                              </div>
+                            </div>
+                          </div> -->
+                                <!-- <div class="box">
+                            <div class="box-section1">
+                              <div class="box-title">
+                                <h2>Latest Post</h2>
+                              </div>
+                            </div>
+                            <div class="latest-post-section2">
+                              <div class="latest-post-person-info">
+                                <img src="./images/avatar.png" alt="" />
+                                <ul>
+                                  <li><h4>Zana Suleiman</h4></li>
+                                  <li><p>About 3 Hours Ago</p></li>
+                                </ul>
+                              </div>
+                              <div class="post">
+                                <p>
+                                  You Can Fool All Of The People Some Of The Time, And Some Of
+                                  The People All Of The Time, But You Can't Fool All Of The
+                                  People All Of The Time.
+                                </p>
+                              </div>
+                              <div class="latest-post-likes-comments">
+                                <ul>
+                                  <li>
+                                    <i class="fa-regular fa-heart heart"></i><span>1.8K</span>
+                                  </li>
+                                  <li>
+                                    <i class="fa-regular fa-comments"></i><span>500</span>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div> -->
+                                <div class="box">
+                                    <div class="box-section1">
+                                        <div class="box-title">
+                                            <h3>Social Media Stats</h3>
+                                        </div>
+                                    </div>
+                                    <div class="social-media-stats">
+                                        <div class="media">
+                                            <div class="media-icon twitter">
+                                                <i class="fa-brands fa-twitter fa-2x"></i>
+                                            </div>
+                                            <ul>
+                                                <li class="twitter">90K Followers</li>
+                                                <li><a href="/#">Follow</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="media">
+                                            <div class="media-icon facebook">
+                                                <i class="fa-brands fa-facebook-f fa-2x"></i>
+                                            </div>
+                                            <ul>
+                                                <li class="facebook">2M Like</li>
+                                                <li><a href="/#">Like</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="media">
+                                            <div class="media-icon youtube">
+                                                <i class="fa-brands fa-youtube fa-2x"></i>
+                                            </div>
+                                            <ul>
+                                                <li class="youtube">1M Subs</li>
+                                                <li><a href="/#">Subscribe</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <div class="media">
+                                            <div class="media-icon linkedin">
+                                                <i class="fa-brands fa-linkedin fa-2x"></i>
+                                            </div>
+                                            <ul>
+                                                <li class="linkedin">70K Followers</li>
+                                                <li><a href="/#">Follow</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects-box">
+                            <div class="box-section1">
+                                <div class="box-title">
+                                    <h3>Events</h3>
+                                </div>
+                            </div>
+                            <div class="projects-box-section2">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                            <td>Finish Date</td>
+                                            <td>Place</td>
+                                            <td>Donate</td>
+                                            <td>Volunteer</td>
+                                            <td>Status</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Ministry</td>
+                                            <td>10 May 2022</td>
+                                            <td>Ministry</td>
+                                            <td>$5300</td>
+                                            <td>
+                                                <img src="./images/team-01.png" alt="" />
+                                                <img src="./images/team-02.png" alt="" />
+                                                <img src="./images/team-03.png" alt="" />
+                                                <img src="./images/team-04.png" alt="" />
+                                            </td>
+                                            <td><a href="/#" class="pending">Pending</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zana Shop</td>
+                                            <td>12 Oct 2021</td>
+                                            <td>Zana Company</td>
+                                            <td>$1500</td>
+                                            <td>
+                                                <img src="./images/team-01.png" alt="" />
+                                                <img src="./images/team-02.png" alt="" />
+                                                <img src="./images/team-03.png" alt="" />
+                                            </td>
+                                            <td><a href="/#" class="in-progress">In Progress</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bouba</td>
+                                            <td>05 Sep 2021</td>
+                                            <td>Bouba</td>
+                                            <td>$800</td>
+                                            <td>
+                                                <img src="./images/team-01.png" alt="" />
+                                                <img src="./images/team-02.png" alt="" />
+                                            </td>
+                                            <td><a href="/#" class="completed">Completed</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mahmoud</td>
+                                            <td>22 May 2021</td>
+                                            <td>Mahmoud</td>
+                                            <td>$600</td>
+                                            <td>
+                                                <img src="./images/team-01.png" alt="" />
+                                                <img src="./images/team-02.png" alt="" />
+                                            </td>
+                                            <td><a href="/#" class="completed">Completed</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sayed</td>
+                                            <td>24 May 2021</td>
+                                            <td>Sayed</td>
+                                            <td>300</td>
+                                            <td>
+                                                <img src="./images/team-01.png" alt="" />
+                                                <img src="./images/team-02.png" alt="" />
+                                            </td>
+                                            <td><a href="/#" class="rejected">Rejected</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Arena</td>
+                                            <td>01 Mar 2021</td>
+                                            <td>Arena Company</td>
+                                            <td>$2600</td>
+                                            <td>
+                                                <img src="./images/team-01.png" alt="" />
+                                                <img src="./images/team-02.png" alt="" />
+                                                <img src="./images/team-03.png" alt="" />
+                                                <img src="./images/team-04.png" alt="" />
+                                            </td>
+                                            <td><a href="/#" class="completed">Completed</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </main>
+                    <div id="Profile" hidden>
+                        <nav class="header navbar navbar-expand-lg">
+
+                            <i class="fa-solid fa-bars bar-item"></i>
+                            <div class="title">
+                                <h5 class="fs-1">Profile</h5>
+                            </div>
+                            <div class="profile ms-auto">
+                                <img src="./images/avatar.png" alt="No Image" class="avatar" id="avatar1" />
+                            </div>
+                        </nav>
+                        <div class="main-content">
+                            <div class="profile-box">
+                                <div class="profile-info">
+                                    <div class="change-avatar-container">
+                                        <img src="../images/avatar.png" id="avatar5" class="change-avatar"
+                                            alt="Avatar 5">
+                                        <!-- 半透明蒙版，提示点击修改头像 -->
+                                        <div class="change-avatar-overlay">Change</div>
+                                    </div>
+                                    <!-- <img src="../images/avatar.png" alt="" id="avatar5"/> -->
+                                    <input type="file" id="avatarInput" style="display:none;" accept="image/*">
+                                    <h4>Miku</h4>
+                                    <p>Level 20</p>
+                                    <div class="progress">
+                                        <span></span>
+                                    </div>
+                                    <div class="stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <p>550 Ratings</p>
+                                </div>
+                                <div class="profile-info-section2">
+                                    <div class="container ">
+
+                                        <div class="row mx-2 my-2">
+                                            <div class="general-information">
+                                                <h3>Information</h3>
+                                                <h7>UserName: Miku</h7>
+                                                <h7>Email: OrganizationMail@gmail.com</h7>
+                                                <h7>Phone: 0934588449</h7>
+                                                <h7>Date Of Join: 20/04/2024</h7>
+                                                <h7>Account Type: User</h7>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-12 mb-2 divider-wrapper"></div>
+                                    <div class="container ">
+
+                                        <div class="row mx-2 my-2">
+
+                                            <h3>Change Password</h3>
+                                            <h7 class="mt-2">Old Password</h7>
+                                            <div class="col-lg-12 col-12 mb-3">
+                                                <input type="password" class="form-control" id="oldPasswd"
+                                                    name="oldPasswd" placeholder="Enter your old password" required>
+                                            </div>
+                                            <h7>New Password</h7>
+                                            <div class="col-lg-12 col-12 mb-3">
+                                                <input type="password" class="form-control" id="newPasswd"
+                                                    name="newPasswd" placeholder="Enter your old password" required>
+                                            </div>
+                                            <h7>Confirm New Password</h7>
+                                            <div class="col-lg-12 col-12 mb-3">
+                                                <input type="password" class="form-control" id="confirmPasswd"
+                                                    name="confirmPasswd" placeholder="Confirm your new password"
+                                                    required>
+                                            </div>
+                                            <div class="col-lg-12 col-12 mb-3">
+                                                <button class="changepasswd-btn btn ms-auto fs-6"
+                                                    id="confirmButton">Change
+                                                    Password</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- 错误信息 -->
+                                    <p id="error-message" class="error-message" style="color: red; display: none;">
+                                        密码不一致，请重新输入。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <main id="Events" >
+                        <nav class="header navbar navbar-expand-lg">
+
+                            <i class="fa-solid fa-bars bar-item"></i>
+                            <div class="title">
+                                <h5 class="fs-1">Events</h5>
+                            </div>
+                            <div class="profile ms-auto">
+                                <img src="./images/avatar.png" alt="No Image" class="avatar" id="avatar1" />
+                            </div>
+                        </nav>
+                        <div class="main-content">
+                            <h5 class="fs-2 my-4">My Volunteer Events</h5>
+                            <div class="col-lg-12 col-12" id="charity-events-container">
+                                <!-- 动态加载新闻 -->
+                            </div>
+                        </div>
+                    </main>
+                </div>
+                <div class="loader">
+                    <h1>Loading<span>....</span></h1>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/aaa.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="js/cookies.js"></script>
+        <script src="js/joinedevents.js"></script>
+    </body>
+
+</html>

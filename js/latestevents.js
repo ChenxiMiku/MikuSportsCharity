@@ -1,9 +1,15 @@
+let selectedTags = []; // 用于存储选中标签的数组
+
+// 定时刷新新闻数据
+//setInterval(fetchEvents, 60000); // 每 60 秒刷新一次
+//fetchEvents(); // 初次加载时调用一次
+
 // 获取新闻列表数据
-async function fetchevents() {
+async function fetchEvents() {
     try {
         const response = await fetch('/api/events');
-        const eventsData = await response.json();
-        renderevents(eventsData);
+        const organizations = await response.json();
+        renderCharityEvents(organizations);
     } catch (error) {
         console.error('Error fetching events:', error);
     }
@@ -15,7 +21,7 @@ const organizations = [
         eventsData: [
             {
                 title: "Charity Run 2024",
-                url: "https://example.com/event/1",
+                url: "events-details.html",
                 image: "https://t.alcy.cc/pc/",
                 tags: ["Running", "Fundraising"],
                 date: "2024-05-01",
@@ -62,10 +68,27 @@ const organizations = [
     }
 ];
 
-// 调用函数渲染多个慈善机构的活动
-
-// 初次渲染所有新闻
 renderCharityEvents(organizations);
+
+// 根据当前选中的标签筛选新闻
+function filterEventsByTags(organizations) {
+    console.log(selectedTags);
+    if (selectedTags.length === 0) {
+        // 如果没有选中任何标签，显示所有新闻
+        renderCharityEvents(organizations);
+    } else {
+        // 筛选包含所有选中标签的新闻
+        const filteredEvents = organizations.map(organization => {
+            const filteredData = organization.eventsData.filter(event =>
+                selectedTags.every(tag => event.tags.includes(tag))
+            );
+            return { ...organization, eventsData: filteredData };
+        });
+
+        // 渲染筛选后的新闻
+        renderCharityEvents(filteredEvents);
+    }
+}
 
 // 渲染多个慈善机构的活动函数
 function renderCharityEvents(organizations) {
@@ -80,7 +103,7 @@ function renderCharityEvents(organizations) {
         const charityHeader = document.createElement('div');
         charityHeader.classList.add('charity-header');
         charityHeader.innerHTML = `
-            <h2>${charityName}</h2>
+            <a href="charity.html" class="fs-1 fw-semibold">${charityName}</a>
             <p>以下是${charityName}组织的最新活动。</p>
         `;
         charityContainer.appendChild(charityHeader);
@@ -102,16 +125,13 @@ function renderCharityEvents(organizations) {
                         <img src="${events.image}" class="events-image img-fluid" alt="">
                     </a>
                     <div class="events-category-block">
-                        ${events.tags.map(tag => `<a class="category-block-link">${tag}</a>`).join(', ')}
+                        ${events.tags.map(tag => `<a class="category-block-link" data-tag="${tag}">${tag}</a>`).join(', ')}
                     </div>
                 </div>
                 <div class="events-block-info">
                     <div class="d-flex mt-2">
                         <div class="ms-4 events-block-date">
                             <p><i class="bi-calendar4 custom-icon"></i> ${events.date}</p>
-                        </div>
-                        <div class="ms-4 events-block-author">
-                            <p><i class="bi-person custom-icon"></i> By ${events.author}</p>
                         </div>
                     </div>
                     <div class="events-block-title mb-2 ms-4">
@@ -125,65 +145,39 @@ function renderCharityEvents(organizations) {
             eventsList.appendChild(eventsItem);
         });
     });
+
+    // 为所有标签添加点击事件
+    document.querySelectorAll('.tags-block-link').forEach(tagLink => {
+        tagLink.addEventListener('click', function (event) {
+            event.preventDefault(); // 阻止默认跳转
+
+            const tag = event.target.getAttribute('data-tag');
+            const isSelected = tagLink.classList.contains('tags-selected');
+
+            if (isSelected) {
+                // 如果已选中，则移除选中状态并从selectedTags中删除
+                tagLink.classList.remove('tags-selected');
+                selectedTags = selectedTags.filter(t => t !== tag);
+            } else {
+                // 如果未选中，则添加选中状态并加入selectedTags
+                tagLink.classList.add('tags-selected');
+                selectedTags.push(tag);
+            }
+
+            // 根据当前选中的标签数组筛选新闻
+            filterEventsByTags(organizations);
+        });
+    });
 }
 
-
-
-
-// 定时刷新新闻数据
-setInterval(fetchevents, 60000); // 每 60 秒刷新一次
-fetchevents(); // 初次加载时调用一次
-
-let selectedTags = []; // 用于存储选中标签的数组
-// 根据当前选中的标签筛选新闻
-function filtereventsByTags() {
-    console.log(selectedTags)
-    if (selectedTags.length === 0) {
-      // 如果没有选中任何标签，显示所有新闻
-      renderevents(eventsData);
-    } else {
-      // 筛选包含所有选中标签的新闻
-      const filteredevents = eventsData.filter(events => 
-        selectedTags.every(tag => events.tags.includes(tag))
-      );
-      renderevents(filteredevents);
-    }
-  }
-  
-  // 点击标签选择或取消选择新闻
-  document.querySelectorAll('.tags-block-link').forEach(tagLink => {
-    tagLink.addEventListener('click', function(event) {
-      event.preventDefault(); // 阻止默认跳转
-  
-      const tag = event.target.getAttribute('data-tag');
-  
-      // 检查标签是否已选中
-      const isSelected = tagLink.classList.contains('tags-selected');
-  
-      if (isSelected) {
-        // 如果已选中，则移除选中状态并从selectedTags中删除
-        tagLink.classList.remove('tags-selected');
-        selectedTags = selectedTags.filter(t => t !== tag);
-      } else {
-        // 如果未选中，则添加选中状态并加入selectedTags
-        tagLink.classList.add('tags-selected');
-        selectedTags.push(tag);
-      }
-  
-      // 根据当前选中的标签数组筛选新闻
-      filtereventsByTags();
-    });
-  });
-  
-  // 一键清除选择
-  const clearButton = document.getElementById('clear-selection');
-  clearButton.addEventListener('click', () => {
-    
+// 一键清除选择
+const clearButton = document.getElementById('clear-selection');
+clearButton.addEventListener('click', () => {
     // 清除所有标签的选中状态
     document.querySelectorAll('.tags-block-link').forEach(link => {
-      link.classList.remove('tags-selected');
-      selectedTags = [];
+        link.classList.remove('tags-selected');
+        selectedTags = [];
     });
     // 显示所有新闻
-    filtereventsByTags();
-  });
+    filterEventsByTags(organizations);
+});

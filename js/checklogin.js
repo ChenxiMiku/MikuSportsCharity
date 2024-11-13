@@ -27,13 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
     // 页面加载时显示登录状态
     if (isLoggedIn) {
         document.getElementById('userAvatar').classList.remove('d-none')
-        document.getElementById('loginBtn').style.display = 'none';
+        if(document.getElementById('loginBtn')){
+            document.getElementById('loginBtn').style.display = 'none';
+        }
         //document.getElementById('registerBtn').style.display = 'none';
         document.getElementById('userAvatar').style.display = 'block';
     } else {
         console.log('not logged in')
         document.getElementById('userLogin').classList.remove('d-none')
-        document.getElementById('loginBtn').style.display = 'block';
+        if(document.getElementById('loginBtn')){
+            document.getElementById('loginBtn').style.display = 'block';
+        }
         //document.getElementById('registerBtn').style.display = 'block';
         document.getElementById('userAvatar').style.display = 'none';
     }
