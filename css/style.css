@@ -12100,6 +12100,56 @@ SECTION
     position: relative;
 }
 
+/*---------------------------------------
+COOKIES             
+-----------------------------------------*/
+/* Cookie Banner 样式 */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 16px;
+    display: none; /* 默认隐藏 */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cookie-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cookie-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 确保文本在按钮内居中 */
+    background: var(--white-color);
+    border: 1px solid var(--primary-color);
+    /* 使用主色作为边框 */
+    border-radius: 30px;
+    /* 圆角边框 */
+    color: var(--primary-color);
+    font-size: var(--btn-font-size);
+    font-weight: var(--font-weight-normal);
+    line-height: normal;
+    padding: 10px 10px;
+}
+
+.cookie-btn:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
 
 /*---------------------------------------
 CUSTOM BLOCK               

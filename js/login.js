@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
         expires.setDate(expires.getDate() + 7); // Cookie 有效期 7 天
         document.cookie = `isLoggedIn=true; expires=${expires.toUTCString()}; path=/;`;
     }
-
     if (loginButton) {
         loginButton.addEventListener("click", function(event) {
             event.preventDefault(); // 防止表单默认提交

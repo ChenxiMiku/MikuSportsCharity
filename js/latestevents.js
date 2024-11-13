@@ -9,94 +9,124 @@ async function fetchevents() {
     }
 }
 
-const eventsData = [
+const organizations = [
     {
-        title: "Clothing donation to urban area",
-        url: "events-detail.html",
-        image: "images/events/medium-shot-volunteers-with-clothing-donations.jpg",
-        date: "October 12, 2024",
-        author: "Admin",
-        comments: 32,
-        summary: "Lorem Ipsum dolor sit amet...",
-        tags: ["Donation", "Clothing"]
+        charityName: "Global Charity Organization",
+        eventsData: [
+            {
+                title: "Charity Run 2024",
+                url: "https://example.com/event/1",
+                image: "https://t.alcy.cc/pc/",
+                tags: ["Running", "Fundraising"],
+                date: "2024-05-01",
+                author: "John Doe",
+                comments: 20,
+                summary: "Join us for a charity run to support health care."
+            },
+            {
+                title: "Food Drive 2024",
+                url: "https://example.com/event/2",
+                image: "https://t.alcy.cc/pc/",
+                tags: ["Donation", "Volunteering"],
+                date: "2024-06-01",
+                author: "Jane Doe",
+                comments: 15,
+                summary: "Help us provide food to those in need."
+            }
+        ]
     },
     {
-        title: "Food donation area",
-        url: "events-detail.html",
-        image: "images/events/medium-shot-people-collecting-foodstuff.jpg",
-        date: "October 20, 2024",
-        author: "Admin",
-        comments: 35,
-        summary: "Sed leo nisl, posuere at...",
-        tags: ["Food", "Donation", "Caring"]
-    },
-    // 更多新闻数据
+        charityName: "Local Children's Foundation",
+        eventsData: [
+            {
+                title: "Toy Donation Drive",
+                url: "https://example.com/event/3",
+                image: "https://t.alcy.cc/pc/",
+                tags: ["Donation", "Children"],
+                date: "2024-07-15",
+                author: "Alice Smith",
+                comments: 30,
+                summary: "Donate toys to bring joy to children in need."
+            },
+            {
+                title: "Summer Camp Fundraiser",
+                url: "https://example.com/event/4",
+                image: "https://t.alcy.cc/pc/",
+                tags: ["Fundraising", "Summer Camp"],
+                date: "2024-08-10",
+                author: "Bob Johnson",
+                comments: 25,
+                summary: "Help us raise funds for our annual summer camp."
+            }
+        ]
+    }
 ];
 
-const charityNames = [
-    "Charity A",
-    "Charity B",
-    "Charity C"
-];
+// 调用函数渲染多个慈善机构的活动
 
 // 初次渲染所有新闻
-renderCharityEvents(eventsData, charityNames[0]);
+renderCharityEvents(organizations);
 
-// 渲染新闻函数
-function renderCharityEvents(data, charityName) {
+// 渲染多个慈善机构的活动函数
+function renderCharityEvents(organizations) {
     const charityContainer = document.getElementById('charity-events-container');
     charityContainer.innerHTML = ''; // 清空现有内容
 
-    // 添加慈善机构名称
-    const charityHeader = document.createElement('div');
-    charityHeader.classList.add('charity-header');
-    charityHeader.innerHTML = `
-        <h2>活动列表: ${charityName}</h2>
-        <p>以下是${charityName}组织的最新活动。</p>
-    `;
-    charityContainer.appendChild(charityHeader);
+    // 遍历每个慈善机构的数据
+    organizations.forEach(organization => {
+        const { charityName, eventsData } = organization;
 
-    // 创建活动列表容器，使用 d-flex 和 flex-wrap 使活动可以在一行内显示多个
-    const eventsList = document.createElement('div');
-    eventsList.id = 'events-list';
-    eventsList.classList.add('d-flex', 'justify-content-start');
-    charityContainer.appendChild(eventsList);
-
-    // 渲染每个活动
-    data.forEach(events => {
-        const eventsItem = document.createElement('div');
-        eventsItem.classList.add('events-block', 'mt-3', 'me-3', 'mb-3', 'custom-block-wrap'); // me-3 (margin end), mb-3 (margin bottom) 控制间距
-        eventsItem.style.flex = '1 1 30%'; // 每个活动占据大约 30% 的宽度，剩下的空间会自动分配
-
-        eventsItem.innerHTML = `
-            <div class="events-block-top">
-                <a href="${events.url}">
-                    <img src="${events.image}" class="events-image img-fluid" alt="">
-                </a>
-                <div class="events-category-block">
-                    ${events.tags.map(tag => `<a class="category-block-link">${tag}</a>`).join(', ')}
-                </div>
-            </div>
-            <div class="events-block-info">
-                <div class="d-flex mt-2">
-                    <div class="events-block-date align-items-start">
-                        <p><i class="bi-calendar4 custom-icon"></i> ${events.date}</p>
-                    </div>
-                    <div class="events-block-author align-items-end">
-                        <p><i class="bi-person custom-icon"></i> By ${events.author}</p>
-                    </div>
-                </div>
-                <div class="events-block-title mb-2">
-                    <h4><a href="${events.url}" class="events-block-title-link">${events.title}</a></h4>
-                </div>
-                <div class="events-block-body">
-                    <p>${events.summary}</p>
-                </div>
-            </div>
+        // 添加慈善机构名称
+        const charityHeader = document.createElement('div');
+        charityHeader.classList.add('charity-header');
+        charityHeader.innerHTML = `
+            <h2>${charityName}</h2>
+            <p>以下是${charityName}组织的最新活动。</p>
         `;
-        eventsList.appendChild(eventsItem);
+        charityContainer.appendChild(charityHeader);
+
+        // 创建活动列表容器，使用 d-flex 和 flex-wrap 使活动可以在一行内显示多个
+        const eventsList = document.createElement('div');
+        eventsList.classList.add('d-flex', 'flex-wrap', 'justify-content-start'); // flex-wrap 保证活动换行显示
+        charityContainer.appendChild(eventsList);
+
+        // 渲染每个活动
+        eventsData.forEach(events => {
+            const eventsItem = document.createElement('div');
+            eventsItem.classList.add('events-block', 'mt-3', 'me-3', 'mb-3', 'custom-block-wrap'); // 控制间距
+            eventsItem.style.flex = '1 1 30%'; // 每个活动占据大约 30% 的宽度，剩下的空间会自动分配
+
+            eventsItem.innerHTML = `
+                <div class="events-block-top">
+                    <a href="${events.url}">
+                        <img src="${events.image}" class="events-image img-fluid" alt="">
+                    </a>
+                    <div class="events-category-block">
+                        ${events.tags.map(tag => `<a class="category-block-link">${tag}</a>`).join(', ')}
+                    </div>
+                </div>
+                <div class="events-block-info">
+                    <div class="d-flex mt-2">
+                        <div class="ms-4 events-block-date">
+                            <p><i class="bi-calendar4 custom-icon"></i> ${events.date}</p>
+                        </div>
+                        <div class="ms-4 events-block-author">
+                            <p><i class="bi-person custom-icon"></i> By ${events.author}</p>
+                        </div>
+                    </div>
+                    <div class="events-block-title mb-2 ms-4">
+                        <h4><a href="${events.url}" class="events-block-title-link">${events.title}</a></h4>
+                    </div>
+                    <div class="events-block-body ms-4">
+                        <p>${events.summary}</p>
+                    </div>
+                </div>
+            `;
+            eventsList.appendChild(eventsItem);
+        });
     });
 }
+
 
 
 
