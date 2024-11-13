@@ -71,13 +71,6 @@
                 </a>
               </li>
 
-              <li id="Settings-Side">
-                <a class="sidebar-link">
-                  <i class="fa-solid fa-gear fa-fw"></i>
-                  <span>Settings</span>
-                </a>
-              </li>
-
               <li id="Profile-Side">
                 <a class="sidebar-link">
                   <i class="fa-regular fa-user fa-fw"></i><span>Profile</span>
@@ -87,12 +80,6 @@
               <li id="Events-Side">
                 <a class="sidebar-link">
                   <i class="fa-solid fa-diagram-project fa-fw"></i><span>Events</span>
-                </a>
-              </li>
-
-              <li id="Files-Side">
-                <a class="sidebar-link">
-                  <i class="fa-regular fa-file fa-fw"></i> <span>Files</span>
                 </a>
               </li>
             </ul>
@@ -110,7 +97,7 @@
 
               <div class="profile">
                 <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
-                <img src="./images/avatar.png" alt="No Image" />
+                <img src="./images/avatar.png" alt="No Image" class="avatar" id="avatar1"/>
               </div>
             </div>
             <div class="main-content">
@@ -127,7 +114,7 @@
                     <div class="box-image">
                       <img src="./images/welcome.png" alt="No image" />
                     </div>
-                    <img src="./images/avatar.png" alt="No image" class="avatar" />
+                    <img src="./images/avatar.png" alt="No image" class="avatar" id="avatar2"/>
                   </div>
                   <div class="box-section2">
                     <ul>
@@ -146,20 +133,6 @@
                     </ul>
                   </div>
                   <a id="dash-pro">Profile </a>
-                </div>
-
-                <div class="box">
-                  <div class="box-section1">
-                    <div class="box-title">
-                      <h3>Post Event</h3>
-                      <p>Write Your Event Content Here</p>
-                    </div>
-                  </div>
-                  <form>
-                    <input type="text" placeholder="Title" />
-                    <textarea placeholder="Content"></textarea>
-                    <button type="submit">Save and Post</button>
-                  </form>
                 </div>
 
                 <div class="box">
@@ -367,66 +340,6 @@
                       <h4>Logic</h4>
                       <span>95</span>
                     </div>
-                  </div>
-                </div>
-                <div class="box">
-                  <div class="box-section1">
-                    <div class="box-title">
-                      <h3>Latest Uploads</h3>
-                    </div>
-                  </div>
-                  <div class="latest-news-section2 latest-uploads">
-                    <img src="./images/pdf.svg" alt="" class="latest-uploads-image" />
-                    <div class="latest-news-section2-info latest-uploads-info">
-                      <h4>my-file.pdf</h4>
-                      <p>Zana</p>
-                    </div>
-                    <span>2.9MB</span>
-                  </div>
-
-                  <div class="latest-news-section2 latest-uploads">
-                    <img src="./images/avi.svg" alt="" class="latest-uploads-image" />
-                    <div class="latest-news-section2-info latest-uploads-info">
-                      <h4>My-Video-File.avi</h4>
-                      <p>Admin</p>
-                    </div>
-                    <span>4.9MB</span>
-                  </div>
-
-                  <div class="latest-news-section2 latest-uploads">
-                    <img src="./images/psd.svg" alt="" class="latest-uploads-image" />
-                    <div class="latest-news-section2-info latest-uploads-info">
-                      <h4>My-Psd-File.psd</h4>
-                      <p>Ahmad</p>
-                    </div>
-                    <span>4.5MB</span>
-                  </div>
-
-                  <div class="latest-news-section2 latest-uploads">
-                    <img src="./images/zip.svg" alt="" class="latest-uploads-image" />
-                    <div class="latest-news-section2-info latest-uploads-info">
-                      <h4>My-Zip-File.zip</h4>
-                      <p>User</p>
-                    </div>
-                    <span>8.9MB</span>
-                  </div>
-
-                  <div class="latest-news-section2 latest-uploads">
-                    <img src="./images/dll.svg" alt="" class="latest-uploads-image" />
-                    <div class="latest-news-section2-info latest-uploads-info">
-                      <h4>My-DLL-File.dll</h4>
-                      <p>Admin</p>
-                    </div>
-                    <span>4.9MB</span>
-                  </div>
-
-                  <div class="latest-news-section2 latest-uploads">
-                    <img src="./images/eps.svg" alt="" class="latest-uploads-image" />
-                    <div class="latest-news-section2-info latest-uploads-info">
-                      <h4>My-Eps-File.eps</h4>
-                      <p>Designer</p>
-                    </div>
-                    <span>8.9MB</span>
                   </div>
                 </div>
                 <div class="box">
@@ -652,219 +565,6 @@
 
             </div>
           </main>
-          <main id="Settings" hidden>
-            <div class="header">
-              <i class="fa-solid fa-bars bar-item"></i>
-              <div class="search">
-                <input type="search" placeholder="Type A Keyword" />
-              </div>
-
-              <div class="profile">
-                <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
-                <img src="../images/avatar.png" alt="No Image" />
-              </div>
-            </div>
-            <div class="main-content">
-              <div class="title">
-                <h1>Settings</h1>
-              </div>
-
-              <div class="main-content-boxes">
-                <div class="box">
-                  <div class="box-section1">
-                    <div class="box-title">
-                      <h3>Site Control</h3>
-                      <p>Control The Website If There Is Maintenance</p>
-                    </div>
-                  </div>
-                  <div class="settings-box-section2">
-                    <div class="settings-box-website-control">
-                      <div class="settings-box-title">
-                        <p>Website Control</p>
-                        <p>Open/Close Website And Type The Reason</p>
-                      </div>
-                      <span class="toggle"></span>
-                    </div>
-                    <form>
-                      <textarea name="" placeholder="Close Message Content"></textarea>
-                    </form>
-                  </div>
-                </div>
-
-                <div class="box">
-                  <div class="box-section1">
-                    <div class="box-title">
-                      <h3>General Info</h3>
-                      <p>General Information About Your Account</p>
-                    </div>
-                  </div>
-                  <div class="general-info-section2">
-                    <form>
-                      <label for="first-name">First Name</label>
-                      <input type="text" placeholder="First Name" id="first-name" />
-                      <label for="last-name">Last Name</label>
-                      <input type="text" placeholder="Last Name" id="last-name" />
-                      <label for="Email">Email</label>
-                      <div class="email">
-                        <input type="email" disabled id="Email" value="zana.suleiman.44@gmail.com" />
-                        <a href="/#">Change</a>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-
-                <div class="box">
-                  <div class="box-section1">
-                    <div class="box-title">
-                      <h3>Security Info</h3>
-                      <p>Security Information About Your Account</p>
-                    </div>
-                  </div>
-                  <div class="security-info-section2">
-                    <div class="person-security-info">
-                      <div class="person-info">
-                        <p style="font-weight: normal">Password</p>
-                        <span>Last Change On 25/10/2021</span>
-                      </div>
-                      <a href="/#">Change</a>
-                    </div>
-
-                    <div class="person-security-info">
-                      <div class="person-info">
-                        <p style="font-weight: normal">Two-Factor Authentication</p>
-                        <span>Enable/Disable The Feature</span>
-                      </div>
-                      <span class="toggle toggle1"></span>
-                    </div>
-
-                    <div class="person-security-info">
-                      <div class="person-info">
-                        <p style="font-weight: normal">Devices</p>
-                        <span>Check The Login Devices List</span>
-                      </div>
-                      <a href="/#">Devices</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="box">
-                  <div class="box-section1">
-                    <div class="box-title">
-                      <h3>Social Info</h3>
-                      <p>Social Media Information</p>
-                    </div>
-                  </div>
-                  <div class="social-info-section2">
-                    <form>
-                      <div class="social-info-icon">
-                        <i class="fa-brands fa-twitter"></i>
-                        <input type="text" placeholder="Twitter Username" />
-                      </div>
-                      <div class="social-info-icon">
-                        <i class="fa-brands fa-facebook-f"></i>
-                        <input type="text" placeholder="Facebook Username" />
-                      </div>
-                      <div class="social-info-icon">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <input type="text" placeholder="Linkedin Username" />
-                      </div>
-                      <div class="social-info-icon">
-                        <i class="fa-brands fa-youtube"></i>
-                        <input type="text" placeholder="Youtube Username" />
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div class="box">
-                  <div class="box-section1 settings-section1">
-                    <div class="box-title">
-                      <h3>Widgets Control</h3>
-                      <p>Show/Hide Widgets</p>
-                    </div>
-                  </div>
-                  <div class="widgets-control-section2">
-                    <form>
-                      <ul>
-                        <li>
-                          <input type="checkbox" id="one" />
-                          <label for="one">Quick Draft</label>
-                        </li>
-                        <li>
-                          <input type="checkbox" id="two" checked />
-                          <label for="two">Yearly Targets</label>
-                        </li>
-                        <li>
-                          <input type="checkbox" id="three" />
-                          <label for="three">Tickets Statistics</label>
-                        </li>
-                        <li>
-                          <input type="checkbox" id="four" checked />
-                          <label for="four">Latest News</label>
-                        </li>
-                        <li>
-                          <input type="checkbox" id="five" />
-                          <label for="five">Latest Tasks</label>
-                        </li>
-                        <li>
-                          <input type="checkbox" id="six" checked />
-                          <label for="six">Top Search Items</label>
-                        </li>
-                      </ul>
-                    </form>
-                  </div>
-                </div>
-                <div class="box">
-                  <div class="box-section1 settings-section1">
-                    <div class="box-title">
-                      <h3>Backup Manager</h3>
-                      <p>Control Backup Time And Location</p>
-                    </div>
-                  </div>
-                  <div class="backup-mangager-section2">
-                    <form>
-                      <ul>
-                        <li>
-                          <input type="radio" id="radio-one" name="time" />
-                          <label for="radio-one">Daily</label>
-                        </li>
-                        <li>
-                          <input type="radio" id="radio-two" name="time" checked />
-                          <label for="radio-two">Weekly</label>
-                        </li>
-                        <li>
-                          <input type="radio" id="radio-three" name="time" />
-                          <label for="radio-three">Monthly</label>
-                        </li>
-                      </ul>
-                    </form>
-                  </div>
-                  <div class="backup-manager-section3">
-                    <input type="radio" name="box-radio" id="box-radio-1" />
-                    <div>
-                      <label for="box-radio-1">
-                        <i class="fa-solid fa-server"></i>
-                        Megaman
-                      </label>
-                    </div>
-                    <input type="radio" name="box-radio" id="box-radio-2" />
-                    <div>
-                      <label for="box-radio-2">
-                        <i class="fa-solid fa-server"></i>
-                        Zero
-                      </label>
-                    </div>
-                    <input type="radio" name="box-radio" id="box-radio-3" checked />
-                    <div>
-                      <label for="box-radio-3">
-                        <i class="fa-solid fa-server"></i>
-                        Sigma
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </main>
           <main id="Profile" hidden>
             <div class="header">
               <i class="fa-solid fa-bars bar-item"></i>
@@ -874,18 +574,27 @@
 
               <div class="profile">
                 <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
-                <img src="../images/avatar.png" alt="No Image" />
+                <img src="../images/avatar.png" alt="No Image" id="avatar4"/>
               </div>
             </div>
             <div class="main-content">
               <div class="title">
                 <h1>Profile</h1>
               </div>
-
               <div class="profile-box">
                 <div class="profile-info">
-                  <img src="../images/avatar.png" alt="" />
-                  <h3>XXX</h3>
+                  <div class="change-avatar-container">
+                    <img src="../images/avatar.png" id="avatar5" class="change-avatar" alt="Avatar 5">
+                    <!-- 半透明蒙版，提示点击修改头像 -->
+                    <div class="change-avatar-overlay">Change</div>
+                  </div>
+                  <!-- <img src="../images/avatar.png" alt="" id="avatar5"/> -->
+                  <input type="file" id="avatarInput" style="display:none;" accept="image/*">
+                  <div class="text-container" id="textDisplay">XXX</div>
+                  <div class="edit-container" id="editContainer">
+                    <input type="text" class="edit-input" id="editInput">
+                    <button class="box-profile" id="confirmButton">Confirm</button>
+                  </div>
                   <p>Level 20</p>
                   <div class="progress">
                     <span></span>
@@ -902,46 +611,54 @@
                 <div class="profile-info-section2">
                   <div class="row">
                     <div class="general-information">
-                      <h3>General-Information</h3>
-                      <div>
-                        <h7>Full Name:&nbsp;</h7>
-                        <span>XXX XXXX XXX Org.</span>
-                      </div>
-                      <div class="toggle"></div>
-                      <span></span>
-                    </div>
-                    <div>
-                      <h7>Country:&nbsp;</h7>
-                      <span>USA</span>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="general-information">
                       <h3>Organization Information</h3>
                       <div>
-                        <h7>Email:&nbsp;</h7>
-                        <span>OrganizationMail@gmail.com</span>
+                        <h7>Full Name: &nbsp;</h7>
+                        <!-- <span>XXX XXXX XXX</span> -->
+                        <div class="text-container" id="textDisplay1">XXX</div>
+                        <div class="edit-container" id="editContainer1">
+                          <input type="text" class="edit-input" id="editInput1">
+                          <button class="box-profile" id="confirmButton1">Confirm</button>
+                        </div>
+                        <span>&nbsp; Org.</span>
                       </div>
-                      <div class="toggle left"></div>
+                      <div>
+                        <h7>Contact Email:&nbsp;</h7>
+                        <!-- <span>OrganizationMail@gmail.com</span> -->
+                        <div class="text-container" id="textDisplay2">OrganizationMail@gmail.com</div>
+                        <div class="edit-container" id="editContainer2">
+                          <input type="text" class="edit-input" id="editInput2" type="email">
+                          <button class="box-profile" id="confirmButton2">Confirm</button>
+                        </div>
+                      </div>
                       <span></span>
                     </div>
                     <div>
                       <h7>Phone:&nbsp;</h7>
-                      <span>0934588449</span>
+                      <!-- <span>0934588449</span> -->
+                      <div class="text-container" id="textDisplay3">0934588449</div>
+                      <div class="edit-container" id="editContainer3">
+                        <input type="text" class="edit-input" id="editInput3">
+                        <button class="box-profile" id="confirmButton3">Confirm</button>
+                      </div>
                     </div>
                     <div>
                       <h7>Date Of Join:&nbsp;</h7>
-                      <span>20/04/1996</span>
+                      <span>20/04/2024</span>
                     </div>
                   </div>
                   <div class="row">
                     <div class="general-information">
-                      <h3>Job Description</h3>
+                      <h3>Your Mission</h3>
                       <div>
                         <h7>Description:&nbsp;</h7>
-                        <span>XXXXXXXXXXXXXXXXXXXXXXXXX</span>
+                        <!-- <span>XXXXXXXXXXXXXXXXXXXXXXXXX</span> -->
+                        <div class="text-container" id="textDisplay4">XXXXXXXXXXXXXXXXXXXXXXXXX</div>
+                        <div class="edit-container" id="editContainer4">
+                          <input type="text" class="edit-input" id="editInput4">
+                          <button class="box-profile" id="confirmButton4">Confirm</button>
+                        </div>
                       </div>
-                      <div class="toggle"></div>
                       <span></span>
                     </div>
                     <div>
@@ -956,138 +673,55 @@
                         <h7>Payment Method:&nbsp;</h7>
                         <span>Paypal</span>
                       </div>
-                      <div class="toggle left"></div>
                       <span></span>
                     </div>
                     <div>
-                      <h7>Email&nbsp;</h7>
-                      <span>OrganizationMail@gmail.com</span>
+                      <h7>Email:&nbsp;</h7>
+                      <!-- <span>OrganizationMail@gmail.com</span> -->
+                      <div class="text-container" id="textDisplay5">OrganizationMail@gmail.com</div>
+                      <div class="edit-container" id="editContainer5">
+                        <input type="text" class="edit-input" id="editInput5" type="email">
+                        <button class="box-profile" id="confirmButton5">Confirm</button>
+                      </div>                       
                     </div>
                     <div>
                       <h7>Subscription:&nbsp;</h7>
                       <span>Monthly</span>
                     </div>
                   </div>
+                  <div class="row">
+                    <div class="general-information">
+                      <h3>Account</h3>
+                      <div>
+                        <h7>Account Type:&nbsp;</h7>
+                        <span>Organization / Admin</span>
+                      </div>
+                      <span></span>
+                    </div>
+                    <div>
+                      <h7>Register Email:&nbsp;</h7>
+                      <!-- <span>OrganizationMail@gmail.com</span> -->
+                      <div class="text-container" id="textDisplay6">OrganizationMail@gmail.com</div>
+                      <div class="edit-container" id="editContainer6">
+                        <input type="text" class="edit-input" id="editInput6" type="email">
+                        <button class="box-profile" id="confirmButton6">Confirm</button>
+                      </div>                       
+                    </div>
+                    <div>
+                      <h7>Password:&nbsp;</h7>
+                      <button class="change-passwd" id="textDisplay7">Change</button>
+                      <div class="edit-container" id="editContainer7">
+                        <input type="password" id="editPasswd7" placeholder="Enter new password">
+                        <br>
+                        <input type="password" id="editConfirmPasswd7" placeholder="Confirm new password">
+                        <br>
+                        <button class="box-profile" id="confirmButton7">Confirm</button>
+                        <p id="error-message7" class="error-message" style="color: red; display: none;">Passwords do not match. Please try again.</p>
+                      </div>                       
+                    </div>                 
+                  </div>
                 </div>
               </div>
-              <!-- <div class="main-content-boxes profile-main-content-boxes">
-                            <div class="box">
-                              <div class="box-section1">
-                                <div class="box-title">
-                                  <h2>My Skills</h2>
-                                  <p>Complete Skills List</p>
-                                </div>
-                              </div>
-                              <div class="profile-skills">
-                                <div class="row">
-                                  <ul>
-                                    <li>HTML</li>
-                                    <li>Pugjs</li>
-                                    <li>HAML</li>
-                                  </ul>
-                                </div>
-                                <div class="row">
-                                  <ul>
-                                    <li>CSS</li>
-                                    <li>SASS</li>
-                                    <li>Styllus</li>
-                                  </ul>
-                                </div>
-                                <div class="row">
-                                  <ul>
-                                    <li>JavaScript</li>
-                                    <li>TypeScript</li>
-                                  </ul>
-                                </div>
-                                <div class="row">
-                                  <ul>
-                                    <li>Vuejs</li>
-                                    <li>Reactjs</li>
-                                  </ul>
-                                </div>
-                                <div class="row">
-                                  <ul>
-                                    <li>Jest</li>
-                                    <li>Jasmine</li>
-                                  </ul>
-                                </div>
-                                <div class="row">
-                                  <ul>
-                                    <li>PHP</li>
-                                    <li>Laravel</li>
-                                  </ul>
-                                </div>
-                                <div class="row">
-                                  <ul>
-                                    <li>Python</li>
-                                    <li>Django</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="box latest-activities">
-                              <div class="box-section1">
-                                <div class="box-title">
-                                  <h2>Latest Activities</h2>
-                                  <p>Latest Activities Done By The User</p>
-                                </div>
-                              </div>
-                              <div class="profile-latest-activities">
-                                <div class="profile-latest-activities-row">
-                                  <div class="row-info">
-                                    <img src="../images/activity-01.png" alt="" />
-                                    <div>
-                                      <span>Store</span>
-                                      <h4>Bought The Mastering Python Course</h4>
-                                    </div>
-                                  </div>
-                                  <div class="row-history">
-                                    <span>18:10</span>
-                                    <h4>Yesterday</h4>
-                                  </div>
-                                </div>
-                                <div class="profile-latest-activities-row">
-                                  <div class="row-info">
-                                    <img src="../images/activity-02.png" alt="" />
-                                    <div>
-                                      <span>Academy</span>
-                                      <h4>Got The PHP Certificate</h4>
-                                    </div>
-                                  </div>
-                                  <div class="row-history">
-                                    <span>16:05</span>
-                                    <h4>Yesterday</h4>
-                                  </div>
-                                </div>
-                                <div class="profile-latest-activities-row">
-                                  <div class="row-info">
-                                    <img src="../images/activity-03.png" alt="" />
-                                    <div>
-                                      <span>Badges</span>
-                                      <h4>Unlocked The 10 Skills Badge</h4>
-                                    </div>
-                                  </div>
-                                  <div class="row-history">
-                                    <span>18:05</span>
-                                    <h4>Yesterday</h4>
-                                  </div>
-                                </div>
-                                <div class="profile-latest-activities-row">
-                                  <div class="row-info">
-                                    <img src="../images/activity-01.png" alt="" />
-                                    <div>
-                                      <span>Store</span>
-                                      <h4>Bought The Typescript Course</h4>
-                                    </div>
-                                  </div>
-                                  <div class="row-history">
-                                    <span>12:05</span>
-                                    <h4>Yesterday</h4>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div> -->
             </div>
           </main>
           <main id="Events" hidden>
@@ -1099,23 +733,25 @@
 
               <div class="profile">
                 <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
-                <img src="../images/avatar.png" alt="No Image" />
+                <img src="../images/avatar.png" alt="No Image" id="avatar6"/>
               </div>
             </div>
             <div class="main-content">
               <div class="title">
                 <h1>Events</h1>
               </div>
-
+              <div class="event-container">
+                <div class="event-title">Post Your Event</div>
+                <textarea class="form-control" rows="5" placeholder="Describe your event here..."></textarea>
+                <button type="submit" class="box-event">Save and Post</button>
+              </div>
               <div class="main-content-boxes projects-main-content-boxes">
                 <div id="eventblock1" class="box featured-block">
                   <span>15/10/2021</span>
-                  <div class="projects-box-section1">
+                  <div id="EventBlockOutter1" class="projects-box-section1">
                     <div class="projects-box-title">
                       <span>Event 1</span>
-                      <p>
-                        Event 1 is Event 1 ~
-                      </p>
+                      <p>Click for Details</p>
                     </div>
                     <div class="projects-box-images">
                       <img src="../images/team-01.png" alt="No Image" />
@@ -1127,7 +763,7 @@
                     <div class="profile-skills">
                       <div class="row">
                         <ul>
-                          <li>Programming</li>
+                          <li>Volunteers</li>
                           <li>Design</li>
                           <li>Hosting</li>
                           <li>Marketing</li>
@@ -1141,23 +777,36 @@
                       <span>$2500</span>
                     </div>
                   </div>
+                  <div id="EventBlockInner1" class="projects-box-section1" hidden>
+                    <div class="box-section1">
+                      <span>Event Details</span>
+                    </div>
+                    <div class="box-section2">
+                      <img src="images/event1.jpg" class="eventPic">
+                    </div>
+                   <div class="box-section2">
+                    <a>Edit</a>
+                    <a id="eventBack1">Back</a>
+                    <a>Delete</a>
+                   </div>
+                  </div>
                 </div>
                 <div id="eventblock2" class="box featured-block">
                   <span>15/6/2022</span>
-                  <div class="projects-box-section1">
+                  <div id="EventBlockOutter2" class="projects-box-section1">
                     <div class="projects-box-title">
                       <span>Event 2</span>
-                      <p>Event 2 is Event 2 ~</p>
+                      <p>Click for Details</p>
                     </div>
                     <div class="projects-box-images">
                       <img src="../images/team-01.png" alt="No Image" />
                       <img src="../images/team-02.png" alt="No Image" />
-                      <img src="../images/team-03.png" alt="No Image" />
+                      <img src="../images/team-04.png" alt="No Image" />
                     </div>
                     <div class="profile-skills">
                       <div class="row">
                         <ul>
-                          <li>Programming</li>
+                          <li>Donate</li>
                           <li>Design</li>
                         </ul>
                       </div>
@@ -1169,22 +818,37 @@
                       <span>$1800</span>
                     </div>
                   </div>
+                  <div id="EventBlockInner2" class="projects-box-section1" hidden>
+                    <div class="box-section1">
+                      <span>Event Details</span>
+                    </div>
+                    <div class="box-section2">
+                      <img src="images/event2.jpg" class="eventPic">
+                    </div>
+                   <div class="box-section2">
+                    <a>Edit</a>
+                    <a id="eventBack2">Back</a>
+                    <a>Delete</a>
+                   </div>
+                  </div>
                 </div>
                 <div id="eventblock3" class="box featured-block">
                   <span>15/6/2022</span>
-                  <div class="projects-box-section1">
+                  <div id="EventBlockOutter3" class="projects-box-section1">
                     <div class="projects-box-title">
                       <span>Event 3</span>
-                      <p>Event 3 is Event 3 ~</p>
+                      <p>Click for Details</p>
                     </div>
+                    <div id="EventBlockInner2"></div>
                     <div class="projects-box-images">
-                      <img src="../images/team-01.png" alt="No Image" />
+                      <img src="../images/team-05.png" alt="No Image" />
                       <img src="../images/team-02.png" alt="No Image" />
                       <img src="../images/team-03.png" alt="No Image" />
                     </div>
                     <div class="profile-skills">
                       <div class="row">
                         <ul>
+                          <li>Sports</li>
                           <li>Design</li>
                         </ul>
                       </div>
@@ -1193,210 +857,21 @@
                       <div class="progress">
                         <span></span>
                       </div>
-                      <span>$950</span>
+                      <span>$1800</span>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </main>
-          <main id="Files" hidden>
-            <div class="header">
-              <i class="fa-solid fa-bars bar-item"></i>
-              <div class="search">
-                <input type="search" placeholder="Type A Keyword" />
-              </div>
-
-              <div class="profile">
-                <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
-                <img src="../images/avatar.png" alt="No Image" />
-              </div>
-            </div>
-            <div class="main-content">
-              <div class="title">
-                <h1>Files</h1>
-              </div>
-              <div class="files-main-content">
-                <div class="files-boxes">
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/pdf.svg" alt="" />
-                      <p>my-file.pdf</p>
-                      <span>Zana</span>
+                  <div id="EventBlockInner3" class="projects-box-section1" hidden>
+                    <div class="box-section1">
+                      <span>Event Details</span>
                     </div>
-                    <div class="file-box-card-footer">
-                      <span>20/06/2020</span>
-                      <span>5.5MB</span>
+                    <div class="box-section2">
+                      <img src="images/event3.jpg" class="eventPic">
                     </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/avi.svg" alt="" />
-                      <p>my-file.avi</p>
-                      <span>Admin</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>12.5MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/eps.svg" alt="" />
-                      <p>my-file.eps</p>
-                      <span>Uploader</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>2.7MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/psd.svg" alt="" />
-                      <p>my-file.psd</p>
-                      <span>Ahmad</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>15.1MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/dll.svg" alt="" />
-                      <p>my-file.dll</p>
-                      <span>Coder</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>2.2MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/png.svg" alt="" />
-                      <p>my-file.png</p>
-                      <span>Designer</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>2.2MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/dll.svg" alt="" />
-                      <p>my-file.dll</p>
-                      <span>Coder</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>2.2MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/png.svg" alt="" />
-                      <p>my-file.png</p>
-                      <span>Designer</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>2.2MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/psd.svg" alt="" />
-                      <p>my-file.psd</p>
-                      <span>Ahmad</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>15.1MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/pdf.svg" alt="" />
-                      <p>my-file.pdf</p>
-                      <span>Zana</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>20/06/2020</span>
-                      <span>5.5MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/avi.svg" alt="" />
-                      <p>my-file.avi</p>
-                      <span>Admin</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>12.5MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/eps.svg" alt="" />
-                      <p>my-file.eps</p>
-                      <span>Uploader</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>2.7MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/psd.svg" alt="" />
-                      <p>my-file.psd</p>
-                      <span>Ahmad</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>15.1MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/dll.svg" alt="" />
-                      <p>my-file.dll</p>
-                      <span>Coder</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>2.2MB</span>
-                    </div>
-                  </div>
-                  <div class="file-box">
-                    <i class="fa-solid fa-download"></i>
-                    <div class="file-box-card-body">
-                      <img src="../images/png.svg" alt="" />
-                      <p>my-file.png</p>
-                      <span>Designer</span>
-                    </div>
-                    <div class="file-box-card-footer">
-                      <span>16/05/2021</span>
-                      <span>2.2MB</span>
-                    </div>
+                   <div class="box-section2">
+                    <a>Edit</a>
+                    <a id="eventBack3">Back</a>
+                    <a>Delete</a>
+                   </div>
                   </div>
                 </div>
               </div>
