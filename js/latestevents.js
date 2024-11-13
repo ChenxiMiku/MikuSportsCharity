@@ -33,36 +33,57 @@ const eventsData = [
     // 更多新闻数据
 ];
 
+const charityNames = [
+    "Charity A",
+    "Charity B",
+    "Charity C"
+];
+
 // 初次渲染所有新闻
-renderevents(eventsData);
+renderCharityEvents(eventsData, charityNames[0]);
 
 // 渲染新闻函数
-function renderevents(data) {
-    const eventsList = document.getElementById('events-list');
-    eventsList.innerHTML = ''; // 清空现有内容
+function renderCharityEvents(data, charityName) {
+    const charityContainer = document.getElementById('charity-events-container');
+    charityContainer.innerHTML = ''; // 清空现有内容
 
+    // 添加慈善机构名称
+    const charityHeader = document.createElement('div');
+    charityHeader.classList.add('charity-header');
+    charityHeader.innerHTML = `
+        <h2>活动列表: ${charityName}</h2>
+        <p>以下是${charityName}组织的最新活动。</p>
+    `;
+    charityContainer.appendChild(charityHeader);
+
+    // 创建活动列表容器，使用 d-flex 和 flex-wrap 使活动可以在一行内显示多个
+    const eventsList = document.createElement('div');
+    eventsList.id = 'events-list';
+    eventsList.classList.add('d-flex', 'justify-content-start');
+    charityContainer.appendChild(eventsList);
+
+    // 渲染每个活动
     data.forEach(events => {
         const eventsItem = document.createElement('div');
-        eventsItem.classList.add('events-block', 'mt-3');
+        eventsItem.classList.add('events-block', 'mt-3', 'me-3', 'mb-3', 'custom-block-wrap'); // me-3 (margin end), mb-3 (margin bottom) 控制间距
+        eventsItem.style.flex = '1 1 30%'; // 每个活动占据大约 30% 的宽度，剩下的空间会自动分配
+
         eventsItem.innerHTML = `
             <div class="events-block-top">
                 <a href="${events.url}">
                     <img src="${events.image}" class="events-image img-fluid" alt="">
                 </a>
                 <div class="events-category-block">
-                    ${events.tags.map(tag => `<a href="#" class="category-block-link">${tag}</a>`).join(', ')}
+                    ${events.tags.map(tag => `<a class="category-block-link">${tag}</a>`).join(', ')}
                 </div>
             </div>
             <div class="events-block-info">
                 <div class="d-flex mt-2">
-                    <div class="events-block-date">
-                        <p><i class="bi-calendar4 custom-icon me-1"></i> ${events.date}</p>
+                    <div class="events-block-date align-items-start">
+                        <p><i class="bi-calendar4 custom-icon"></i> ${events.date}</p>
                     </div>
-                    <div class="events-block-author mx-5">
-                        <p><i class="bi-person custom-icon me-1"></i> By ${events.author}</p>
-                    </div>
-                    <div class="events-block-comment">
-                        <p><i class="bi-chat-left custom-icon me-1"></i> ${events.comments} Comments</p>
+                    <div class="events-block-author align-items-end">
+                        <p><i class="bi-person custom-icon"></i> By ${events.author}</p>
                     </div>
                 </div>
                 <div class="events-block-title mb-2">
@@ -76,6 +97,8 @@ function renderevents(data) {
         eventsList.appendChild(eventsItem);
     });
 }
+
+
 
 // 定时刷新新闻数据
 setInterval(fetchevents, 60000); // 每 60 秒刷新一次

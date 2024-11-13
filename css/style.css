@@ -1408,7 +1408,7 @@ progress {
         width: 16.6666666667%
     }
 
-    .col-lg-auto {
+    .flex-wraauto {
         flex: 0 0 auto;
         width: auto
     }
