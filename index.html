@@ -12,7 +12,6 @@
 
     <!-- CSS FILES -->
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/checklogin.js"></script>
 </head>
 
 <body>
@@ -84,18 +83,22 @@
                         <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn" href="login.html">Login</a>
                     </li>
                     <!-- 用户头像和下拉菜单 -->
-                    <div id="userAvatar" class="dropdown avatar-image d-none">
+                    <div id="userAvatar" class="dropdown avatar-image me-5 d-none">
                         <a class="dropdown-toggle" href="#"">
                             <img id=" avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
                             height="64" class="rounded-circle">
                         </a>
                         <!-- 下拉菜单 -->
                         <div class="dropdown-menu" aria-labelledby="avatarDropdown">
-                            <a class="dropdown-item d-flex" href="dashboard.html">Your Profile</a>
-                            <a class="dropdown-item d-flex" href="#" id="logoutBtn">Log out</a>
+                            <a class="dropdown-item align-items-center" href="dashboard.html">
+                                <i class="bi-speedometer2 me-2"></i>Dashboard
+                            </a>
+
+                            <a class="dropdown-item align-items-center" href="login.html">
+                                <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
+                            </a>
                         </div>
                     </div>
-
                 </ul>
             </div>
         </div>
@@ -110,7 +113,7 @@
                         <div id="hero-slide" class="carousel slide carousel-fade" data-ride="carousel">
                             <div class="carousel-inner">
                                 <div class="carousel-item carousel-item-prev carousel-item-next active">
-                                    <img src="images/slide/volunteer-helping-with-donation-box.jpg"
+                                    <img src="images/slide/1.jpg"
                                         class="carousel-image img-fluid" alt="...">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Enjoy sports</h1>
@@ -118,7 +121,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item carousel-item-next carousel-item-prev">
-                                    <img src="images/slide/volunteer-selecting-organizing-clothes-donations-charity.jpg"
+                                    <img src="images/slide/2.png"
                                         class="carousel-image img-fluid" alt="...">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Non-profit</h1>
@@ -126,7 +129,7 @@
                                     </div>
                                 </div>
                                 <div class="carousel-item carousel-item-next carousel-item-prev">
-                                    <img src="images/slide/medium-shot-people-collecting-donations.jpg"
+                                    <img src="images/slide/3.png"
                                         class="carousel-image img-fluid" alt="...">
                                     <div class="carousel-caption d-flex flex-column justify-content-end">
                                         <h1>Join us</h1>
@@ -274,7 +277,7 @@
                         <h2>Recent Events</h2>
                     </div>
                     <div class="col-lg-12 col-12 text-start ms-4 mb-2">
-                        <h5 class="fs-2" >Donation</h5>
+                        <h5 class="fs-2">Donation</h5>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="custom-block-wrap">
@@ -349,7 +352,7 @@
 
 
                     <div class="col-lg-12 col-12 text-start mt-5 ms-4 mb-2">
-                        <h5 class="fs-2" >Volunteer</h5>
+                        <h5 class="fs-2">Volunteer</h5>
                     </div>
                     <div class="col-lg-4 col-md-6 col-12">
                         <div class="custom-block-wrap">
@@ -694,6 +697,7 @@
     <script src="js/custom.js"></script>
     <script src="js/carousel.js"></script>
     <script src="js/cookies.js"></script>
+    <script src="js/checklogin.js"></script>
 </body>
 
 </html>

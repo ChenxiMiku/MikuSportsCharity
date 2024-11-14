@@ -64,26 +64,26 @@
                         <ul>
                             <li id="Dashboard-Side">
                                 <a class="sidebar-link">
-                                    <i class="fa-regular fa-chart-bar fa-fw"></i>
+                                    <i class="fa-regular bi-speedometer2 fa-fw"></i>
                                     <span>Dashboard</span>
                                 </a>
                             </li>
 
                             <li id="Profile-Side">
                                 <a class="sidebar-link">
-                                    <i class="fa-regular fa-user fa-fw"></i><span>Profile</span>
+                                    <i class="fa-regular bi-person fa-fw"></i><span>Profile</span>
                                 </a>
                             </li>
 
                             <li id="Donation-Side">
                                 <a class="sidebar-link">
-                                    <i class="fa-solid fa-diagram-project fa-fw"></i><span>Donation</span>
+                                    <i class="fa-solid bi-wallet2 fa-fw"></i><span>Donation</span>
                                 </a>
                             </li>
 
                             <li id="Events-Side">
                                 <a class="sidebar-link">
-                                    <i class="fa-solid fa-diagram-project fa-fw"></i><span>Events</span>
+                                    <i class="fa-solid bi-calendar2-event fa-fw"></i><span>Events</span>
                                 </a>
                             </li>
                         </ul>
@@ -99,19 +99,23 @@
                             <div class="title">
                                 <h5 class="fs-1">Dashboard</h5>
                             </div>
-                            <div id="userAvatar" class="dropdown avatar-image me-5">
+                            <div id="userAvatar" class="dropdown avatar-image me-6">
                                 <a class="dropdown-toggle" href="#"">
                                     <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
                                     height="64" class="rounded-circle">
                                 </a>
                                 <!-- 下拉菜单 -->
                                 <div class="dropdown-menu" aria-labelledby="avatarDropdown">
-                                    <a class="dropdown-item d-flex align-items-center" href="index.html">
-                                        <i class="bi-house me-1"></i>Homepage
+                                    <a class="dropdown-item align-items-center" href="index.html">
+                                        <i class="bi-house me-2"></i>Homepage
                                     </a>
 
-                                    <a class="dropdown-item d-flex align-items-center" href="login.html">
-                                        <i class="bi-box-arrow-right me-1" id="logoutBtn"></i>Log out
+                                    <a class="dropdown-item align-items-center" href="index.html">
+                                        <i class="bi-person-badge me-2"></i>Admin
+                                    </a>
+
+                                    <a class="dropdown-item align-items-center" href="login.html">
+                                        <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
                                     </a>
                                 </div>
                             </div>
@@ -191,95 +195,64 @@
                         <div class="projects-box">
                             <div class="box-section1">
                                 <div class="box-title">
-                                    <h3>Events</h3>
+                                    <h3>Latest Donation</h3>
                                 </div>
                             </div>
-                            <div class="projects-box-section2">
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <td>Name</td>
-                                            <td>Finish Date</td>
-                                            <td>Place</td>
-                                            <td>Donate</td>
-                                            <td>Volunteer</td>
-                                            <td>Status</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Ministry</td>
-                                            <td>10 May 2022</td>
-                                            <td>Ministry</td>
-                                            <td>$5300</td>
-                                            <td>
-                                                <img src="./images/team-01.png" alt="" />
-                                                <img src="./images/team-02.png" alt="" />
-                                                <img src="./images/team-03.png" alt="" />
-                                                <img src="./images/team-04.png" alt="" />
-                                            </td>
-                                            <td><a href="/#" class="pending">Pending</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Zana Shop</td>
-                                            <td>12 Oct 2021</td>
-                                            <td>Zana Company</td>
-                                            <td>$1500</td>
-                                            <td>
-                                                <img src="./images/team-01.png" alt="" />
-                                                <img src="./images/team-02.png" alt="" />
-                                                <img src="./images/team-03.png" alt="" />
-                                            </td>
-                                            <td><a href="/#" class="in-progress">In Progress</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Bouba</td>
-                                            <td>05 Sep 2021</td>
-                                            <td>Bouba</td>
-                                            <td>$800</td>
-                                            <td>
-                                                <img src="./images/team-01.png" alt="" />
-                                                <img src="./images/team-02.png" alt="" />
-                                            </td>
-                                            <td><a href="/#" class="completed">Completed</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mahmoud</td>
-                                            <td>22 May 2021</td>
-                                            <td>Mahmoud</td>
-                                            <td>$600</td>
-                                            <td>
-                                                <img src="./images/team-01.png" alt="" />
-                                                <img src="./images/team-02.png" alt="" />
-                                            </td>
-                                            <td><a href="/#" class="completed">Completed</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sayed</td>
-                                            <td>24 May 2021</td>
-                                            <td>Sayed</td>
-                                            <td>300</td>
-                                            <td>
-                                                <img src="./images/team-01.png" alt="" />
-                                                <img src="./images/team-02.png" alt="" />
-                                            </td>
-                                            <td><a href="/#" class="rejected">Rejected</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Arena</td>
-                                            <td>01 Mar 2021</td>
-                                            <td>Arena Company</td>
-                                            <td>$2600</td>
-                                            <td>
-                                                <img src="./images/team-01.png" alt="" />
-                                                <img src="./images/team-02.png" alt="" />
-                                                <img src="./images/team-03.png" alt="" />
-                                                <img src="./images/team-04.png" alt="" />
-                                            </td>
-                                            <td><a href="/#" class="completed">Completed</a></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div class="donation-container">
+                                <div class="ViewWrapper donation-shadow">
+                                    <div class="ant-table-body" style="overflow: auto; max-height: 1000px;">
+                                        <table style="width: 1300px; min-width: 100%; table-layout: fixed;">
+                                            <colgroup>
+                                                <col style="width: 270px;">
+                                                <col style="width: 250px;">
+                                                <col style="width: 150px;">
+                                            </colgroup>
+                                            <thead class="ant-table-thead ant-table-row">
+                                                <tr>
+                                                    <th class="ant-table-cell">Bill ID</th>
+                                                    <th class="ant-table-cell">Beneficiary</th>
+                                                    <th class="ant-table-cell">Frequency</th>
+                                                    <th class="ant-table-cell">Amount</th>
+                                                    <th class="ant-table-cell">Status</th>
+                                                    <th class="ant-table-cell">Created At</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                        <table style="width: 1300px; min-width: 100%; table-layout: fixed; ">
+                                            <colgroup>
+                                                <col style="width: 270px;">
+                                                <col style="width: 250px;">
+                                                <col style="width: 150px;">
+                                            </colgroup>
+                                            <tbody class="ant-table-tbody">
+                                                <!-- Row 1 -->
+                                                <tr class="ant-table-row ant-table-row-level-0">
+                                                    <td class="ant-table-cell">
+                                                        2024102701103995789598385</td>
+                                                    <td class="ant-table-cell">Event1</td>
+                                                    <td class="ant-table-cell">Monthly</td>
+                                                    <td class="ant-table-cell">4.50</td>
+                                                    <td class="ant-table-cell">Canceled</td>
+                                                    </td>
+                                                    <td class="ant-table-cell">2024-10-27 01:35:39
+                                                    </td>
+                                                </tr>
+
+                                                <!-- Row 2 -->
+                                                <tr class="ant-table-row ant-table-row-level-0">
+                                                    <td class="ant-table-cell">
+                                                        2024101121102516150995191</td>
+                                                    <td class="ant-table-cell">Even2</td>
+                                                    <td class="ant-table-cell">One Time</td>
+                                                    <td class="ant-table-cell">1.00</td>
+                                                    <td class="ant-table-cell">Completed</td>
+                                                    <td class="ant-table-cell">2024-10-11 21:25:25
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -291,15 +264,24 @@
                             <div class="title">
                                 <h5 class="fs-1">Profile</h5>
                             </div>
-                            <div id="userAvatar" class="dropdown avatar-image me-5">
+                            <div id="userAvatar" class="dropdown avatar-image me-6">
                                 <a class="dropdown-toggle" href="#"">
                                     <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
                                     height="64" class="rounded-circle">
                                 </a>
                                 <!-- 下拉菜单 -->
                                 <div class="dropdown-menu" aria-labelledby="avatarDropdown">
-                                    <a class="dropdown-item d-flex" href="index.html">Homepage</a>
-                                    <a class="dropdown-item d-flex" href="login.html" id="logoutBtn">Log out</a>
+                                    <a class="dropdown-item align-items-center" href="index.html">
+                                        <i class="bi-house me-2"></i>Homepage
+                                    </a>
+
+                                    <a class="dropdown-item align-items-center" href="index.html">
+                                        <i class="bi-person-badge me-2"></i>Admin
+                                    </a>
+
+                                    <a class="dropdown-item align-items-center" href="login.html">
+                                        <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
+                                    </a>
                                 </div>
                             </div>
                         </nav>
@@ -316,16 +298,6 @@
                                     <input type="file" id="avatarInput" style="display:none;" accept="image/*">
                                     <h4>Miku</h4>
                                     <p>Level 20</p>
-                                    <div class="progress">
-                                        <span></span>
-                                    </div>
-                                    <div class="stars">
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </div>
                                     <p>550 Ratings</p>
                                 </div>
                                 <div class="profile-info-section2">
@@ -338,7 +310,7 @@
                                                 <h7>Email: OrganizationMail@gmail.com</h7>
                                                 <h7>Phone: 0934588449</h7>
                                                 <h7>Date Of Join: 20/04/2024</h7>
-                                                <h7>Account Type: User</h7>
+                                                <h7>Account Type: Admin</h7>
                                             </div>
                                         </div>
                                     </div>
@@ -390,15 +362,24 @@
                             <div class="title">
                                 <h5 class="fs-1">Events</h5>
                             </div>
-                            <div id="userAvatar" class="dropdown avatar-image me-5">
+                            <div id="userAvatar" class="dropdown avatar-image me-6">
                                 <a class="dropdown-toggle" href="#"">
                                     <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
                                     height="64" class="rounded-circle">
                                 </a>
                                 <!-- 下拉菜单 -->
                                 <div class="dropdown-menu" aria-labelledby="avatarDropdown">
-                                    <a class="dropdown-item d-flex" href="index.html">Homepage</a>
-                                    <a class="dropdown-item d-flex" href="login.html" id="logoutBtn">Log out</a>
+                                    <a class="dropdown-item align-items-center" href="index.html">
+                                        <i class="bi-house me-2"></i>Homepage
+                                    </a>
+
+                                    <a class="dropdown-item align-items-center" href="index.html">
+                                        <i class="bi-person-badge me-2"></i>Admin
+                                    </a>
+
+                                    <a class="dropdown-item align-items-center" href="login.html">
+                                        <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
+                                    </a>
                                 </div>
                             </div>
                         </nav>
@@ -416,15 +397,24 @@
                             <div class="title">
                                 <h5 class="fs-1">Donation</h5>
                             </div>
-                            <div id="userAvatar" class="dropdown avatar-image me-5">
+                            <div id="userAvatar" class="dropdown avatar-image me-6">
                                 <a class="dropdown-toggle" href="#"">
                                     <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
                                     height="64" class="rounded-circle">
                                 </a>
                                 <!-- 下拉菜单 -->
                                 <div class="dropdown-menu" aria-labelledby="avatarDropdown">
-                                    <a class="dropdown-item d-flex" href="index.html">Homepage</a>
-                                    <a class="dropdown-item d-flex" href="login.html" id="logoutBtn">Log out</a>
+                                    <a class="dropdown-item align-items-center" href="index.html">
+                                        <i class="bi-house me-2"></i>Homepage
+                                    </a>
+
+                                    <a class="dropdown-item align-items-center" href="index.html">
+                                        <i class="bi-person-badge me-2"></i>Admin
+                                    </a>
+
+                                    <a class="dropdown-item align-items-center" href="login.html">
+                                        <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
+                                    </a>
                                 </div>
                             </div>
                         </nav>
@@ -441,12 +431,12 @@
                                             </colgroup>
                                             <thead class="ant-table-thead ant-table-row">
                                                 <tr>
-                                                    <th class="ant-table-cell">帐单号</th>
-                                                    <th class="ant-table-cell">捐款对象</th>
-                                                    <th class="ant-table-cell">周期</th>
-                                                    <th class="ant-table-cell">订单金额</th>
-                                                    <th class="ant-table-cell">订单状态</th>
-                                                    <th class="ant-table-cell">创建时间</th>
+                                                    <th class="ant-table-cell">Bill ID</th>
+                                                    <th class="ant-table-cell">Beneficiary</th>
+                                                    <th class="ant-table-cell">Frequency</th>
+                                                    <th class="ant-table-cell">Amount</th>
+                                                    <th class="ant-table-cell">Status</th>
+                                                    <th class="ant-table-cell">Created At</th>
                                                 </tr>
                                             </thead>
                                         </table>
@@ -461,10 +451,10 @@
                                                 <tr class="ant-table-row ant-table-row-level-0">
                                                     <td class="ant-table-cell">
                                                         2024102701103995789598385</td>
-                                                    <td class="ant-table-cell">优质网络服务</td>
-                                                    <td class="ant-table-cell">月付</td>
+                                                    <td class="ant-table-cell">Event1</td>
+                                                    <td class="ant-table-cell">Monthly</td>
                                                     <td class="ant-table-cell">4.50</td>
-                                                    <td class="ant-table-cell">已取消</td>
+                                                    <td class="ant-table-cell">Canceled</td>
                                                     </td>
                                                     <td class="ant-table-cell">2024-10-27 01:35:39
                                                     </td>
@@ -474,10 +464,10 @@
                                                 <tr class="ant-table-row ant-table-row-level-0">
                                                     <td class="ant-table-cell">
                                                         2024101121102516150995191</td>
-                                                    <td class="ant-table-cell">test</td>
-                                                    <td class="ant-table-cell">月付</td>
+                                                    <td class="ant-table-cell">Even2</td>
+                                                    <td class="ant-table-cell">One Time</td>
                                                     <td class="ant-table-cell">1.00</td>
-                                                    <td class="ant-table-cell">已完成</td>
+                                                    <td class="ant-table-cell">Completed</td>
                                                     <td class="ant-table-cell">2024-10-11 21:25:25
                                                     </td>
                                                 </tr>
