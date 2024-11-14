@@ -9,10 +9,13 @@ let getSidebarLink = document.querySelectorAll(".sidebar-link");
 let getDashboard = document.querySelector("#Dashboard")
 let getProfile = document.querySelector("#Profile")
 let getEvents = document.querySelector("#Events")
+let getAdmission = document.querySelector("#Admission")
 let getDashboard_Side = document.querySelector("#Dashboard-Side")
 let getProfile_Side = document.querySelector("#Profile-Side")
 let getEvents_Side = document.querySelector("#Events-Side")
+let getAdmission_Side = document.querySelector("#Admission-Side")
 let getDashPro = document.querySelector("#dash-pro")
+let getAdmissionDashHead = document.querySelector("#Admission-dash-head")
 let eventBlock1 = document.getElementById('eventblock1');
 let outterBlock1 = document.getElementById('EventBlockOutter1');
 let innerBlock1 = document.getElementById('EventBlockInner1');
@@ -57,7 +60,10 @@ function switchPage(page) {
 getDashboard_Side.onclick = () => switchPage(getDashboard);
 getProfile_Side.onclick = () => switchPage(getProfile);
 getEvents_Side.onclick = () => switchPage(getEvents);
+getAdmission_Side.onclick = () => switchPage(getAdmission);
 getDashPro.onclick = () => switchPage(getProfile);
+getAdmissionDashHead.onclick = () => switchPage(getAdmission);
+
 
 
 function toggleBlocks(eventBlock, outterBlock, innerBlock, eventBack) {

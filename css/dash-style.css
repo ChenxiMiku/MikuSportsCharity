@@ -2757,3 +2757,7 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
   color: red;
   display: none; /* 默认隐藏 */
 }
+
+.event-del-bt {
+  background-color: var(--red-color) !important;
+}
