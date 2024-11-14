@@ -73,18 +73,18 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="events.html">Charities</a>
+                        <a class="nav-link click-scroll" href="events.html">Events</a>
                     </li>
 
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="volunteer.html">Volunteer</a>
                     </li>
 
-                    <li id="userLogin" class="nav-item ms-3">
-                        <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn" href="login.html">Login</a>
+                    <li id="loginBtn" class="nav-item ms-3">
+                        <a class="nav-link custom-btn custom-border-btn btn" href="login.html">Login</a>
                     </li>
                     <!-- 用户头像和下拉菜单 -->
-                    <div id="userAvatar" class="dropdown avatar-image d-none">
+                    <div id="userAvatar" class="dropdown avatar-image">
                         <a class="dropdown-toggle" href="#"">
                             <img id=" avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
                             height="64" class="rounded-circle">
@@ -109,14 +109,14 @@
                         <div class="col-lg-5 col-12 mx-auto">
                             <form class="custom-form login-form" action="#" method="get" role="form" novalidate>
                                 <h3 class="mb-4 d-flex justify-content-center">Welcome Back</h3>
-                                <div class class="row">
+                                <div class="row">
                                     <div class="col-lg-12 col-12 mb-2">
                                         <input type="text" class="form-control" id="name" name="name"
-                                            placeholder="Enter your email address" required aria-label="Username">
+                                            placeholder="Enter your email address" aria-label="Username" required>
                                     </div>
                                     <div class="col-lg-12 col-12 mb-2">
                                         <input type="password" class="form-control" id="password" name="password"
-                                            placeholder="Password" required aria-label="Password">
+                                            placeholder="Password" aria-label="Password" required>
                                     </div>
                                     <div class="col-lg-12 col-12 mb-2 d-flex justify-content-center">
                                         <button type="submit" id="SigninBtn" class="custom-btn btn">Login</button>
@@ -145,104 +145,103 @@
         </main>
 
 
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-12 mb-4">
-                    <img src="images/logo.png" class="logo img-fluid" alt="">
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 mb-4">
-                    <h5 class="site-footer-title mb-3">Quick Links</h5>
-
-                    <ul class="footer-menu">
-                        <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">About us</a></li>
-
-                        <li class="footer-menu-item"><a href="events.html" class="footer-menu-link">Events</a></li>
-
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Causes</a></li>
-
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a>
-                        </li>
-
-                        <li class="footer-menu-item"><a href="#" class="footer-menu-link">Make a donation</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 col-12 mx-auto">
-                    <h5 class="site-footer-title mb-3">Contact Infomation</h5>
-
-                    <p class="text-white d-flex mb-2">
-                        <i class="bi-telephone me-2"></i>
-
-                        <a href="tel: +86 150-9864-6873" class="site-footer-link">
-                            +86 150-9864-6873
-                        </a>
-                    </p>
-
-                    <p class="text-white d-flex">
-                        <i class="bi-envelope me-2"></i>
-
-                        <a href="mailto:info@yourgmail.com" class="site-footer-link">
-                            charity@mikufans.me
-                        </a>
-                    </p>
-
-                    <p class="text-white d-flex mt-3">
-                        <i class="bi-geo-alt me-2"></i>
-
-                        <a href="https://www.google.com/maps/place/999+Hucheng+Huanlu,+Pudong+New+Area,+Shanghai,+China/@30.8868445,121.8956191,17z/data=!3m1!4b1!4m6!3m5!1s0x35ad768034588f11:0x89d232b593411ad6!8m2!3d30.88684!4d121.90049!16s%2Fg%2F11g4fj_p1x?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
-                            class="site-footer-link">
-                            999 Huchenghuan Road, Pudong New District, Shanghai, China
-                        </a>
-                    </p>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="site-footer-bottom">
+        <footer class="site-footer">
             <div class="container">
                 <div class="row">
-
-                    <div class="col-lg-6 col-md-7 col-12 align-items-center">
-                        <p class="copyright-text mb-0 align-items-center">Copyright © 2024 <a href="#">Miku
-                                Sports</a>
-                            Charity Org.
+                    <div class="col-lg-3 col-12 mb-4">
+                        <img src="images/logo.png" class="logo img-fluid" alt="">
                     </div>
 
-                    <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-end align-items-center mx-auto">
-                        <ul class="social-icon">
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-github"></a>
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <h5 class="site-footer-title mb-3">Quick Links</h5>
+
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">About us</a></li>
+
+                            <li class="footer-menu-item"><a href="events.html" class="footer-menu-link">Events</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Causes</a></li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Become a volunteer</a>
                             </li>
+
+                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Make a donation</a></li>
                         </ul>
                     </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                        <h5 class="site-footer-title mb-3">Contact Infomation</h5>
+
+                        <p class="text-white d-flex mb-2">
+                            <i class="bi-telephone me-2"></i>
+
+                            <a href="tel: +86 150-9864-6873" class="site-footer-link">
+                                +86 150-9864-6873
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <i class="bi-envelope me-2"></i>
+
+                            <a href="mailto:info@yourgmail.com" class="site-footer-link">
+                                charity@mikufans.me
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex mt-3">
+                            <i class="bi-geo-alt me-2"></i>
+
+                            <a href="https://www.google.com/maps/place/999+Hucheng+Huanlu,+Pudong+New+Area,+Shanghai,+China/@30.8868445,121.8956191,17z/data=!3m1!4b1!4m6!3m5!1s0x35ad768034588f11:0x89d232b593411ad6!8m2!3d30.88684!4d121.90049!16s%2Fg%2F11g4fj_p1x?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                                class="site-footer-link">
+                                999 Huchenghuan Road, Pudong New District, Shanghai, China
+                            </a>
+                        </p>
+
+                    </div>
                 </div>
+            </div>
 
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-7 col-12 align-items-center">
+                            <p class="copyright-text mb-0 align-items-center">Copyright © 2024 <a href="#">Miku
+                                    Sports</a>
+                                Charity Org.
+                        </div>
+
+                        <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-end align-items-center mx-auto">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-github"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            </div>
+        </footer>
+        <div id="cookie-banner" class="cookie-banner">
+            <div class="cookie-content d-flex">
+                <div class="cookie-text col-lg-8 me-2 mt-2">
+                    <h4>Cookies</h4>
+                    <p>We use cookies to provide a better user experience. Click "Accept all cookies" to agree to the use of cookies. You must accept cookies to log in.</p>
+                </div>
+                <button id="accept-cookies" class="cookie-btn btn col-lg-2 fs-6 me-2">Accept all cookies</button>
+                <button id="reject-cookies" class="cookie-btn btn col-lg-2 fs-6">Reject</button>
             </div>
         </div>
-        </div>
-    </footer>
-    <div id="cookie-banner" class="cookie-banner">
-        <div class="cookie-content d-flex">
-            <div class="cookie-text col-lg-8 me-2 mt-2">
-                <h4>Cookies</h4>
-                <p>We use cookies to provide a better user experience. Click "Accept all cookies" to agree to the use of
-                    cookies. You must accept cookies to log in.</p>
-            </div>
-            <button id="accept-cookies" class="cookie-btn btn col-lg-2 fs-6 me-2">Accept all cookies</button>
-            <button id="reject-cookies" class="cookie-btn btn col-lg-2 fs-6">Reject</button>
-        </div>
-    </div>
-    <!-- JAVASCRIPT FILES -->
-    <script src="js/counter.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="js/thirdlogin.js"></script>
-    <script src="js/checklogin.js"></script>
-    <script src="js/login.js"></script>
-    <script src="js/cookies.js"></script>
-</body>
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/counter.js"></script>
+        <script src="js/custom.js"></script>
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
+        <script src="js/thirdlogin.js"></script>
+        <script src="js/checklogin.js"></script>
+        <script src="js/login.js"></script>
+        <script src="js/cookies.js"></script>
+    </body>
 
-</html>
+</html>s
