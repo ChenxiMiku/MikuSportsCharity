@@ -1,5 +1,5 @@
 function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
+    let profile = googleUser.getBasicProfile();
 
     // 这里可以发送用户信息到后端进行处理
     // 例如: 
