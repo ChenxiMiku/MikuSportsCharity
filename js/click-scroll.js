@@ -1,53 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-    "use strict";
-  
-    // Define the sections
-    var sectionArray = [1, 2, 3, 4, 5, 6];
-  
-    // For each section in the array, handle scroll and click events
-    sectionArray.forEach(function(value, index) {
-        // Scroll event for activating links
-        document.addEventListener('scroll', function() {
-            var offsetSection = document.getElementById('section_' + value).offsetTop - 90;
-            var docScroll = window.pageYOffset || document.documentElement.scrollTop;
-            var docScroll1 = docScroll + 1;
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
 
-            if (docScroll1 >= offsetSection) {
-                var links = document.querySelectorAll('.navbar-nav .nav-item .nav-link');
-                
-                links.forEach(function(link) {
-                    link.classList.remove('active');
-                    link.classList.add('inactive');
-                });
-
-                links[index].classList.add('active');
-                links[index].classList.remove('inactive');
-            }
-        });
-
-        // Click event for smooth scrolling
-        var clickScrolls = document.querySelectorAll('.click-scroll');
-        if (clickScrolls.length > index) {  // Check if the element exists
-            var clickScroll = clickScrolls[index];
-            clickScroll.addEventListener('click', function(e) {
-                var offsetClick = document.getElementById('section_' + value).offsetTop - 90;
-                e.preventDefault();
-
-                window.scrollTo({
-                    top: offsetClick,
-                    behavior: 'smooth'
-                });
-            });
+    // 当用户滚动页面时显示或隐藏按钮
+    window.addEventListener('scroll', function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollToTopBtn.style.display = 'block'; // 显示按钮
+        } else {
+            scrollToTopBtn.style.display = 'none';  // 隐藏按钮
         }
     });
 
-    // Set initial active/inactive states
-    var navLinks = document.querySelectorAll('.navbar-nav .nav-item .nav-link');
-    navLinks.forEach(function(link) {
-        link.classList.add('inactive');
+    // 点击按钮时滚动到顶部
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'  // 平滑滚动
+        });
     });
-    
-    // Activate the first link initially
-    navLinks[0].classList.add('active');
-    navLinks[0].classList.remove('inactive');
 });

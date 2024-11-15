@@ -22,8 +22,12 @@
 
                 <div class="col-lg-8 col-12 d-flex flex-wrap">
                     <p class="d-flex me-4 mb-0">
-                        <i class="bi-geo-alt me-2"></i>
+                    <i class="bi-geo-alt me-2"></i>
+
+                    <a href="https://www.google.com/maps/place/999+Hucheng+Huanlu,+Pudong+New+Area,+Shanghai,+China/@30.8868445,121.8956191,17z/data=!3m1!4b1!4m6!3m5!1s0x35ad768034588f11:0x89d232b593411ad6!8m2!3d30.88684!4d121.90049!16s%2Fg%2F11g4fj_p1x?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                        class="site-footer-link">
                         999 Huchenghuan Road, Pudong New District, Shanghai, China
+                    </a>
                     </p>
 
                     <p class="d-flex mb-0">
@@ -61,6 +65,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -76,24 +81,26 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link click-scroll" href="volunteer.html">Volunteer</a>
+                        <a class="nav-link click-scroll" href="#top">Volunteer</a>
                     </li>
 
                     <li id="userLogin" class="nav-item ms-3">
                         <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn" href="login.html">Login</a>
                     </li>
+
                     <div id="userAvatar" class="dropdown avatar-image me-5 d-none">
                         <a class="dropdown-toggle" href="#"">
                             <img id=" avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
                             height="64" class="rounded-circle">
                         </a>
+
                         <div class="dropdown-menu" aria-labelledby="avatarDropdown">
                             <a class="dropdown-item align-items-center" href="dashboard.html">
                                 <i class="bi-speedometer2 me-2"></i>Dashboard
                             </a>
 
-                            <a class="dropdown-item align-items-center" href="login.html">
-                                <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
+                            <a class="dropdown-item align-items-center" id="logoutBtn" href="index.html">
+                                <i class="bi-box-arrow-right me-2"></i>Log out
                             </a>
                         </div>
                     </div>
@@ -117,54 +124,53 @@
                     <div class="col-lg-12 col-md-12 col-12 my-4 mb-lg-0" id="eventDiv1">
                         <div class="event-block d-flex justify-content-start align-items-center">
                             <div class="event-details">
-                                <h5>活动 1: 帮助社区清洁</h5>
-                                <p>日期: 2024年11月15日</p>
-                                <p>时间: 9:00 - 12:00</p>
+                                <h5>Volunteer for Running Race</h5>
+                                <p>Date: December 5, 2024</p>
+                                <p>Location: City Running Track</p>
+                                <p><strong>Charity Organization:</strong> Run for a Cause</p>
                             </div>
                             <div class="form-check custom-checkbox ms-auto">
-                                <input type="checkbox" class="form-check-input" id="event1">
-                                <label class="custom-control-label me-3" for="event1"></label>
+                                <input type="checkbox" class="form-check-input" id="event1" onchange="updateSelectedEvents()">
                             </div>
                         </div>
                     </div>
-
+    
                     <div class="col-lg-12 col-md-12 col-12 my-4 mb-lg-0" id="eventDiv2">
                         <div class="event-block d-flex justify-content-start align-items-center">
                             <div class="event-details">
-                                <h5>活动 2: 义卖会</h5>
-                                <p>日期: 2024年11月20日</p>
-                                <p>时间: 10:00 - 15:00</p>
+                                <h5>Volunteer for Basketball Tournament</h5>
+                                <p>Date: December 10, 2024</p>
+                                <p>Location: Indoor Basketball Court</p>
+                                <p><strong>Charity Organization:</strong> Hoops for Hope</p>
                             </div>
                             <div class="form-check custom-checkbox ms-auto">
-                                <input type="checkbox" class="form-check-input" id="event2">
-                                <label class="custom-control-label me-3" for="event1"></label>
+                                <input type="checkbox" class="form-check-input" id="event2" onchange="updateSelectedEvents()">
                             </div>
                         </div>
                     </div>
-
+    
                     <div class="col-lg-12 col-md-12 col-12 my-4 mb-lg-0" id="eventDiv3">
                         <div class="event-block d-flex justify-content-start align-items-center">
                             <div class="event-details">
-                                <h5>活动 3: 老人院探访</h5>
-                                <p>日期: 2024年11月25日</p>
-                                <p>时间: 14:00 - 16:00</p>
+                                <h5>Volunteer for Football Match</h5>
+                                <p>Date: December 15, 2024</p>
+                                <p>Location: Football Field</p>
+                                <p><strong>Charity Organization:</strong> Kickstart Charity</p>
                             </div>
                             <div class="form-check custom-checkbox ms-auto">
-                                <input type="checkbox" class="form-check-input" id="event3">
-                                <label class="custom-control-label me-3" for="event1"></label>
+                                <input type="checkbox" class="form-check-input" id="event3" onchange="updateSelectedEvents()">
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-12 my-4 mb-lg-0 d-flex justify-content-end">
-                        <button class="col-lg-2 col-md-2 col-12 mb-4 me-2 custom-btn" id="skipBtn">Skip</button>
-                        <button class="col-lg-2 col-md-2 col-12 mb-4 custom-btn" id="nextBtn" disabled>Next</button>
+    
+                    <div class="d-flex justify-content-end">
+                        <button class="col-lg-2 col-md-2 col-12 mt-4 custom-btn" id="nextBtn" disabled>Next</button>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- 注册表单区域 -->
-        <section id="form-section" class="section-padding" style="height:1000px">
+    
+        <section id="form-section" class="section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-12 mx-auto">
@@ -172,34 +178,61 @@
                             <h2>Volunteer Registration Form</h2>
                             <p>Please fill out the form to complete your registration.</p>
                         </div>
-                        <form>
+                        <form id="volunteerForm">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
+                                <input type="text" class="form-control" id="name" required
+                                       pattern="^[\p{L}\s\-]+$" maxlength="50"
+                                       title="Name can contain any language characters, spaces, and hyphens, and should not exceed 50 characters.">
+                            </div>                            
+                            
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
+                                <input type="email" class="form-control" id="email" required
+                                       maxlength="100"
+                                       title="Please enter a valid email address (e.g., user@example.com).">
                             </div>
+                            
                             <div class="mb-3">
                                 <label for="phone" class="form-label">Phone</label>
-                                <input type="tel" class="form-control" id="phone" required>
-                            </div>
+                                <input type="tel" class="form-control" id="phone" required
+                                       pattern="^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$"
+                                       maxlength="15"
+                                       title="Please enter a valid phone number (e.g., +1-800-123-4567).">
+                            </div>                            
+    
+                            <!-- Dynamically filled event times -->
+                            <div id="selected-events"></div>
+    
                             <div class="col-lg-12 col-md-12 col-12 my-4 mb-lg-0 d-flex justify-content-center">
-                                <button class="col-lg-6 col-md-6 col-12 mb-4 me-4 custom-btn"
-                                    id="previousBtn">Previous</button>
-                                <button class="col-lg-6 col-md-6 col-12 mb-4 me-4 custom-btn" id="nextBtn">Next</button>
+                                <button class="col-lg-4 col-5 mb-4 me-auto custom-btn" id="previousBtn">Previous</button>
+                                <button type="submit" class="col-lg-4 col-5 mb-4 ms-auto custom-btn" id="submitBtn">Submit</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
+    
+        <!-- Submitted Section -->
+        <section id="submitted-section" class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <div class="section-title text-center">
+                            <h2>Thank You for Your Registration!</h2>
+                            <p>Your submission has been received. Below are your registration details:</p>
+                        </div>
+                        <div id="submitted-details"></div>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <a href="index.html" class="col-lg-2 col-md-2 col-12 mt-4 custom-btn text-center">Back to Home</a>
+                    </div>                    
+                </div>
+            </div>
+        </section>
     </main>
-
-
-
-
+    
     <footer class="site-footer">
         <div class="container">
             <div class="row">
@@ -277,12 +310,31 @@
         </div>
         </div>
     </footer>
-
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content d-flex">
+            <div class="cookie-text col-lg-8 me-2 mt-2">
+                <h4>Cookies</h4>
+                <p>We use cookies to provide a better user experience. Click "Accept all cookies" to agree to the use of
+                    cookies. You must accept cookies to log in.</p>
+            </div>
+            <button id="accept-cookies" class="cookie-btn btn col-lg-2 fs-6 me-2">Accept all cookies</button>
+            <button id="reject-cookies" class="cookie-btn btn col-lg-2 fs-6">Reject</button>
+        </div>
+    </div>
+    <div id="loginOverlay" class="loginOverlay">
+        <div>
+            <h2>Please Log In</h2>
+            <p>You need to log in to access this page.</p>
+            <p>Redirecting</p>
+            <a href="login.html">Click here to log in</a>
+        </div>
+    </div>
     <!-- JAVASCRIPT FILES -->
     <!-- <script src="js/click-scroll.js"></script> -->
     <script src="js/custom.js"></script>
     <script src="js/checklogin.js"></script>
     <script src="js/step.js"></script>
+    <script src="js/redirect.js"></script>
 </body>
 
 </html>

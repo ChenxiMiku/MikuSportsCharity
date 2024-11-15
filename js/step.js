@@ -1,53 +1,77 @@
-// script.js
+// Define the variables globally so they can be accessed in any function
+let eventSection, formSection, submittedSection, nextButton, previousButton;
 
 document.addEventListener("DOMContentLoaded", function() {
-    // 获取页面元素
-    const eventSection = document.getElementById("event-section");
-    const formSection = document.getElementById("form-section");
-    const nextButton = document.getElementById("nextBtn");
-    const previousButton = document.getElementById("previousBtn");
-    const skipButton = document.getElementById("skipBtn");
+    // Initialize the variables after DOM is fully loaded
+    eventSection = document.getElementById("event-section");
+    formSection = document.getElementById("form-section");
+    submittedSection = document.getElementById("submitted-section");
+    nextButton = document.getElementById("nextBtn");
+    previousButton = document.getElementById("previousBtn");
 
-    // 设置初始状态
     eventSection.classList.add("active");
-    formSection.style.display = "none"; // 隐藏表单部分
+    formSection.style.display = "none"; 
+    submittedSection.style.display = "none"; 
 
-    // "下一步"按钮和"跳过"按钮的点击事件监听
     nextButton.addEventListener("click", handleNextButtonClick);
-    skipButton.addEventListener("click", function() {
-        handleNextButtonClick();
-        resetCheckboxes();  // 跳过时取消所有选择
-    });
-
     previousButton.addEventListener("click", handlePreviousButtonClick);
 
-    // 绑定所有以 "eventDiv" 开头的 div 点击事件
     const divs = document.querySelectorAll('[id^="eventDiv"]');
     divs.forEach(div => {
         div.addEventListener('click', toggleCheckbox);
     });
+
+    const volunteerForm = document.getElementById("volunteerForm");
+    volunteerForm.addEventListener("submit", handleSubmit);
 });
 
-// 切换复选框状态的函数
+// Store event times for each event
+const eventTimes = {
+    event1: [
+        { start: "08:00", end: "12:00" },
+        { start: "13:00", end: "17:00" }
+    ],
+    event2: [
+        { start: "09:00", end: "13:00" },
+        { start: "14:00", end: "18:00" }
+    ],
+    event3: [
+        { start: "10:00", end: "14:00" },
+        { start: "15:00", end: "19:00" }
+    ]
+};
+
+// Toggle checkbox when clicking on event div (without clicking the checkbox itself)
 function toggleCheckbox(event) {
     const divId = event.currentTarget.id;
     const checkboxId = divId.replace("eventDiv", "event");
     const checkbox = document.getElementById(checkboxId);
 
-    // 如果点击的不是复选框或标签，切换 checkbox 状态
     if (event.target.tagName !== 'INPUT' && event.target.tagName !== 'LABEL' && checkbox) {
         checkbox.checked = !checkbox.checked;
     }
-    // 更新 "下一步"按钮的状态
-    const nextButton = document.getElementById("nextBtn");
-    nextButton.disabled = !checkbox.checked;
+
+    updateNextButtonStatus();
+    updateSelectedEvents();
 }
 
-// "下一步" 和 "跳过"按钮点击事件处理
-function handleNextButtonClick() {
-    const eventSection = document.getElementById("event-section");
-    const formSection = document.getElementById("form-section");
+// Update the status of the Next button based on selected checkboxes
+function updateNextButtonStatus() {
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    let isChecked = false;
 
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+            isChecked = true;
+        }
+    });
+
+    const nextButton = document.getElementById("nextBtn");
+    nextButton.disabled = !isChecked; 
+}
+
+// Handle the "Next" button click (transition to the next section)
+function handleNextButtonClick() {
     eventSection.classList.remove("active");
     eventSection.classList.add("slide-out-left");
     formSection.style.display = "block";
@@ -62,11 +86,9 @@ function handleNextButtonClick() {
         document.documentElement.scrollTop = 0;
     }, 500);
 }
-// "上一步"按钮点击事件处理
-function handlePreviousButtonClick() {
-    const eventSection = document.getElementById("event-section");
-    const formSection = document.getElementById("form-section");
 
+// Handle the "Previous" button click (transition back to the event section)
+function handlePreviousButtonClick() {
     formSection.classList.remove("active");
     formSection.classList.add("slide-out-right");
     eventSection.style.display = "block";
@@ -82,12 +104,108 @@ function handlePreviousButtonClick() {
     }, 500);
 }
 
-// 取消所有复选框选择的函数
-function resetCheckboxes() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
+// Dynamically update selected events and their time slots in the second step
+function updateSelectedEvents() {
+    const selectedEventsContainer = document.getElementById("selected-events");
+    selectedEventsContainer.innerHTML = "";
+
+    let selectedEvents = [];
+
+    if (document.getElementById("event1").checked) {
+        selectedEvents.push("event1");
+    }
+    if (document.getElementById("event2").checked) {
+        selectedEvents.push("event2");
+    }
+    if (document.getElementById("event3").checked) {
+        selectedEvents.push("event3");
+    }
+
+    selectedEvents.forEach(eventId => {
+        let eventContainer = document.createElement('div');
+        eventContainer.classList.add('selected-event');
+
+        let times = eventTimes[eventId];
+        let eventName = document.querySelector(`#${eventId}`).closest('.event-block').querySelector('h5').textContent;
+
+        let eventTitle = document.createElement('h5');
+        eventTitle.textContent = eventName;
+        eventContainer.appendChild(eventTitle);
+
+        let timeSelect = document.createElement('select');
+        timeSelect.name = `${eventId}_time`;
+        timeSelect.classList.add("form-control");
+
+        times.forEach(time => {
+            let option = document.createElement('option');
+            option.value = `${time.start} - ${time.end}`;
+            option.textContent = `${time.start} - ${time.end}`;
+            timeSelect.appendChild(option);
+        });
+
+        eventContainer.appendChild(timeSelect);
+        selectedEventsContainer.appendChild(eventContainer);
     });
-    // 禁用“下一步”按钮
-    document.getElementById("nextBtn").disabled = true;
+}
+
+// Handle the form submission
+function handleSubmit(event) {
+    event.preventDefault();
+
+    // Get form data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const selectedEvents = getSelectedEventTimes();
+
+    // Display the submitted information
+    const submittedDetails = document.getElementById("submitted-details");
+    submittedDetails.innerHTML = `
+        <h3>Registration Summary</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Selected Events:</strong></p>
+        <ul>
+            ${selectedEvents.map(event => `
+                <li>${event.name} - ${event.time}</li>
+            `).join('')}
+        </ul>
+    `;
+
+    // Slide out form section and show submitted section with slide-in animation
+    formSection.classList.add("slide-out-left");
+    formSection.classList.remove("active");
+
+    submittedSection.style.display = "block";
+    submittedSection.classList.add("slide-in-right");
+
+    setTimeout(() => {
+        formSection.style.display = "none";
+        formSection.classList.remove("slide-out-left");
+        submittedSection.classList.remove("slide-in-right");
+        submittedSection.classList.add("active");
+
+        document.documentElement.scrollTop = 0;
+    }, 500);
+}
+
+// Get the selected event times from the form
+function getSelectedEventTimes() {
+    const selectedEvents = [];
+
+    if (document.getElementById("event1").checked) {
+        const time = document.querySelector('[name="event1_time"]').value;
+        selectedEvents.push({ name: "Volunteer for Running Race", time });
+    }
+    if (document.getElementById("event2").checked) {
+        const time = document.querySelector('[name="event2_time"]').value;
+        selectedEvents.push({ name: "Volunteer for Basketball Tournament", time });
+    }
+    if (document.getElementById("event3").checked) {
+        const time = document.querySelector('[name="event3_time"]').value;
+        selectedEvents.push({ name: "Volunteer for Football Match", time });
+    }
+
+    return selectedEvents;
 }

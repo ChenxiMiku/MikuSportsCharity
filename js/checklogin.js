@@ -17,10 +17,14 @@ document.addEventListener('DOMContentLoaded', function() {
     isLoggedIn = getLoginStatusFromCookie();
     console.log(isLoggedIn);
 
+
+
     // 登出功能
     logoutBtn.addEventListener('click', function(event) {
         event.preventDefault();
+
         document.cookie = "isLoggedIn=false; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
+        localStorage.removeItem('previousPage');
         window.location.reload(); // 刷新页面
     });
 

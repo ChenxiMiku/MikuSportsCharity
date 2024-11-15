@@ -1,10 +1,10 @@
-let selectedTags = []; 
+let selectedTags = [];
 
-// Refresh news data regularly
-//setInterval(fetchEvents, 60000); 
-//fetchEvents(); 
+// Get organization name from the URL query parameter
+const urlParams = new URLSearchParams(window.location.search);
+const selectedOrg = urlParams.get('organization'); // The selected organization from the URL
 
-// Get news list data, reserved interface
+// Modify the fetchEvents function to handle filtering by organization
 async function fetchEvents() {
     try {
         const response = await fetch('/api/events');
@@ -24,7 +24,7 @@ const organizations = [
                 title: "Charity Run 2024",
                 url: "charity.html?organization=Kisckstarter%20Foundation",
                 image: "https://t.alcy.cc/pc/",
-                tags: ["Running", "Fundraising"],
+                tags: ["Running", "Volunteer"],
                 date: "2024-05-01",
                 author: "John Doe",
                 comments: 20,
@@ -34,7 +34,7 @@ const organizations = [
                 title: "Football  2024",
                 url: "charity.html?organization=Run%20for%20Life",
                 image: "https://t.alcy.cc/pc/",
-                tags: ["Donation", "Volunteering"],
+                tags: ["Donation", "Children"],
                 date: "2024-06-01",
                 author: "Jane Doe",
                 comments: 15,
@@ -59,7 +59,7 @@ const organizations = [
                 title: "Summer Camp Fundraiser",
                 url: "charity.html",
                 image: "https://t.alcy.cc/pc/",
-                tags: ["Fundraising", "Summer Camp"],
+                tags: ["Running", "Volunteer"],
                 date: "2024-08-10",
                 author: "Bob Johnson",
                 comments: 25,
@@ -69,6 +69,7 @@ const organizations = [
     }
 ];
 
+// Render events based on the selected organization
 renderCharityEvents(organizations);
 
 function filterEventsByTags(organizations) {
@@ -91,13 +92,18 @@ function renderCharityEvents(organizations) {
     const charityContainer = document.getElementById('charity-events-container');
     charityContainer.innerHTML = ''; 
 
-    organizations.forEach(organization => {
+    // Filter organizations if a specific one is selected from the URL
+    const filteredOrganizations = selectedOrg ? 
+        organizations.filter(org => org.charityName.toLowerCase() === selectedOrg.toLowerCase()) :
+        organizations;
+
+    filteredOrganizations.forEach(organization => {
         const { charityName, eventsData } = organization;
 
         const charityHeader = document.createElement('div');
         charityHeader.classList.add('charity-header');
         charityHeader.innerHTML = `
-            <a href="charity.html?organization=${charityName}" class="fs-1 fw-semibold">${charityName}</a>
+            <a href="charity.html" class="fs-1 fw-semibold">${charityName}</a>
             <p>Here are the latest events organized by ${charityName}.</p>
         `;
         charityContainer.appendChild(charityHeader);
@@ -112,6 +118,7 @@ function renderCharityEvents(organizations) {
             eventsItem.style.flex = '1 1 30%';
 
             eventsItem.innerHTML = `
+            <div class="custom-block">
                 <div class="events-block-top">
                     <a href="${events.url}">
                         <img src="${events.image}" class="events-image img-fluid" alt="">
@@ -133,12 +140,14 @@ function renderCharityEvents(organizations) {
                         <p>${events.summary}</p>
                     </div>
                 </div>
+                <a href="donate.html" class="custom-btn btn">Donate now</a>
+            </div>
             `;
             eventsList.appendChild(eventsItem);
         });
     });
 
-
+    // Add event listener for filtering tags
     document.querySelectorAll('.tags-block-link').forEach(tagLink => {
         tagLink.addEventListener('click', function (event) {
             event.preventDefault(); 
@@ -159,6 +168,7 @@ function renderCharityEvents(organizations) {
     });
 }
 
+// Clear tag selection
 const clearButton = document.getElementById('clear-selection');
 clearButton.addEventListener('click', () => {
 

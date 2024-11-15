@@ -23,8 +23,13 @@
                 <div class="col-lg-8 col-12 d-flex flex-wrap">
                     <p class="d-flex me-4 mb-0">
                         <i class="bi-geo-alt me-2"></i>
-                        999 Huchenghuan Road, Pudong New District, Shanghai, China
+
+                        <a href="https://www.google.com/maps/place/999+Hucheng+Huanlu,+Pudong+New+Area,+Shanghai,+China/@30.8868445,121.8956191,17z/data=!3m1!4b1!4m6!3m5!1s0x35ad768034588f11:0x89d232b593411ad6!8m2!3d30.88684!4d121.90049!16s%2Fg%2F11g4fj_p1x?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D"
+                            class="site-footer-link">
+                            999 Huchenghuan Road, Pudong New District, Shanghai, China
+                        </a>
                     </p>
+
 
                     <p class="d-flex mb-0">
                         <i class="bi-envelope me-2"></i>
@@ -61,6 +66,7 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -75,6 +81,8 @@
                         <a class="nav-link click-scroll" href="events.html">Charities</a>
                     </li>
 
+
+
                     <li class="nav-item">
                         <a class="nav-link click-scroll" href="volunteer.html">Volunteer</a>
                     </li>
@@ -82,21 +90,29 @@
                     <li id="userLogin" class="nav-item ms-3">
                         <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn" href="login.html">Login</a>
                     </li>
+
                     <div id="userAvatar" class="dropdown avatar-image me-5 d-none">
                         <a class="dropdown-toggle" href="#"">
                             <img id=" avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64"
                             height="64" class="rounded-circle">
                         </a>
+
                         <div class="dropdown-menu" aria-labelledby="avatarDropdown">
                             <a class="dropdown-item align-items-center" href="dashboard.html">
                                 <i class="bi-speedometer2 me-2"></i>Dashboard
                             </a>
 
-                            <a class="dropdown-item align-items-center" href="login.html">
-                                <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
+                            <a class="dropdown-item align-items-center" id="logoutBtn" href="index.html">
+                                <i class="bi-box-arrow-right me-2"></i>Log out
                             </a>
                         </div>
                     </div>
+
+                    <li class="nav-item my-auto ms-2">
+                        <button id="darkModeToggle" class="btn btn-outline-secondary">
+                            <i class="fas bi-moon-fill"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -106,46 +122,85 @@
         <section class="section-padding">
             <div class="container">
                 <h2 class="text-center mb-4">About Miku Sports Charity Platform</h2>
-                <p>At Miku Sports Charity Platform, we believe that sports should be accessible to everyone, regardless of
-                    their
-                    background. Our mission is to promote sportsmanship and provide opportunities for
-                    underprivileged
-                    youth to engage in sports activities.</p>
+                <p>Our group worked collaboratively to develop Spots Charity, a website that provides a platform for
+                    users to support charitable causes through donations and other engagement options. Our organization
+                    aims to create a space that fosters community involvement and streamlines the donation process,
+                    making it easier for individuals to contribute to causes they care about. Looking ahead, we envision
+                    expanding Spots Charity’s functionalities to include more interactive features and partnerships with
+                    charitable organizations, enhancing both user experience and impact.</p>
                 <p>Through various programs, we aim to empower young athletes and foster a sense of community. Join
                     us
                     in our journey to make a positive impact!</p>
 
                 <h3 class="mt-5">Team Contributions</h3>
-                <p>Our team is composed of passionate individuals, each bringing unique skills to the table. Alice
-                    is
-                    responsible for the overall design, ensuring a user-friendly experience. Bob handles the
-                    back-end
-                    development, ensuring data security. Claire focuses on the front-end interface, while David
-                    creates
-                    engaging content to reach our audience.</p>
-
-                <h3 class="mt-4">Challenges Faced</h3>
-                <p>We face challenges such as integrating various functionalities seamlessly and designing an
-                    appealing
-                    yet functional interface. Continuous communication and collaboration have been key to overcoming
-                    these hurdles.</p>
-
+                <ul>
+                    <li><b>Chengwei Yan</b> was responsible for designing the CSS styling and JavaScript framework for
+                        the front end. He led the architecture of the website routing, ensuring a structured navigation
+                        system. Chengwei also designed the main page, donation page, and login page, handling code
+                        validation, testing, and the maintenance of the GitHub dev branch.</li>
+                    <li><b>Wentao Su</b> focused on designing the CSS and JavaScript framework for the front end as
+                        well. He oversaw the dashboard design for users and organizations, and developed the
+                        authentication for the user panel categorization. Wentao contributed to bug fixes in the main
+                        page and login page and managed code validation, testing, and GitHub main branch maintenance.
+                    </li>
+                    <li><b>Ruilin Hu</b> worked on gathering image assets and proofreading text content for the website.
+                    </li>
+                    <li><b>Wentai Ge</b> supported the team by collecting image resources and assisting with text
+                        proofreading.</li>
+                </ul>
+                <br>
+                <h3 class="mt-4">Project Highlights</h3>
+                <p>One of the most exciting aspects of our work on Spots Charity was the opportunity to create a website
+                    with a meaningful purpose. Our website is designed to make charitable donations more accessible and
+                    organized, allowing users to interact with causes in a streamlined, user-friendly environment. The
+                    team's collaboration on this project, blending our skills in design, programming, and quality
+                    assurance, made the process both engaging and fulfilling. Additionally, implementing functionality
+                    like authentication and user categorization presented an exciting challenge and enhanced our
+                    technical expertise.</p>
+                <br>
+                <h3 class="mt-4">Project Challenges</h3>
+                <p>Throughout the project, we encountered several challenges. Integrating a consistent design across
+                    various pages required coordination and attention to detail, as our team members had to maintain a
+                    unified style while working on separate sections. Moreover, implementing an effective authentication
+                    system for user roles and dashboards demanded careful planning to ensure security and functionality.
+                    Testing and maintaining code consistency across GitHub branches was another challenge, requiring
+                    effective communication and collaboration to resolve merge conflicts and ensure code integrity.</p>
+                <br>
                 <h3 class="mt-4">Design Assets</h3>
                 <ul>
-                    <li>Logo: images/logo.png</li>
-                    <li>Images: causes/group-african-kids-paying-attention-class.jpg,
-                        causes/poor-child-landfill-looks-forward-with-hope.jpg,
-                        causes/african-woman-pouring-water-recipient-outdoors.jpg</li>
-                    <li>Fonts: Google Fonts (Roboto)</li>
-                    <li>Icons: Bootstrap Icons</li>
+                    <li>Logo:
+                        <p>Self-Made</p>
+                    </li>
+                    <li>Images:
+                        <p>https://selectorshub.com/user-reviews-2/</p>
+                        <p>https://ratnamfoundation.lk/our-amazing-volunteers/</p>
+                        <p>https://www.endurancesportswire.com/sports-topics/giving/page/4/</p>
+                        <p>https://www.flaticon.com/</p>
+                        <p>https://www.github.com/</p>
+                        <p>https://about.google/brand-resource-center/logos-list/</p>
+                        <p>https://www.curseforge.com/</p>
+                        <p>https://www.pngkey.com/detail/u2t4r5y3r5o0w7u2_join-now-business-illustration-png/</p>
+                    </li>
+                    <li>Fonts:
+                        <p>https://fonts.googleapis.com</p>
+                        <p>https://getbootstrap.com/docs/5.0/content/typography/</p>
+                    </li>
+                    <li>Icons:
+                        <p>https://icons.getbootstrap.com/</p>
+                        <p>https://www.github.com/</p>
+                    </li>
+                    <li>CSS:
+                        <p>https://getbootstrap.com/</p>
+                        <p>https://fontawesome.com/</p>
+                    </li>
                 </ul>
-
+                <br>
                 <h3 class="mt-4">Team Members</h3>
                 <ul>
                     <li>Chengwei Yan(Student ID: 694659)</li>
-                    <li>Bob Li (Student ID: 123457)</li>
-                    <li>Claire Zhang (Student ID: 123458)</li>
-                    <li>David Chen (Student ID: 123459)</li>
+                    <li>Wentao Su (Student ID: 694641)</li>
+                    <li>Ruilin Hu (Student ID: 694498)</li>
+                    <li>Wentai Ge (Student ID: 694640)</li>
                 </ul>
             </div>
         </section>
@@ -231,12 +286,29 @@
         </div>
     </footer>
 
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content d-flex">
+            <div class="cookie-text col-lg-8 me-2 mt-2">
+                <h4>Cookies</h4>
+                <p>We use cookies to provide a better user experience. Click "Accept all cookies" to agree to the use of
+                    cookies. You must accept cookies to log in.</p>
+            </div>
+            <button id="accept-cookies" class="cookie-btn btn col-lg-2 fs-6 me-2">Accept all cookies</button>
+            <button id="reject-cookies" class="cookie-btn btn col-lg-2 fs-6">Reject</button>
+        </div>
+    </div>
+
+    <!-- 滚动到顶部按钮 -->
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
     <!-- JAVASCRIPT FILES -->
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script src="js/thirdlogin.js"></script>
     <script src="js/checklogin.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/click-scroll.js"></script>
 </body>
 
 </html>
