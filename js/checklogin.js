@@ -2,7 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const avatarImg = document.getElementById('avatarImg');
     const dropdownMenu = document.getElementById('dropdownMenu');
     const logoutButtons = document.querySelectorAll('.logoutBtn'); // 查询所有带有 'logoutBtn' 类的元素
-    // 检查是否已登录
+
+    
     function getLoginStatusFromCookie() {
         const cookies = document.cookie.split('; ');
         for (let cookie of cookies) {
