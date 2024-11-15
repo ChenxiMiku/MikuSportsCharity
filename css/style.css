@@ -17266,7 +17266,7 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
 .box-event {
     margin-top: var(--third-margin);
     border: 1px solid var(--eee-color);
-    background-color: var(--blue-color);
+    background-color: var(--primary-color);
     color: var(--bg-color);
     padding: var(--fifth-padding) var(--fourth-padding);
     border-radius: var(--secondary-radius);
