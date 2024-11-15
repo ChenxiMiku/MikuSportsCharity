@@ -25,7 +25,7 @@ const organizations = [
             {
                 title: "Charity Run 2024",
                 url: "donate.html?charityName=Hope%20Foundation&eventName=Kickstart%20Hope&raisedAmount=18500&goalAmount=32000&eventImage=path_to_image.jpg",
-                image: "https://t.alcy.cc/pc/",
+                image: "images/hatsunemiku.JPG",
                 tags: ["Running", "Volunteer"],
                 date: "2024-05-01",
                 author: "John Doe",
@@ -34,7 +34,7 @@ const organizations = [
             {
                 title: "Football 2024",
                 url: "charity.html?organization=Run%20for%20Life",
-                image: "https://t.alcy.cc/pc/",
+                image: "images/hatsunemiku.JPG",
                 tags: ["Donation", "Children"],
                 date: "2024-06-01",
                 author: "Jane Doe",
@@ -50,7 +50,7 @@ const organizations = [
             {
                 title: "Toy Donation Drive",
                 url: "charity.html",
-                image: "https://t.alcy.cc/pc/",
+                image: "images/hatsunemiku.JPG",
                 tags: ["Donation", "Children"],
                 date: "2024-07-15",
                 author: "Alice Smith",
@@ -59,7 +59,7 @@ const organizations = [
             {
                 title: "Summer Camp Fundraiser",
                 url: "charity.html",
-                image: "https://t.alcy.cc/pc/",
+                image: "images/hatsunemiku.JPG",
                 tags: ["Running", "Volunteer"],
                 date: "2024-08-10",
                 author: "Bob Johnson",
