@@ -1,14 +1,22 @@
-// 监听搜索输入框的键盘输入事件
 const searchInput = document.getElementById('search');
+const searchBtn = document.querySelector('.search-btn');
+
 searchInput.addEventListener('input', () => {
     const keyword = searchInput.value.trim().toLowerCase();
-    filterEventsByKeyword(keyword);
+    searchBtn.disabled = !keyword; 
+    filterEventsByKeyword(keyword); 
 });
 
-// 按关键词筛选事件
+// 定义搜索按钮的点击事件，手动触发搜索
+searchBtn.addEventListener('click', (e) => {
+    e.preventDefault(); 
+    const keyword = searchInput.value.trim().toLowerCase();
+    filterEventsByKeyword(keyword); 
+});
+
 function filterEventsByKeyword(keyword) {
     if (!keyword) {
-        renderCharityEvents(organizations); // 如果没有输入关键词，显示所有事件
+        renderCharityEvents(organizations); 
         return;
     }
 
@@ -19,7 +27,11 @@ function filterEventsByKeyword(keyword) {
             event.tags.some(tag => tag.toLowerCase().includes(keyword))
         );
         return { ...org, eventsData: filteredEvents };
-    }).filter(org => org.eventsData.length > 0); // 过滤掉没有匹配事件的组织
+    }).filter(org => org.eventsData.length > 0); 
 
-    renderCharityEvents(filteredOrganizations);
+    renderCharityEvents(filteredOrganizations); 
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    searchBtn.disabled = !searchInput.value.trim();
+});

@@ -15,10 +15,12 @@ async function fetchEvents() {
     }
 }
 
-// Sample organizations data
+// Sample organizations data with mission and goal
 const organizations = [
     {
         charityName: "Kisckstarter Foundation",
+        mission: "To empower communities through sustainable healthcare and education.",
+        goal: "Provide resources and opportunities to underserved communities globally.",
         eventsData: [
             {
                 title: "Charity Run 2024",
@@ -27,23 +29,23 @@ const organizations = [
                 tags: ["Running", "Volunteer"],
                 date: "2024-05-01",
                 author: "John Doe",
-                comments: 20,
-                summary: "Join us for a charity run to support health care."
+                comments: 20
             },
             {
-                title: "Football  2024",
+                title: "Football 2024",
                 url: "charity.html?organization=Run%20for%20Life",
                 image: "https://t.alcy.cc/pc/",
                 tags: ["Donation", "Children"],
                 date: "2024-06-01",
                 author: "Jane Doe",
-                comments: 15,
-                summary: "Join us for a charity run to support health care."
+                comments: 15
             }
         ]
     },
     {
         charityName: "Run for Life",
+        mission: "To support healthy living through sports and wellness activities.",
+        goal: "Encourage participation in fitness programs across all age groups.",
         eventsData: [
             {
                 title: "Toy Donation Drive",
@@ -52,8 +54,7 @@ const organizations = [
                 tags: ["Donation", "Children"],
                 date: "2024-07-15",
                 author: "Alice Smith",
-                comments: 30,
-                summary: "Join us for a charity run to support health care."
+                comments: 30
             },
             {
                 title: "Summer Camp Fundraiser",
@@ -62,8 +63,7 @@ const organizations = [
                 tags: ["Running", "Volunteer"],
                 date: "2024-08-10",
                 author: "Bob Johnson",
-                comments: 25,
-                summary: "Join us for a charity run to support health care."
+                comments: 25
             }
         ]
     }
@@ -106,13 +106,14 @@ function renderCharityEvents(organizations) {
     volunteerContainer.innerHTML = `<h2>Volunteer Events</h2>`;
 
     filteredOrganizations.forEach(organization => {
-        const { charityName, eventsData } = organization;
+        const { charityName, mission, goal, eventsData } = organization;
 
+        // Render charity header with mission and goal
         const charityHeader = document.createElement('div');
         charityHeader.classList.add('charity-header');
         charityHeader.innerHTML = `
-            <a href="charity.html" class="fs-1 fw-semibold">${charityName}</a>
-            <p>Here are the latest events organized by ${charityName}.</p>
+            <a href="#" class="fs-1 fw-semibold">${charityName}</a>
+            <p>Mission: ${mission} <br> Goal: ${goal}</p>
         `;
         charityContainer.appendChild(charityHeader);
 
@@ -148,9 +149,6 @@ function renderCharityEvents(organizations) {
                     </div>
                     <div class="events-block-title mb-2 ms-4">
                         <h4><a href="${event.url}" class="events-block-title-link">${event.title}</a></h4>
-                    </div>
-                    <div class="events-block-body ms-4">
-                        <p>${event.summary}</p>
                     </div>
                 </div>
                 <a href="donate.html" class="custom-btn btn">${buttonLabel}</a>
@@ -190,7 +188,6 @@ function renderCharityEvents(organizations) {
         });
     });
 }
-
 
 // Clear tag selection
 const clearButton = document.getElementById('clear-selection');
