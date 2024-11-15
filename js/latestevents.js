@@ -72,7 +72,6 @@ const organizations = [
 renderCharityEvents(organizations);
 
 function filterEventsByTags(organizations) {
-    console.log(selectedTags);
     if (selectedTags.length === 0) {
         renderCharityEvents(organizations);
     } else {

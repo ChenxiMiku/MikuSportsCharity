@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 setLoginCookie();
                 // 登录成功后重定向到原来的页面
                 const previousPage = localStorage.getItem('previousPage');
-                console.log(previousPage);
                 window.location.href = previousPage ? previousPage : "dashboard.html";
             } else {
                 // 如果验证失败，可以显示错误提示

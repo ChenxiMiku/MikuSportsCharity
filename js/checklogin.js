@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     isLoggedIn = getLoginStatusFromCookie();
-    console.log(isLoggedIn);
 
 
 
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         //document.getElementById('registerBtn').style.display = 'none';
         document.getElementById('userAvatar').style.display = 'block';
     } else {
-        console.log('not logged in')
         document.getElementById('userLogin').classList.remove('d-none')
         if(document.getElementById('loginBtn')){
             document.getElementById('loginBtn').style.display = 'block';

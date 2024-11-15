@@ -13,7 +13,6 @@ window.onload = function () {
     // 设置页面内容
 
     document.getElementById('charity-name').textContent = charityName;
-    console.log(charityName);
     document.getElementById('event-name').textContent = eventName;
     document.getElementById('event-raised').textContent = raisedAmount;
     document.getElementById('event-goal').textContent = goalAmount;

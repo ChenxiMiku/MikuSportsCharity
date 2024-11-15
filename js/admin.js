@@ -51,7 +51,6 @@ getXmark.onclick = () => {
 };
 
 function switchPage(page) {
-  console.log("display " + page.id)
   Display_Page.hidden = true;
   Display_Page = page;
   Display_Page.hidden = false;
@@ -68,14 +67,12 @@ getAdmissionDashHead.onclick = () => switchPage(getAdmission);
 
 function toggleBlocks(eventBlock, outterBlock, innerBlock, eventBack) {
   eventBlock.addEventListener('click', (event) => {
-      console.log("inner");
       outterBlock.hidden = true;
       innerBlock.hidden = false;
   });
 
   eventBack.addEventListener('click', (event) => {
       event.stopPropagation();
-      console.log("outter");
       innerBlock.hidden = true;
       outterBlock.hidden = false;
   });
