@@ -8,7 +8,7 @@
 ## Code library record
 - All JavaScript files are located in the `js/` directory.
 - Style files are located in the `css/` directory.
-- Font files are located in the `fonts/` directory snd google fonts.
+- Font files are located in the `fonts/` directory and google fonts.
 - Image files are located in the `images/` directory.
 
 ### Main JavaScript files
