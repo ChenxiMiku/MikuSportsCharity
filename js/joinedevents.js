@@ -1,7 +1,7 @@
 const charityData = [
     {
         title: "Charity Run 2024",
-        url: "https://example.com/event/1",
+        url: "#",
         image: "https://t.alcy.cc/pc/",
         tags: ["Running", "Fundraising"],
         date: "2024-05-01",
@@ -11,7 +11,7 @@ const charityData = [
     },
     {
         title: "Food Drive 2024",
-        url: "https://example.com/event/2",
+        url: "#",
         image: "https://t.alcy.cc/pc/",
         tags: ["Donation", "Volunteering"],
         date: "2024-06-01",
