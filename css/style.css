@@ -13405,6 +13405,22 @@ dashboard
     width: 100%
 }
 
+.edit-btn {
+    display: flex;
+    background: var(--bg-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 30px;
+    color: var(--primary-color);
+    font-size: var(--btn-font-size);
+    font-weight: var(--font-weight-normal);
+    padding: 6px 20px;
+}
+
+.edit-btn:hover {
+    background: var(--primary-color);
+    color: var(--bg-color);
+}
+
 /*---------------------------------------
 RESPONSIVE STYLES               
 -----------------------------------------*/
@@ -18235,3 +18251,16 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
     outline: 0;
     box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25)
 }
+
+.width-150{
+    width: 150px;
+}
+
+.width-250 {
+    width: 250px;
+}
+
+.width-270{
+    width: 270px;
+}
+
