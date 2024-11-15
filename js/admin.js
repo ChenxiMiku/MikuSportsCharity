@@ -14,7 +14,7 @@ let getEvents_Side = document.querySelector("#Events-Side");
 let getAdmission_Side = document.querySelector("#Admission-Side");
 let activePage = window.location.pathname;
 let getSideBarStatus = false;
-let displayPage = getDashboard; // 默认显示的页面是 Dashboard
+let displayPage = getDashboard;
 
 getBarItem.onclick = () => {
   getSideBar.style = "transform: translateX(0px);width:220px";

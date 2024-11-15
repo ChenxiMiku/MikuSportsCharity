@@ -11641,7 +11641,6 @@ CUSTOM PROPERTIES ( VARIABLES )
 
 }
 
-/* 强制深色模式（手动切换） */
 .dark-mode {
     --bg-color: #121212;
     --primary-color: #8bcfbb;
@@ -11754,12 +11753,9 @@ INDEX
 -----------------------------------------*/
 .vertical-line {
     border-left: 2px solid var(--bg-color);
-    /* 设置竖线的颜色和宽度 */
     height: auto;
-    /* 设置竖线的高度 */
 }
 
-/* 初始隐藏按钮 */
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
@@ -11779,7 +11775,6 @@ INDEX
     line-height: 48px;
 }
 
-/* 按钮悬停效果 */
 .scroll-to-top:hover {
     background-color: var(--primary-color);
 }
@@ -11834,7 +11829,6 @@ SECTION
 /*---------------------------------------
 COOKIES             
 -----------------------------------------*/
-/* Cookie Banner 样式 */
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -11846,7 +11840,6 @@ COOKIES
     text-align: center;
     font-size: 16px;
     display: none;
-    /* 默认隐藏 */
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -11864,12 +11857,9 @@ COOKIES
     display: flex;
     align-items: center;
     justify-content: center;
-    /* 确保文本在按钮内居中 */
     background: var(--bg-color);
     border: 1px solid var(--primary-color);
-    /* 使用主色作为边框 */
     border-radius: 30px;
-    /* 圆角边框 */
     color: var(--primary-color);
     font-size: var(--btn-font-size);
     font-weight: var(--font-weight-normal);
@@ -12006,12 +11996,9 @@ CUSTOM BUTTON
     display: flex;
     align-items: center;
     justify-content: center;
-    /* 确保文本在按钮内居中 */
     background: var(--bg-color);
     border: 2px solid var(--primary-color);
-    /* 使用主色作为边框 */
     border-radius: 30px;
-    /* 圆角边框 */
     color: var(--primary-color);
     font-size: var(--btn-font-size);
     font-weight: var(--font-weight-normal);
@@ -12433,14 +12420,12 @@ Register
     transition: all 0.5s;
 }
 
-/* 左侧退出动画 */
 .slide-out-left {
     transform: translateX(-100%);
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* 右侧进入动画 */
 .slide-in-right {
     transform: translateX(100%);
     opacity: 0;
@@ -12448,14 +12433,12 @@ Register
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* 右侧退出动画 */
 .slide-out-right {
     transform: translateX(100%);
     opacity: 0;
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* 左侧进入动画 */
 .slide-in-left {
     transform: translateX(-100%);
     opacity: 0;
@@ -12463,7 +12446,6 @@ Register
     transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* 激活状态 */
 .active {
     transform: translateX(0);
     opacity: 1;
@@ -12560,9 +12542,7 @@ DONATE
     overflow: hidden;
     padding: 50px;
     backdrop-filter: blur(20px);
-    /* 添加模糊效果 */
     background-color: rgba(255, 255, 255, 0.5);
-    /* 添加半透明背景色 */
 }
 
 
@@ -12882,9 +12862,7 @@ Events
 -----------------------------------------*/
 .tags-selected {
     border-color: #007BFF;
-    /* 选中状态边框颜色（蓝色） */
     background-color: #f0f8ff;
-    /* 选中状态背景色 */
 }
 
 /*---------------------------------------
@@ -13319,12 +13297,9 @@ dashboard
     display: flex;
     align-items: center;
     justify-content: center;
-    /* 确保文本在按钮内居中 */
     background: var(--bg-color);
     border: 2px solid var(--primary-color);
-    /* 使用主色作为边框 */
     border-radius: 30px;
-    /* 圆角边框 */
     color: var(--primary-color);
     font-size: var(--btn-font-size);
     font-weight: var(--font-weight-normal);
@@ -17345,12 +17320,10 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    /* 确保头像是圆形 */
     margin: 10px;
     cursor: pointer;
 }
 
-/* 圆形蒙版样式 */
 .change-avatar-overlay {
     position: absolute;
     top: 0;
@@ -17358,25 +17331,19 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    /* 半透明黑色 */
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 16px;
     opacity: 0;
-    /* 初始隐藏 */
     pointer-events: none;
-    /* 防止阻止点击 */
     transition: opacity 0.3s ease;
     border-radius: 50%;
-    /* 圆形蒙版 */
 }
 
-/* 鼠标悬停时显示圆形蒙版 */
 .change-avatar-container:hover .change-avatar-overlay {
     opacity: 1;
-    /* 显示蒙版 */
 }
 
 .change-passwd {
@@ -17393,11 +17360,9 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
     cursor: pointer;
 }
 
-/* 错误信息样式 */
 .error-message {
     color: red;
     display: none;
-    /* 默认隐藏 */
 }
 
 
@@ -17422,7 +17387,6 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
 
 .box-profile {
     background-color: var(--primary-color);
-    /* 可以根据需要修改 */
     color: white;
     padding: 10px 20px;
     font-size: 16px;

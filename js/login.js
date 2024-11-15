@@ -6,22 +6,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function setLoginCookie() {
         const expires = new Date();
-        expires.setDate(expires.getDate() + 7); // Cookie 有效期 7 天
+        expires.setDate(expires.getDate() + 7);
         document.cookie = `isLoggedIn=true; expires=${expires.toUTCString()}; path=/;`;
     }
 
     if (loginButton) {
         loginButton.addEventListener("click", function(event) {
-            event.preventDefault(); // 防止表单默认提交
+            event.preventDefault(); 
 
-            // 如果表单有效，才继续执行登录逻辑
+
             if (loginForm.checkValidity()) {
                 setLoginCookie();
-                // 登录成功后重定向到原来的页面
+
                 const previousPage = localStorage.getItem('previousPage');
                 window.location.href = previousPage ? previousPage : "dashboard.html";
             } else {
-                // 如果验证失败，可以显示错误提示
+
                 loginForm.reportValidity();
             }
         });
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Add Google login logic here
             setLoginCookie();
             
-            // 登录成功后重定向到原来的页面
+
             const previousPage = localStorage.getItem('previousPage');
             window.location.href = previousPage ? previousPage : "dashboard.html";
         });
@@ -44,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function() {
         githubButton.addEventListener("click", function(event) {
             event.preventDefault();
 
-            // 这里可以添加 GitHub 登录逻辑
+
             setLoginCookie();
 
-            // 登录成功后重定向到原来的页面
+
             const previousPage = localStorage.getItem('previousPage');
             window.location.href = previousPage ? previousPage : "dashboard.html";
         });

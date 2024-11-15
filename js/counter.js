@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
   
-	// 计数器功能
 	function countTo(element, options = {}) {
 	  const fromNum = options.from || parseInt(element.getAttribute('data-from'), 10) || 0;
 	  const toNum = options.to || parseInt(element.getAttribute('data-to'), 10) || 0;
@@ -8,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	  const refreshInterval = options.refreshInterval || parseInt(element.getAttribute('data-refresh-interval'), 10) || 100;
 	  const decimalsNum = options.decimals || parseInt(element.getAttribute('data-decimals'), 10) || 0;
 	  
-	  // 确保 to 和 from 都是有效数字
 	  if (isNaN(fromNum) || isNaN(toNum)) {
 		console.error('Invalid data attributes on element:', element);
 		return;
@@ -44,13 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	  element.textContent = formatterNum(fromNum);
 	}
   
-	// 使用 IntersectionObserver 进行元素出现检测
 	function createAppearObserver(element, callback, options = {}) {
 	  const observerNum = new IntersectionObserver((entries) => {
 		entries.forEach(entry => {
 		  if (entry.isIntersecting) {
 			callback(entry.target);
-			observerNum.unobserve(entry.target);  // 一旦出现，不再继续观察
+			observerNum.unobserve(entry.target); 
 		  }
 		});
 	  }, { threshold: options.threshold || 0.1 });
@@ -58,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	  observerNum.observe(element);
 	}
   
-	// 选择所有的 .counter-number 元素并启动计数器
 	const countersNum = document.querySelectorAll('.counter-number');
   
 	countersNum.forEach(counter => {

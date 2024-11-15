@@ -25,18 +25,16 @@ renderCharityEvents(charityData);
 
 function renderCharityEvents(data) {
     const charityContainer = document.getElementById('charity-events-container');
-    charityContainer.innerHTML = ''; // 清空现有内容
-    // 创建活动列表容器，使用 d-flex 和 flex-wrap 使活动可以在一行内显示多个
+    charityContainer.innerHTML = ''; 
     const eventsList = document.createElement('div');
     eventsList.id = 'events-list';
     eventsList.classList.add('d-flex', 'flex-wrap', 'justify-content-start');
     charityContainer.appendChild(eventsList);
 
-    // 渲染每个活动
     data.forEach(events => {
         const eventsItem = document.createElement('div');
-        eventsItem.classList.add('myevents-block', 'mt-3', 'me-3', 'mb-3', 'custom-block-wrap'); // 控制间距
-        eventsItem.style.flex = '1 1 30%'; // 每个活动占据大约 30% 的宽度，剩下的空间会自动分配
+        eventsItem.classList.add('myevents-block', 'mt-3', 'me-3', 'mb-3', 'custom-block-wrap'); 
+        eventsItem.style.flex = '1 1 30%';
 
         eventsItem.innerHTML = `
                 <div class="events-block-top">

@@ -7,7 +7,7 @@ searchInput.addEventListener('input', () => {
     filterEventsByKeyword(keyword); 
 });
 
-// 定义搜索按钮的点击事件，手动触发搜索
+
 searchBtn.addEventListener('click', (e) => {
     e.preventDefault(); 
     const keyword = searchInput.value.trim().toLowerCase();

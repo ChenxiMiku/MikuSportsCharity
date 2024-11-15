@@ -1,6 +1,5 @@
 let selectedTags = []; 
 
-// 获取新闻数据的接口，保留接口
 async function fetchEvents() {
     try {
         const response = await fetch('/api/events');
@@ -134,7 +133,6 @@ function renderCharityEvents(organizations) {
     });
 }
 
-// 将事件监听器绑定到 DOMContentLoaded 事件中，只绑定一次
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.tags-block-link').forEach(tagLink => {
         tagLink.addEventListener('click', function (event) {
