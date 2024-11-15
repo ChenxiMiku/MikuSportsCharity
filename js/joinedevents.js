@@ -2,7 +2,7 @@ const charityData = [
     {
         title: "Charity Run 2024",
         url: "#",
-        image: "https://t.alcy.cc/pc/",
+        image: "images/hatsunemiku.JPG",
         tags: ["Running", "Fundraising"],
         date: "2024-05-01",
         author: "John Doe",
@@ -12,7 +12,7 @@ const charityData = [
     {
         title: "Food Drive 2024",
         url: "#",
-        image: "https://t.alcy.cc/pc/",
+        image: "images/hatsunemiku.JPG",
         tags: ["Donation", "Volunteering"],
         date: "2024-06-01",
         author: "Jane Doe",
