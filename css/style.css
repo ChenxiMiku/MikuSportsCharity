@@ -11637,6 +11637,9 @@ CUSTOM PROPERTIES ( VARIABLES )
     --font-weight-normal: 400;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+    
+    --sec-main-color: #ffffff;
+
 }
 
 /* 强制深色模式（手动切换） */
@@ -11653,6 +11656,7 @@ CUSTOM PROPERTIES ( VARIABLES )
     --border-color: #333333;
     --navbar-color: rgba(0, 0, 0, 0.75);
     --main-color: #333333;
+    --sec-main-color: #373b3e;
 }
 
 body {
@@ -17266,7 +17270,7 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
 .box-event {
     margin-top: var(--third-margin);
     border: 1px solid var(--eee-color);
-    background-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
     color: var(--bg-color);
     padding: var(--fifth-padding) var(--fourth-padding);
     border-radius: var(--secondary-radius);
@@ -18205,4 +18209,30 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
 .fa-sort-desc:before,
 .fa-sort-down:before {
     content: "\f0dd"
+}
+
+.dash-form {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--p-color);
+    background-color: var(--sec-main-color);
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .375rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.dash-form:focus {
+    color: var(--p-color);
+    background-color: var(--sec-main-color);
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25)
 }
