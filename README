@@ -1,14 +1,14 @@
 ## Test the availability of the website
-1. Make sure all pages load properly in different browsers (such as Chrome, Firefox, Safari).
-2. Test all links and buttons to ensure that they point to the correct page or perform the correct operation.
-3. Test the user registration, login, and logout functions.
-4. Test the donation function to ensure that the donation amount is recorded correctly.
-5. Test the event viewing and registration functions.
+1. Make sure all pages load properly in different browsers (such as Chrome, Firefox, Safari). √
+2. Test all links and buttons to ensure that they point to the correct page or perform the correct operation. √
+3. Test the user registration, login, and logout functions. √
+4. Test the donation function to ensure that the donation amount is recorded correctly. √
+5. Test the event viewing and registration functions. √
 
 ## Code library record
 - All JavaScript files are located in the `js/` directory.
 - Style files are located in the `css/` directory.
-- Font files are located in the `fonts/` directory.
+- Font files are located in the `fonts/` directory snd google fonts.
 - Image files are located in the `images/` directory.
 
 ### Main JavaScript files
@@ -38,4 +38,4 @@
 Welcome to contribute code and suggestions, please submit a Pull Request or Issue.
 
 ## License
-This project uses the MIT license.
+This project doesn't have any license.
