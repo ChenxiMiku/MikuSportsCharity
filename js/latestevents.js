@@ -1,17 +1,13 @@
 let selectedTags = []; 
 
-// Refresh news data regularly
-//setInterval(fetchEvents, 60000); 
-//fetchEvents(); 
-
-// Get news list data, reserved interface
+// 获取新闻数据的接口，保留接口
 async function fetchEvents() {
     try {
         const response = await fetch('/api/events');
         const organizations = await response.json();
         renderCharityEvents(organizations);
     } catch (error) {
-        console.error('Error fetching events:', error);
+        console.error('获取事件时出错:', error);
     }
 }
 
@@ -136,8 +132,10 @@ function renderCharityEvents(organizations) {
             eventsList.appendChild(eventsItem);
         });
     });
+}
 
-
+// 将事件监听器绑定到 DOMContentLoaded 事件中，只绑定一次
+document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.tags-block-link').forEach(tagLink => {
         tagLink.addEventListener('click', function (event) {
             event.preventDefault(); 
@@ -156,15 +154,15 @@ function renderCharityEvents(organizations) {
             filterEventsByTags(organizations);
         });
     });
-}
 
-const clearButton = document.getElementById('clear-selection');
-clearButton.addEventListener('click', () => {
+    const clearButton = document.getElementById('clear-selection');
+    clearButton.addEventListener('click', () => {
+        document.querySelectorAll('.tags-block-link').forEach(link => {
+            link.classList.remove('tags-selected');
+            console.log(selectedTags);
+            selectedTags = [];
+        });
 
-    document.querySelectorAll('.tags-block-link').forEach(link => {
-        link.classList.remove('tags-selected');
-        selectedTags = [];
+        filterEventsByTags(organizations);
     });
-
-    filterEventsByTags(organizations);
 });

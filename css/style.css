@@ -15056,7 +15056,7 @@ main .main-content .title::after {
 }
 
 .main-content-boxes .box.first-box .box-section1 {
-    background-color: var(--eee-color);
+    background-color: var(--primary-color);
     position: relative;
     padding: var(--third-padding);
     margin-bottom: calc(var(--main-margin) + 30px);
@@ -16799,7 +16799,7 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--eee-color);
+    background-color: var(--main-color);
     border-radius: var(--main-radius);
     -webkit-border-radius: var(--main-radius);
     -moz-border-radius: var(--main-radius);

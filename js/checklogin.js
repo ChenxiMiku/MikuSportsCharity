@@ -18,13 +18,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // 登出功能
     logoutButtons.forEach(function (logoutBtn) {
-        console.log("asd");
         logoutBtn.addEventListener('click', function (event) {
-            event.preventDefault();
+            //event.preventDefault();
             console.log("Logout button clicked");
             document.cookie = "isLoggedIn=false; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
             localStorage.removeItem('previousPage');
-            //window.location.reload(); // 刷新页面
+            window.location.reload(); // 刷新页面
         });
     });
 
