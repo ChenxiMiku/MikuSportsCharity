@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>Miku Sports Charity Platform - Dashboard</title>
+  <title>Miku Sports Charity - Dashboard</title>
 
   <!-- CSS FILES -->
   <link rel="stylesheet" href="css/style.css" />
@@ -58,7 +58,7 @@
               <i class="fa-solid fa-xmark xmark"></i>
               <p class="d-flex me-4 mb-0">
                 <a href="index.html">
-                  <img src="images/logo.png" class="logo-small img-fluid" alt="Miku Sports Charity Platform">
+                  <img src="images/logo.png" class="logo-small img-fluid" alt="Miku Sports Charity">
                 </a>
               </p>  
 
@@ -82,6 +82,13 @@
                   <i class="fa-solid fa-diagram-project fa-fw"></i><span>Events</span>
                 </a>
               </li>
+
+              <li id="Admission-Side">
+                <a class="sidebar-link">
+                  <i class="fa-regular fa-circle-user fa-fw"></i
+                  ><span>Admission</span>
+                </a>
+              </li>
             </ul>
             <div class="col-lg-12 col-md-12 col-12 text-center">
               <p>Copyright © 2024 <br><a href="index.html">Miku Sports</a><br>Charity Org.</br></br>
@@ -102,7 +109,7 @@
             </div>
             <div class="main-content">
               <div class="title">
-                <h1>Dashboard</h1>
+                <h1>Admin Dashboard</h1>
               </div>
               <div class="main-content-boxes">
                 <div class="box first-box">
@@ -193,7 +200,7 @@
                 <div class="box">
                   <div class="box-section1">
                     <div class="box-title">
-                      <h3>Admission Statistics</h3>
+                      <h3 id="Admission-dash-head">Admission Statistics</h3>
                       <p>Everything About Admission</p>
                     </div>
                   </div>
@@ -355,7 +362,7 @@
                         <li><span></span> Started The Project</li>
                         <li><span></span> The Project About To Finish</li>
                         <li><span></span> Test The Project</li>
-                        <li><span></span> Finish The Project & Get Money</li>
+                        <li><span></span> Finish The Project</li>
                       </ul>
                     </div>
                     <img src="./images/project.png" alt="" />
@@ -635,8 +642,7 @@
                     </div>
                     <div>
                       <h7>Phone:&nbsp;</h7>
-                      <!-- <span>0934588449</span> -->
-                      <div class="text-container" id="textDisplay3">0934588449</div>
+                      <div class="text-container" id="textDisplay3">0123456789</div>
                       <div class="edit-container" id="editContainer3">
                         <input type="text" class="edit-input" id="editInput3">
                         <button class="box-profile" id="confirmButton3">Confirm</button>
@@ -764,9 +770,6 @@
                       <div class="row">
                         <ul>
                           <li>Volunteers</li>
-                          <li>Design</li>
-                          <li>Hosting</li>
-                          <li>Marketing</li>
                         </ul>
                       </div>
                     </div>
@@ -787,7 +790,7 @@
                    <div class="box-section2">
                     <a>Edit</a>
                     <a id="eventBack1">Back</a>
-                    <a>Delete</a>
+                    <a class="event-del-bt">Delete</a>
                    </div>
                   </div>
                 </div>
@@ -807,7 +810,6 @@
                       <div class="row">
                         <ul>
                           <li>Donate</li>
-                          <li>Design</li>
                         </ul>
                       </div>
                     </div>
@@ -828,7 +830,7 @@
                    <div class="box-section2">
                     <a>Edit</a>
                     <a id="eventBack2">Back</a>
-                    <a>Delete</a>
+                    <a class="event-del-bt">Delete</a>
                    </div>
                   </div>
                 </div>
@@ -849,7 +851,6 @@
                       <div class="row">
                         <ul>
                           <li>Sports</li>
-                          <li>Design</li>
                         </ul>
                       </div>
                     </div>
@@ -870,8 +871,130 @@
                    <div class="box-section2">
                     <a>Edit</a>
                     <a id="eventBack3">Back</a>
-                    <a>Delete</a>
+                    <a class="event-del-bt">Delete</a>
                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <main id="Admission" hidden>
+            <div class="header">
+              <i class="fa-solid fa-bars bar-item"></i>
+              <div class="search">
+                <input type="search" placeholder="Type A Keyword" />
+              </div>
+    
+              <div class="profile">
+                <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
+                <img src="../images/avatar.png" alt="No Image" />
+              </div>
+            </div>
+            <div class="main-content">
+              <div class="title">
+                <h1>Admission</h1>
+              </div>
+              <div class="friends-main-boxes">
+                <div class="friends-box-card">
+                  <div class="friends-box-card-contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <div class="friends-box-card-info">
+                    <img src="../images/friend-01.jpg" alt="" />
+                    <h4>Volunteer 1</h4>
+                    <p>Apply for Event 1  Volunteer</p>
+                  </div>
+                  <div class="friends-box-card-body">
+                    <ul>
+                      <li>
+                        <i class="fa-regular fa-face-smile"></i
+                        ><span>99 Friends</span>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-code-commit"></i
+                        ><span>15 Projects</span>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-newspaper"></i
+                        ><span>25 Events</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="friends-box-card-footer">
+                    <p>Apply 02/10/2021</p>
+                    <div class="friends-box-card-footer-buttons">
+                      <a href="/#">Accpect</a>
+                      <a href="/#">Reject</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="friends-box-card">
+                  <div class="friends-box-card-contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <div class="friends-box-card-info">
+                    <img src="../images/friend-02.jpg" alt="" />
+                    <h4>Volunteer 2</h4>
+                    <p>Apply for Event 2  Volunteer</p>
+                  </div>
+                  <div class="friends-box-card-body">
+                    <ul>
+                      <li>
+                        <i class="fa-regular fa-face-smile"></i
+                        ><span>30 Friends</span>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-code-commit"></i
+                        ><span>11 Projects</span>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-newspaper"></i
+                        ><span>12 Events</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="friends-box-card-footer">
+                    <p>Apply 02/08/2020</p>
+                    <div class="friends-box-card-footer-buttons">
+                      <a href="/#">Accpect</a>
+                      <a href="/#">Reject</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="friends-box-card">
+                  <div class="friends-box-card-contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <div class="friends-box-card-info">
+                    <img src="../images/friend-03.jpg" alt="" />
+                    <h4>Donation 1</h4>
+                    <p>Donation for Event 3</p>
+                  </div>
+                  <div class="friends-box-card-body">
+                    <ul>
+                      <li>
+                        <i class="fa-regular fa-face-smile"></i
+                        ><span>80 Friends</span>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-code-commit"></i
+                        ><span>20 Projects</span>
+                      </li>
+                      <li>
+                        <i class="fa-regular fa-newspaper"></i
+                        ><span>18 Events</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="friends-box-card-footer">
+                    <p>Apply 02/06/2020</p>
+                    <div class="friends-box-card-footer-buttons">
+                      <a href="/#">Accept</a>
+                      <a href="/#">Reject</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -886,7 +1009,7 @@
     </main>
 
     <!-- JAVASCRIPT FILES -->
-    <script src="./js/dashboardjs.js"></script>
+    <script src="./js/admin.js"></script>
 
   </body>
 
