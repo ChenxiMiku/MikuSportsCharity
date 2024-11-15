@@ -13097,7 +13097,7 @@ CONTACT SEARCH & DONATE & SUBCRIBE FORM
     background: var(--bg-color);
     border: 2px solid var(--primary-color);
     border-radius: 15px !important;
-    line-height: normal;
+    line-height: 100%;
     padding: 15px 15px !important;
 }
 
