@@ -44,7 +44,7 @@ function renderCharityEvents(data) {
                         <img src="${events.image}" class="events-image img-fluid" alt="">
                     </a>
                     <div class="myevents-category-block">
-                        ${events.tags.map(tag => `<a class="mycategory-block-link" data-tag="${tag}">${tag}</a>`).join(', ')}
+                        ${events.tags.map(tag => `<a class="mycategory-block-link" data-tag="${tag}">${tag}</a>`).join(' ')}
                     </div>
                 </div>
                 <div class="events-block-info">
