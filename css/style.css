@@ -11652,6 +11652,7 @@ CUSTOM PROPERTIES ( VARIABLES )
     --p-color: #ffffff;
     --border-color: #333333;
     --navbar-color: rgba(0, 0, 0, 0.75);
+    --main-color: #333333;
 }
 
 body {
@@ -13374,9 +13375,9 @@ dashboard
 }
 
 .ant-table-cell {
-    background: #fff !important;
+    background: var(--main-color);
     font-size: 16px;
-    color: var(--text-gray) !important;
+    color: var(--dark-color);
     text-align: center;
 }
 
@@ -13385,7 +13386,7 @@ dashboard
 }
 
 .ant-table-body {
-    background-color: var(--bg-color);
+    background-color: var(--main-color);
     overflow: auto; 
     max-height: 1000px;
 }
@@ -14815,7 +14816,7 @@ div.loader h1 span {
     padding: var(--third-padding);
     display: flex;
     flex-direction: column;
-    box-shadow: 0 0 10px 0px #ddd;
+    box-shadow: 0 0 10px 0px --main-color;
     position: relative;
     transition: transform 0.45s;
     -webkit-transition: transform 0.45s;
