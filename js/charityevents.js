@@ -22,7 +22,7 @@ const organizations = [
         eventsData: [
             {
                 title: "Charity Run 2024",
-                url: "charity.html?organization=Kisckstarter%20Foundation",
+                url: "donate.html?charityName=Hope%20Foundation&eventName=Kickstart%20Hope&raisedAmount=18500&goalAmount=32000&eventImage=path_to_image.jpg",
                 image: "https://t.alcy.cc/pc/",
                 tags: ["Running", "Volunteer"],
                 date: "2024-05-01",
@@ -97,6 +97,15 @@ function renderCharityEvents(organizations) {
         organizations.filter(org => org.charityName.toLowerCase() === selectedOrg.toLowerCase()) :
         organizations;
 
+    // Create containers for "Donation" and "Volunteer" categories
+    const donationContainer = document.createElement('div');
+    donationContainer.classList.add('category-container', 'donation-container');
+    donationContainer.innerHTML = `<h2>Donation Events</h2>`;
+    
+    const volunteerContainer = document.createElement('div');
+    volunteerContainer.classList.add('category-container', 'volunteer-container');
+    volunteerContainer.innerHTML = `<h2>Volunteer Events</h2>`;
+
     filteredOrganizations.forEach(organization => {
         const { charityName, eventsData } = organization;
 
@@ -108,47 +117,62 @@ function renderCharityEvents(organizations) {
         `;
         charityContainer.appendChild(charityHeader);
 
-        const eventsList = document.createElement('div');
-        eventsList.classList.add('d-flex', 'flex-wrap', 'justify-content-start');
-        charityContainer.appendChild(eventsList);
-
-        eventsData.forEach(events => {
-            const eventsItem = document.createElement('div');
-            eventsItem.classList.add('events-block', 'mt-3', 'me-3', 'mb-3', 'custom-block-wrap'); 
-            eventsItem.style.flex = '1 1 30%';
-
-            eventsItem.innerHTML = `
+        eventsData.forEach(event => {
+            // Create the event card for the current event
+            const eventItem = document.createElement('div');
+            eventItem.classList.add('events-block', 'mt-3', 'me-3', 'mb-3', 'custom-block-wrap'); 
+            eventItem.style.flex = '1 1 30%';
+        
+            // Determine the button label based on the tags
+            let buttonLabel = '';
+            if (event.tags.includes("Donation")) {
+                buttonLabel = 'Donate now';
+            } else if (event.tags.includes("Volunteer")) {
+                buttonLabel = 'Volunteer';
+            }
+        
+            eventItem.innerHTML = `
             <div class="custom-block">
                 <div class="events-block-top">
-                    <a href="${events.url}">
-                        <img src="${events.image}" class="events-image img-fluid" alt="">
+                    <a href="${event.url}">
+                        <img src="${event.image}" class="events-image img-fluid" alt="">
                     </a>
                     <div class="events-category-block">
-                        ${events.tags.map(tag => `<a class="category-block-link" data-tag="${tag}">${tag}</a>`).join(', ')}
+                        ${event.tags.map(tag => `<a class="category-block-link" data-tag="${tag}">${tag}</a>`).join(', ')}
                     </div>
                 </div>
                 <div class="events-block-info">
                     <div class="d-flex mt-2">
                         <div class="ms-4 events-block-date">
-                            <p><i class="bi-calendar4 custom-icon"></i> ${events.date}</p>
+                            <p><i class="bi-calendar4 custom-icon"></i> ${event.date}</p>
                         </div>
                     </div>
                     <div class="events-block-title mb-2 ms-4">
-                        <h4><a href="${events.url}" class="events-block-title-link">${events.title}</a></h4>
+                        <h4><a href="${event.url}" class="events-block-title-link">${event.title}</a></h4>
                     </div>
                     <div class="events-block-body ms-4">
-                        <p>${events.summary}</p>
+                        <p>${event.summary}</p>
                     </div>
                 </div>
-                <a href="donate.html" class="custom-btn btn">Donate now</a>
+                <a href="donate.html" class="custom-btn btn">${buttonLabel}</a>
             </div>
             `;
-            eventsList.appendChild(eventsItem);
-        });
+        
+            // Add event to the appropriate category container
+            if (event.tags.includes("Donation")) {
+                donationContainer.appendChild(eventItem);
+            } else if (event.tags.includes("Volunteer")) {
+                volunteerContainer.appendChild(eventItem);
+            }
+        });        
     });
 
+    // Append the category containers to the main container
+    charityContainer.appendChild(donationContainer);
+    charityContainer.appendChild(volunteerContainer);
+
     // Add event listener for filtering tags
-    document.querySelectorAll('.tags-block-link').forEach(tagLink => {
+    document.querySelectorAll('.category-block-link').forEach(tagLink => {
         tagLink.addEventListener('click', function (event) {
             event.preventDefault(); 
 
@@ -167,6 +191,7 @@ function renderCharityEvents(organizations) {
         });
     });
 }
+
 
 // Clear tag selection
 const clearButton = document.getElementById('clear-selection');
