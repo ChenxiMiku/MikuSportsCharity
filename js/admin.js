@@ -29,13 +29,9 @@ let outterBlock3 = document.getElementById('EventBlockOutter3');
 let innerBlock3 = document.getElementById('EventBlockInner3');
 let eventBack3 = document.getElementById('eventBack3');
 let profileEditBt = document.getElementById('profile-edit-bt')
-// let textDisplay = document.getElementById('textDisplay');
-// let editContainer = document.getElementById('editContainer');
-// let editInput = document.getElementById('editInput');
-// let confirmButton = document.getElementById('confirmButton');
 let activePage = window.location.pathname;
 let getSideBarStatus = false;
-let Display_Page = getDashboard; // Default displayed page is Dashboard
+let displayPage = getDashboard; // Default displayed page is Dashboard
 
 getBarItem.onclick = () => {
   getSideBar.style = "transform: translateX(0px);width:220px";
@@ -51,9 +47,9 @@ getXmark.onclick = () => {
 };
 
 function switchPage(page) {
-  Display_Page.hidden = true;
-  Display_Page = page;
-  Display_Page.hidden = false;
+  displayPage.hidden = true;
+  displayPage = page;
+  displayPage.hidden = false;
 }
 
 getDashboard_Side.onclick = () => switchPage(getDashboard);
@@ -62,7 +58,6 @@ getEvents_Side.onclick = () => switchPage(getEvents);
 getAdmission_Side.onclick = () => switchPage(getAdmission);
 getDashPro.onclick = () => switchPage(getProfile);
 getAdmissionDashHead.onclick = () => switchPage(getAdmission);
-
 
 
 function toggleBlocks(eventBlock, outterBlock, innerBlock, eventBack) {
@@ -114,7 +109,6 @@ setupEditableText('textDisplay5', 'editContainer5', 'editInput5', 'confirmButton
 setupEditableText('textDisplay6', 'editContainer6', 'editInput6', 'confirmButton6');
 
 
-
 // 获取元素
 const changeButton7 = document.getElementById('textDisplay7');
 const editContainer7 = document.getElementById('editContainer7');
@@ -155,10 +149,6 @@ confirmButton7.addEventListener('click', () => {
 });
 
 
-
-
-
-
 // 获取所有带有 avatar 尾标的 img 标签
 const avatarImages = document.querySelectorAll('img[id^="avatar"]');
 const avatarInput = document.getElementById('avatarInput');
@@ -184,16 +174,6 @@ avatarInput.addEventListener('change', (event) => {
         reader.readAsDataURL(file); // 读取用户选择的文件为 Data URL
     }
 });
-
-
-
-
-
-
-
-
-
-
 
 
 window.addEventListener("resize", (e) => {
