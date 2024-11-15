@@ -14,7 +14,7 @@
 
     <!-- CSS FILES -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/dash-all.min.css" />
+
 </head>
 
 <body>
@@ -318,19 +318,75 @@
                                     <p>550 Ratings</p>
                                 </div>
                                 <div class="profile-info-section2">
-                                    <div class="container ">
-
+                                    <div class="container" id="informationSection">
                                         <div class="row mx-2 my-2">
-                                            <div class="general-information">
-                                                <h3>Information</h3>
-                                                <h7>UserName: Miku</h7>
-                                                <h7>Email: charity@mikufans.me</h7>
-                                                <h7>Phone: 0934588449</h7>
-                                                <h7>Date Of Join: 20/04/2024</h7>
-                                                <h7>Account Type: Admin</h7>
-                                            </div>
+                                          <h3 class="d-flex justify-content-between align-items-center">
+                                            Information
+                                            <button id="editButton" class="btn edit-btn my-auto">Edit</button>
+                                          </h3>
+                                      
+                                          <div class="col-lg-12 col-12 mb-1">
+                                            <h7>UserName:</h7>
+                                            <p class="fw-normal ms-2" id="userName">Miku</p>
+                                          </div>
+                                      
+                                          <div class="col-lg-12 col-12 mb-1">
+                                            <h7>Email:</h7>
+                                            <p class="fw-normal ms-2" id="email">charity@mikufans.me</p>
+                                          </div>
+                                      
+                                          <div class="col-lg-12 col-12 mb-1">
+                                            <h7>Phone:</h7>
+                                            <p class="fw-normal ms-2" id="phone">0123456789</p>
+                                          </div>
+                                      
+                                          <div class="col-lg-12 col-12 mb-1">
+                                            <h7>Date of Join:</h7>
+                                            <p class="fw-normal ms-2" id="dateOfJoin">2020-11-13</p>
+                                          </div>
+                                      
+                                          <div class="col-lg-12 col-12 mb-1">
+                                            <h7>Account Type:</h7>
+                                            <p class="fw-normal ms-2" id="accountType">Admin</p>
+                                          </div>
                                         </div>
-                                    </div>
+                                      </div>
+                                      
+                                      <div id="editForm" class="pt-2" style="display: none;">
+                                        <div class="row mx-2 my-2">
+                                          <h3>Edit Information</h3>
+                                          <h7 class="mt-2">Userame</h7>
+                                          <div class="col-lg-12 col-12 mb-3">
+                                            <input type="text" class="form-control" id="editUserName" name="editUserName" placeholder="Enter username" required>
+                                          </div>
+                                      
+                                          <h7>Email</h7>
+                                          <div class="col-lg-12 col-12 mb-3">
+                                            <input type="email" class="form-control" id="editEmail" name="editEmail" placeholder="Enter your email" required>
+                                          </div>
+                                      
+                                          <h7>Phone</h7>
+                                          <div class="col-lg-12 col-12 mb-3">
+                                            <input type="text" class="form-control" id="editPhone" name="editPhone" placeholder="Enter your phone number" required>
+                                          </div>
+                                      
+                                          <h7>Date of Join</h7>
+                                          <div class="col-lg-12 col-12 mb-3">
+                                            <input type="date" class="form-control" id="editDateOfJoin" name="editDateOfJoin" required>
+                                          </div>
+                                      
+                                          <h7>Account Type</h7>
+                                          <div class="col-lg-12 col-12 mb-3">
+                                            <input type="text" class="form-control" id="editAccountType" name="editAccountType" placeholder="Enter account type" required>
+                                          </div>
+                                      
+                                          <div class="col-lg-12 col-12 mb-3">
+                                            <button id="saveButton" class="btn btn-primary ms-auto fs-6">Save Changes</button>
+                                            <button id="cancelButton" class="btn btn-secondary fs-6">Cancel</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      
                                     <div class="col-lg-12 col-12 mb-2 divider-wrapper"></div>
                                     <div class="container ">
 
@@ -523,8 +579,8 @@
         <script src="js/joinedevents.js"></script>
         <script src="js/checklogin.js"></script>
         <script src="js/darkmode.js"></script>
-        <script src="js/click-scroll.js"></script>
         <script src="js/changepasswd.js"></script>
+        <script src="js/userprofile.js"></script> 
     </body>
 
 </html>
