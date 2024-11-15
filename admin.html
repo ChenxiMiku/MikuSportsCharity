@@ -11,7 +11,7 @@
   <!-- CSS FILES -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/dash-all.min.css" />
-  <link rel="stylesheet" href="css/dash-style.css" />
+  <!---link rel="stylesheet" href="css/dash-style.css" /--->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap" rel="stylesheet" />
@@ -56,61 +56,79 @@
           <div class="sidebar">
             <div class="brand">
               <i class="fa-solid fa-xmark xmark"></i>
-              <p class="d-flex me-4 mb-0">
+              <p class="d-flex mb-0">
                 <a href="index.html">
-                  <img src="images/logo.png" class="logo-small img-fluid" alt="Miku Sports Charity">
+                  <img src="images/logo.png" class="logo-small img-fluid" alt="Miku Sports Charity Platform">
                 </a>
-              </p>  
+              </p>
 
             </div>
             <ul>
               <li id="Dashboard-Side">
                 <a class="sidebar-link">
-                  <i class="fa-regular fa-chart-bar fa-fw"></i>
+                  <i class="fa-regular bi-speedometer2 fa-fw"></i>
                   <span>Dashboard</span>
                 </a>
               </li>
 
               <li id="Profile-Side">
                 <a class="sidebar-link">
-                  <i class="fa-regular fa-user fa-fw"></i><span>Profile</span>
+                  <i class="fa-regular bi-person fa-fw"></i><span>Profile</span>
                 </a>
               </li>
 
-              <li id="Events-Side">
+              <li id="Donation-Side">
                 <a class="sidebar-link">
-                  <i class="fa-solid fa-diagram-project fa-fw"></i><span>Events</span>
+                  <i class="fa-solid bi-wallet2 fa-fw"></i><span>Donation</span>
                 </a>
               </li>
 
               <li id="Admission-Side">
                 <a class="sidebar-link">
-                  <i class="fa-regular fa-circle-user fa-fw"></i
-                  ><span>Admission</span>
+                  <i class="fa-solid bi-wallet2 fa-fw"></i><span>Admission</span>
+                </a>
+              </li>
+
+              <li id="Events-Side">
+                <a class="sidebar-link">
+                  <i class="fa-solid bi-calendar2-event fa-fw"></i><span>Events</span>
                 </a>
               </li>
             </ul>
             <div class="col-lg-12 col-md-12 col-12 text-center">
-              <p>Copyright © 2024 <br><a href="index.html">Miku Sports</a><br>Charity Org.</br></br>
+              <p>Copyright © 2024 <br><a href="index.html">Miku Sports </a>Org.
               </p>
             </div>
           </div>
           <main id="Dashboard">
-            <div class="header">
-              <i class="fa-solid fa-bars bar-item"></i>
-              <div class="search">
-                <input type="search" placeholder="Type A Keyword" />
-              </div>
+            <nav class="header navbar navbar-expand-lg">
 
-              <div class="profile">
-                <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
-                <img src="./images/avatar.png" alt="No Image" class="avatar" id="avatar1"/>
-              </div>
-            </div>
-            <div class="main-content">
+              <i class="fa-solid fa-bars bar-item"></i>
               <div class="title">
-                <h1>Admin Dashboard</h1>
+                <h5 class="fs-1">Admin Dashboard</h5>
               </div>
+              <div id="userAvatar" class="dropdown avatar-image me-6">
+                <a class="dropdown-toggle" href="#"">
+                      <img id=" avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64" height="64"
+                  class="rounded-circle">
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="avatarDropdown">
+                  <a class="dropdown-item align-items-center" href="index.html">
+                    <i class="bi-house me-2"></i>Homepage
+                  </a>
+
+                  <a class="dropdown-item align-items-center" href="admin.html">
+                    <i class="bi-speedometer2 me-2"></i>Dashboard
+                  </a>
+
+                  <a class="dropdown-item align-items-center" href="login.html">
+                    <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
+                  </a>
+                </div>
+              </div>
+            </nav>
+            <div class="main-content">
               <div class="main-content-boxes">
                 <div class="box first-box">
                   <div class="box-section1">
@@ -121,7 +139,7 @@
                     <div class="box-image">
                       <img src="./images/welcome.png" alt="No image" />
                     </div>
-                    <img src="./images/avatar.png" alt="No image" class="avatar" id="avatar2"/>
+                    <img src="./images/avatar.png" alt="No image" class="avatar" id="avatar2" />
                   </div>
                   <div class="box-section2">
                     <ul>
@@ -273,44 +291,7 @@
                     <span>9 Days Ago</span>
                   </div>
                 </div>
-                <div class="box">
-                  <div class="box-section1">
-                    <div class="box-title">
-                      <h3>Latest Tasks</h3>
-                    </div>
-                  </div>
-                  <div class="latest-tasks-section2">
-                    <div class="latest-tasks-section2-info">
-                      <h4>Record One New Video</h4>
-                      <p>Record some Ad-Videos</p>
-                    </div>
-                    <i class="fa-regular fa-trash-can"></i>
-                  </div>
 
-                  <div class="latest-tasks-section2">
-                    <div class="latest-tasks-section2-info">
-                      <h4>Write Article</h4>
-                      <p>Write some articles</p>
-                    </div>
-                    <i class="fa-regular fa-trash-can"></i>
-                  </div>
-
-                  <div class="latest-tasks-section2">
-                    <div class="latest-tasks-section2-info">
-                      <h4>Finish Project</h4>
-                      <p>Finish last program</p>
-                    </div>
-                    <i class="fa-regular fa-trash-can"></i>
-                  </div>
-
-                  <div class="latest-tasks-section2">
-                    <div class="latest-tasks-section2-info">
-                      <h4>Finish Lesson</h4>
-                      <p>Finish teaching volunteers</p>
-                    </div>
-                    <i class="fa-regular fa-trash-can"></i>
-                  </div>
-                </div>
                 <div class="box">
                   <div class="box-section1">
                     <div class="box-title">
@@ -349,83 +330,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="box">
-                  <div class="box-section1">
-                    <div class="box-title">
-                      <h3>Last Event Progress</h3>
-                    </div>
-                  </div>
-                  <div class="last-project-progress">
-                    <div class="last-project-progress-info">
-                      <ul>
-                        <li><span></span> Got The Project</li>
-                        <li><span></span> Started The Project</li>
-                        <li><span></span> The Project About To Finish</li>
-                        <li><span></span> Test The Project</li>
-                        <li><span></span> Finish The Project</li>
-                      </ul>
-                    </div>
-                    <img src="./images/project.png" alt="" />
-                  </div>
-                </div>
-                <!-- <div class="box">
-                            <div class="box-section1">
-                              <div class="box-title">
-                                <h2>Reminders</h2>
-                              </div>
-                            </div>
-                            <div class="reminders-section2">
-                              <div class="reminders">
-                                <h4>Check My Tasks List</h4>
-                                <p>28/09/2022 - 12:00am</p>
-                              </div>
-                              <div class="reminders">
-                                <h4>Check My Projects</h4>
-                                <p>26/10/2022 - 12:00am</p>
-                              </div>
-                              <div class="reminders">
-                                <h4>Call All My Clients</h4>
-                                <p>05/11/2022 - 12:00am</p>
-                              </div>
-                              <div class="reminders">
-                                <h4>Finish The Development Workshop</h4>
-                                <p>20/12/2022 - 12:00am</p>
-                              </div>
-                            </div>
-                          </div> -->
-                <!-- <div class="box">
-                            <div class="box-section1">
-                              <div class="box-title">
-                                <h2>Latest Post</h2>
-                              </div>
-                            </div>
-                            <div class="latest-post-section2">
-                              <div class="latest-post-person-info">
-                                <img src="./images/avatar.png" alt="" />
-                                <ul>
-                                  <li><h4>Zana Suleiman</h4></li>
-                                  <li><p>About 3 Hours Ago</p></li>
-                                </ul>
-                              </div>
-                              <div class="post">
-                                <p>
-                                  You Can Fool All Of The People Some Of The Time, And Some Of
-                                  The People All Of The Time, But You Can't Fool All Of The
-                                  People All Of The Time.
-                                </p>
-                              </div>
-                              <div class="latest-post-likes-comments">
-                                <ul>
-                                  <li>
-                                    <i class="fa-regular fa-heart heart"></i><span>1.8K</span>
-                                  </li>
-                                  <li>
-                                    <i class="fa-regular fa-comments"></i><span>500</span>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div> -->
+
+
                 <div class="box">
                   <div class="box-section1">
                     <div class="box-title">
@@ -573,17 +479,33 @@
             </div>
           </main>
           <main id="Profile" hidden>
-            <div class="header">
-              <i class="fa-solid fa-bars bar-item"></i>
-              <div class="search">
-                <input type="search" placeholder="Type A Keyword" />
-              </div>
+            <nav class="header navbar navbar-expand-lg">
 
-              <div class="profile">
-                <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
-                <img src="../images/avatar.png" alt="No Image" id="avatar4"/>
+              <i class="fa-solid fa-bars bar-item"></i>
+              <div class="title">
+                <h5 class="fs-1">Dashboard</h5>
               </div>
-            </div>
+              <div id="userAvatar" class="dropdown avatar-image me-6">
+                <a class="dropdown-toggle" href="#"">
+                      <img id=" avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64" height="64"
+                  class="rounded-circle">
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="avatarDropdown">
+                  <a class="dropdown-item align-items-center" href="index.html">
+                    <i class="bi-house me-2"></i>Homepage
+                  </a>
+
+                  <a class="dropdown-item align-items-center" href="admin.html">
+                    <i class="bi-speedometer2 me-2"></i>Dashboard
+                  </a>
+
+                  <a class="dropdown-item align-items-center" href="login.html">
+                    <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
+                  </a>
+                </div>
+              </div>
+            </nav>
             <div class="main-content">
               <div class="title">
                 <h1>Profile</h1>
@@ -688,7 +610,7 @@
                       <div class="edit-container" id="editContainer5">
                         <input type="text" class="edit-input" id="editInput5" type="email">
                         <button class="box-profile" id="confirmButton5">Confirm</button>
-                      </div>                       
+                      </div>
                     </div>
                     <div>
                       <h7>Subscription:&nbsp;</h7>
@@ -711,7 +633,7 @@
                       <div class="edit-container" id="editContainer6">
                         <input type="text" class="edit-input" id="editInput6" type="email">
                         <button class="box-profile" id="confirmButton6">Confirm</button>
-                      </div>                       
+                      </div>
                     </div>
                     <div>
                       <h7>Password:&nbsp;</h7>
@@ -722,26 +644,43 @@
                         <input type="password" id="editConfirmPasswd7" placeholder="Confirm new password">
                         <br>
                         <button class="box-profile" id="confirmButton7">Confirm</button>
-                        <p id="error-message7" class="error-message" style="color: red; display: none;">Passwords do not match. Please try again.</p>
-                      </div>                       
-                    </div>                 
+                        <p id="error-message7" class="error-message" style="color: red; display: none;">Passwords do not
+                          match. Please try again.</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </main>
           <main id="Events" hidden>
-            <div class="header">
-              <i class="fa-solid fa-bars bar-item"></i>
-              <div class="search">
-                <input type="search" placeholder="Type A Keyword" />
-              </div>
+            <nav class="header navbar navbar-expand-lg">
 
-              <div class="profile">
-                <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
-                <img src="../images/avatar.png" alt="No Image" id="avatar6"/>
+              <i class="fa-solid fa-bars bar-item"></i>
+              <div class="title">
+                <h5 class="fs-1">Dashboard</h5>
               </div>
-            </div>
+              <div id="userAvatar" class="dropdown avatar-image me-6">
+                <a class="dropdown-toggle" href="#"">
+                      <img id=" avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64" height="64"
+                  class="rounded-circle">
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="avatarDropdown">
+                  <a class="dropdown-item align-items-center" href="index.html">
+                    <i class="bi-house me-2"></i>Homepage
+                  </a>
+
+                  <a class="dropdown-item align-items-center" href="admin.html">
+                    <i class="bi-speedometer me-2"></i>Dashboard
+                  </a>
+
+                  <a class="dropdown-item align-items-center" href="login.html">
+                    <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
+                  </a>
+                </div>
+              </div>
+            </nav>
             <div class="main-content">
               <div class="title">
                 <h1>Events</h1>
@@ -787,11 +726,11 @@
                     <div class="box-section2">
                       <img src="images/event1.jpg" class="eventPic">
                     </div>
-                   <div class="box-section2">
-                    <a>Edit</a>
-                    <a id="eventBack1">Back</a>
-                    <a class="event-del-bt">Delete</a>
-                   </div>
+                    <div class="box-section2">
+                      <a>Edit</a>
+                      <a id="eventBack1">Back</a>
+                      <a class="event-del-bt">Delete</a>
+                    </div>
                   </div>
                 </div>
                 <div id="eventblock2" class="box featured-block">
@@ -827,11 +766,11 @@
                     <div class="box-section2">
                       <img src="images/event2.jpg" class="eventPic">
                     </div>
-                   <div class="box-section2">
-                    <a>Edit</a>
-                    <a id="eventBack2">Back</a>
-                    <a class="event-del-bt">Delete</a>
-                   </div>
+                    <div class="box-section2">
+                      <a>Edit</a>
+                      <a id="eventBack2">Back</a>
+                      <a class="event-del-bt">Delete</a>
+                    </div>
                   </div>
                 </div>
                 <div id="eventblock3" class="box featured-block">
@@ -868,28 +807,44 @@
                     <div class="box-section2">
                       <img src="images/event3.jpg" class="eventPic">
                     </div>
-                   <div class="box-section2">
-                    <a>Edit</a>
-                    <a id="eventBack3">Back</a>
-                    <a class="event-del-bt">Delete</a>
-                   </div>
+                    <div class="box-section2">
+                      <a>Edit</a>
+                      <a id="eventBack3">Back</a>
+                      <a class="event-del-bt">Delete</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </main>
           <main id="Admission" hidden>
-            <div class="header">
+            <nav class="header navbar navbar-expand-lg">
+
               <i class="fa-solid fa-bars bar-item"></i>
-              <div class="search">
-                <input type="search" placeholder="Type A Keyword" />
+              <div class="title">
+                <h5 class="fs-1">Dashboard</h5>
               </div>
-    
-              <div class="profile">
-                <span class="bell"><i class="fa-regular fa-bell fa-lg"></i></span>
-                <img src="../images/avatar.png" alt="No Image" />
+              <div id="userAvatar" class="dropdown avatar-image me-6">
+                <a class="dropdown-toggle" href="#"">
+                      <img id=" avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="64" height="64"
+                  class="rounded-circle">
+                </a>
+
+                <div class="dropdown-menu" aria-labelledby="avatarDropdown">
+                  <a class="dropdown-item align-items-center" href="index.html">
+                    <i class="bi-house me-2"></i>Homepage
+                  </a>
+
+                  <a class="dropdown-item align-items-center" href="admin.html">
+                    <i class="bi-speedometer me-2"></i>Dashboard
+                  </a>
+
+                  <a class="dropdown-item align-items-center" href="login.html">
+                    <i class="bi-box-arrow-right me-2" id="logoutBtn"></i>Log out
+                  </a>
+                </div>
               </div>
-            </div>
+            </nav>
             <div class="main-content">
               <div class="title">
                 <h1>Admission</h1>
@@ -903,21 +858,18 @@
                   <div class="friends-box-card-info">
                     <img src="../images/friend-01.jpg" alt="" />
                     <h4>Volunteer 1</h4>
-                    <p>Apply for Event 1  Volunteer</p>
+                    <p>Apply for Event 1 Volunteer</p>
                   </div>
                   <div class="friends-box-card-body">
                     <ul>
                       <li>
-                        <i class="fa-regular fa-face-smile"></i
-                        ><span>99 Friends</span>
+                        <i class="fa-regular fa-face-smile"></i><span>99 Friends</span>
                       </li>
                       <li>
-                        <i class="fa-solid fa-code-commit"></i
-                        ><span>15 Projects</span>
+                        <i class="fa-solid fa-code-commit"></i><span>15 Projects</span>
                       </li>
                       <li>
-                        <i class="fa-regular fa-newspaper"></i
-                        ><span>25 Events</span>
+                        <i class="fa-regular fa-newspaper"></i><span>25 Events</span>
                       </li>
                     </ul>
                   </div>
@@ -937,21 +889,18 @@
                   <div class="friends-box-card-info">
                     <img src="../images/friend-02.jpg" alt="" />
                     <h4>Volunteer 2</h4>
-                    <p>Apply for Event 2  Volunteer</p>
+                    <p>Apply for Event 2 Volunteer</p>
                   </div>
                   <div class="friends-box-card-body">
                     <ul>
                       <li>
-                        <i class="fa-regular fa-face-smile"></i
-                        ><span>30 Friends</span>
+                        <i class="fa-regular fa-face-smile"></i><span>30 Friends</span>
                       </li>
                       <li>
-                        <i class="fa-solid fa-code-commit"></i
-                        ><span>11 Projects</span>
+                        <i class="fa-solid fa-code-commit"></i><span>11 Projects</span>
                       </li>
                       <li>
-                        <i class="fa-regular fa-newspaper"></i
-                        ><span>12 Events</span>
+                        <i class="fa-regular fa-newspaper"></i><span>12 Events</span>
                       </li>
                     </ul>
                   </div>
@@ -976,16 +925,13 @@
                   <div class="friends-box-card-body">
                     <ul>
                       <li>
-                        <i class="fa-regular fa-face-smile"></i
-                        ><span>80 Friends</span>
+                        <i class="fa-regular fa-face-smile"></i><span>80 Friends</span>
                       </li>
                       <li>
-                        <i class="fa-solid fa-code-commit"></i
-                        ><span>20 Projects</span>
+                        <i class="fa-solid fa-code-commit"></i><span>20 Projects</span>
                       </li>
                       <li>
-                        <i class="fa-regular fa-newspaper"></i
-                        ><span>18 Events</span>
+                        <i class="fa-regular fa-newspaper"></i><span>18 Events</span>
                       </li>
                     </ul>
                   </div>
@@ -1008,8 +954,15 @@
       </section>
     </main>
 
+    <!-- 滚动到顶部按钮 -->
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
+      <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
     <!-- JAVASCRIPT FILES -->
     <script src="./js/admin.js"></script>
+    <script src="js/darkmode.js"></script>
+    <script src="js/click-scroll.js"></script>
 
   </body>
 
