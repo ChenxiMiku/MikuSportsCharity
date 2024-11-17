@@ -12525,7 +12525,7 @@ VOLUNTEER
 DONATE              
 -----------------------------------------*/
 .donate-section {
-    background-image: url('images/ychw.png');
+    background-image: url('/images/image.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -13101,8 +13101,7 @@ Login Form
 -----------------------------------------*/
 
 .login-section {
-    background-image: url('images/ychw.png');
-    /*background-image: url('images/image.png');*/
+    background-image: url('/images/image.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

@@ -1,23 +1,11 @@
 (function () {
   "use strict";
 
-  /*// COUNTER NUMBERS
-  document.addEventListener('DOMContentLoaded', function() {
-    // Detect when elements are visible on the screen (replaces jQuery .appear)
-    const counterThumbs = document.querySelectorAll('.counter-thumb');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const counters = document.querySelectorAll('.counter-number');
-          counters.forEach(counter => countTo(counter));
-        }
-      });
-    });
+  document.getElementById('send-button').addEventListener('click', function (event) {
+    event.preventDefault(); 
+    alert('Not implemented yet.');
+  });
 
-    counterThumbs.forEach(thumb => observer.observe(thumb));
-  });*/
-
-  // CUSTOM LINK (smooth scroll)
   const smoothScrollLinks = document.querySelectorAll('.smoothscroll');
   smoothScrollLinks.forEach(link => {
     link.addEventListener('click', function (event) {

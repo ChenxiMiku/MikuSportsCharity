@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     saveButton.addEventListener('click', function () {
-        console.log(organizationNameDisplay)
         organizationNameDisplay.textContent = editOrganizationName.value.trim() || organizationNameDisplay.textContent;
         emailDisplay.textContent = editEmail.value.trim() || emailDisplay.textContent;
         phoneDisplay.textContent = editPhone.value.trim() || phoneDisplay.textContent;

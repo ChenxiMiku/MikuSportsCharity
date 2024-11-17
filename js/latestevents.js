@@ -27,7 +27,7 @@ const organizations = [
             },
             {
                 title: "Football  2024",
-                url: "charity.html?organization=Run%20for%20Life",
+                url: "charity.html?organization=Kisckstarter%20Foundation",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Donation", "Volunteering"],
                 date: "2024-06-01",
@@ -41,8 +41,8 @@ const organizations = [
         charityName: "Run for Life",
         eventsData: [
             {
-                title: "Toy Donation Drive",
-                url: "charity.html",
+                title: "Donation Drive",
+                url: "charity.html?organization=Run%20for%20Life",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Donation", "Children"],
                 date: "2024-07-15",
@@ -52,7 +52,7 @@ const organizations = [
             },
             {
                 title: "Summer Camp Fundraiser",
-                url: "charity.html",
+                url: "charity.html?organization=Run%20for%20Life",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Fundraising", "Summer Camp"],
                 date: "2024-08-10",
@@ -157,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
     clearButton.addEventListener('click', () => {
         document.querySelectorAll('.tags-block-link').forEach(link => {
             link.classList.remove('tags-selected');
-            console.log(selectedTags);
             selectedTags = [];
         });
 

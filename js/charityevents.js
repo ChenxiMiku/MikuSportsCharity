@@ -123,12 +123,16 @@ function renderCharityEvents(organizations) {
             eventItem.classList.add('events-block', 'mt-3', 'me-3', 'mb-3', 'custom-block-wrap'); 
             eventItem.style.flex = '1 1 30%';
         
-            // Determine the button label based on the tags
+            // Determine the button label and URL based on the tags
             let buttonLabel = '';
+            let buttonUrl = ''; // Variable to hold the URL
+        
             if (event.tags.includes("Donation")) {
                 buttonLabel = 'Donate now';
+                buttonUrl = `donate.html?charityName=Hope%20Foundation&eventName=Kickstart%20Hope&raisedAmount=18500&goalAmount=32000&eventImage=images/causes/240808-olympics-supershoes-nike-se-1200p-734ca1.webp`; // Construct URL for charity
             } else if (event.tags.includes("Volunteer")) {
                 buttonLabel = 'Volunteer';
+                buttonUrl = `volunteer.html`; // Update Volunteer URL
             }
         
             eventItem.innerHTML = `
@@ -151,7 +155,7 @@ function renderCharityEvents(organizations) {
                         <h4><a href="${event.url}" class="events-block-title-link">${event.title}</a></h4>
                     </div>
                 </div>
-                <a href="donate.html" class="custom-btn btn">${buttonLabel}</a>
+                <a href="${buttonUrl}" class="custom-btn btn">${buttonLabel}</a>
             </div>
             `;
         
@@ -161,7 +165,7 @@ function renderCharityEvents(organizations) {
             } else if (event.tags.includes("Volunteer")) {
                 volunteerContainer.appendChild(eventItem);
             }
-        });        
+        });                
     });
 
     // Append the category containers to the main container

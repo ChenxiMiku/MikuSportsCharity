@@ -18,3 +18,8 @@ window.onload = function () {
     document.getElementById('event-image').src = eventImage;
 
 };
+
+document.getElementById('submit-btn').addEventListener('click', function (event) {
+    event.preventDefault(); 
+    alert('Not implemented yet.');
+  });

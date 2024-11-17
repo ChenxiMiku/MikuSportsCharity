@@ -18,7 +18,6 @@ const isLoggedIn = getLoginStatusFromCookie();
 logoutButtons.forEach(function (logoutBtn) {
     logoutBtn.addEventListener('click', function (event) {
         //event.preventDefault();
-        console.log("Logout button clicked");
         document.cookie = "isLoggedIn=false; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/;";
         localStorage.removeItem('previousPage');
         window.location.reload();

@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     toggler.addEventListener("click", function () {
 
-        console.log("yes");
         const isExpanded = toggler.getAttribute("aria-expanded") === "true";
         toggler.setAttribute("aria-expanded", !isExpanded);
 
