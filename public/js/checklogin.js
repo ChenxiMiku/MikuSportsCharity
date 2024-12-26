@@ -1,82 +1,89 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const logoutButtons = document.querySelectorAll('.logoutBtn');
-
-    function getLoginStatusFromCookie() {
-        const cookies = document.cookie.split('; ');
-        for (let cookie of cookies) {
-            const [name, value] = cookie.split('=');
-            if (name === 'user_login') {
-                // 解码 base64 编码的值
-                const decodedValue = atob(value);
-                
-                // 发送请求到服务器验证解码后的 email 是否有效
-                return verifyLogin(decodedValue);
-            }
+document.addEventListener("DOMContentLoaded", function () {
+    const logoutButtons = document.querySelectorAll(".logoutBtn");
+    const loginBtn = document.getElementById("loginBtn");
+    const userAvatar = document.getElementById("userAvatar");
+    const userName = document.getElementById("userName");
+    const loginOverlay = document.getElementById("loginOverlay");
+    loginBtn.style.display = "none";
+    async function verifyLogin() {
+        try {
+            const response = await fetch("../public/api/verifyLogin", {
+                method: "GET",
+                credentials: "include",
+            });
+            const data = await response.json();
+            return data.success ? data : null;
+        } catch (error) {
+            console.error("Error verifying token:", error);
+            return null;
         }
-        return false;
     }
 
-    function verifyLogin(email) {
-        // 使用 fetch 向服务器发送验证请求
-        return fetch('../public/api/verifyLogin', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email: email }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            return data.success;
-        })
-        .catch(error => {
-            console.error('Error verifying login:', error);
-            return false;
+    async function updateUI() {
+        const userData = await verifyLogin();
+
+        if (window.location.pathname.endsWith("/login") && userData) {
+            console.log("User is already logged in. Redirecting to home page...");
+            window.location.href = "../public/";
+        }
+
+        if (!userData && loginOverlay) {
+            loginOverlay.classList.remove("d-none");
+            document.body.style.pointerEvents = "auto"; 
+        }
+
+        if (userData) {
+            if (userName) {
+                userName.textContent = userData.username;
+                console.log("User is logged in as", userData.username);
+            }
+            if (userAvatar) {
+                userAvatar.src = userData.avatarUrl || "../public/images/avatar.png";
+                userAvatar.classList.remove("d-none");
+                userAvatar.style.display = "block";
+            }
+            if (loginBtn) loginBtn.style.display = "none";
+        } else {
+            if (loginBtn) loginBtn.style.display = "block";
+            if (userAvatar) userAvatar.style.display = "none";
+        }
+    }
+
+    function logout() {
+        fetch("../public/api/logout", {
+            method: "POST",
+            credentials: "include",
+        }).then(() => {
+            localStorage.removeItem("previousPage");
+            updateUI();
         });
     }
 
-    // 检查用户是否已登录
-    const isLoggedIn = getLoginStatusFromCookie();
-
-    // 根据登录状态显示不同内容
-    if (isLoggedIn) {
-        // 从服务器获取用户头像
-        fetch('../public/api/getUserAvatar')  // 假设你有一个API接口返回用户头像信息
-            .then(response => response.json())
-            .then(data => {
-                if (data.success && data.avatarUrl) {
-                    // 如果成功获取到头像，则显示用户头像
-                    document.getElementById('userAvatar').src = data.avatarUrl;
-                    document.getElementById('userAvatar').classList.remove('d-none');
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching user avatar:', error);
-            });
-
-        if (document.getElementById('loginBtn')) {
-            document.getElementById('loginBtn').style.display = 'none';
-        }
-        document.getElementById('userAvatar').style.display = 'block';
-
-    } else {
-        if (document.getElementById('userLogin')) {
-            document.getElementById('userLogin').classList.remove('d-none');
-        }
-
-        if (document.getElementById('loginBtn')) {
-            document.getElementById('loginBtn').style.display = 'block';
-        }
-        document.getElementById('userAvatar').style.display = 'none';
-    }
-
-    // 处理退出登录
     logoutButtons.forEach(function (logoutBtn) {
-        logoutBtn.addEventListener('click', function (event) {
-            // 退出登录时删除用户登录的 cookie
-            document.cookie = 'user_login=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-            localStorage.removeItem('previousPage');
-            window.location.reload();
+        logoutBtn.addEventListener("click", function () {
+            logout();
         });
     });
+
+    async function redirectIfNotLoggedIn() {
+        const userData = await verifyLogin();
+
+        if (!userData) {
+            if (loginOverlay) {
+                loginOverlay.style.display = "flex"; 
+                document.body.style.pointerEvents = "none";
+            }
+
+            localStorage.setItem("previousPage", window.location.href);
+
+            setTimeout(() => {
+                window.location.href = "../public/login";
+            }, 3000);
+        }
+    }
+
+    if (window.location.pathname.endsWith("/volunteer")) {
+        redirectIfNotLoggedIn();
+    }
+    updateUI();
 });

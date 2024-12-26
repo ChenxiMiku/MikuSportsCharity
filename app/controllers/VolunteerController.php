@@ -1,7 +1,7 @@
 <?php
 
-class AboutController extends Controller {
-    public function about() {
+class VolunteerController extends Controller {
+    public function volunteer() {
         $title = $this->config('app')['title'];
         $email = $this->config('app')['email'];
         $phone = $this->config('app')['phone'];
@@ -9,16 +9,20 @@ class AboutController extends Controller {
         $addressLink = $this->config('app')['addressLink'];
         $description = $this->config('app')['description'];
 
-        $this->view('pages/about', [
-            'webTitle' => "About - " . $title,
+        $volunteerEventModel = $this->model('VolunteerEvent');
+
+        $this->view('pages/volunteer', [
+            'webTitle' => "Volunteer - ". $title,
             'title' => $title,
             'email' => $email,
             'phone' => $phone,
             'address' => $address,
             'addressLink' => $addressLink,
             'description' => $description,
+            'volunteerEvents' => $volunteerEventModel->getUpcomingEvents(),
         ]);
 
     }
 }
+
 ?>

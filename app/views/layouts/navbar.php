@@ -37,7 +37,23 @@
                 <li id="userLogin" class="nav-item mx-3">
                     <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn" href="../public/login">Login</a>
                 </li>
-                <li class="nav-item my-auto ms-2">
+                <div id="userAvatar" class="dropdown me-4 d-none my-auto nav-item">
+                    <a class="dropdown-toggle my-auto" href="../public/dashboard" role="button" id="avatarDropdown">
+                            <p class="my-auto d-inline"><span id="userName"></span></p>
+                            <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="48" height="48" class="rounded-circle d-inline">
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="avatarDropdown">
+                        <a class="dropdown-item align-items-center" href="../public/dashboard">
+                            <i class="bi-speedometer2 me-2"></i>Dashboard
+                        </a>
+
+                        <a class="dropdown-item align-items-center logoutBtn" href="../public/">
+                            <i class="bi-box-arrow-right me-2"></i>Log out
+                        </a>
+                    </div>
+                </div>
+                <li class="nav-item my-auto ms-3">
                     <button class="btn btn-outline-secondary darkModeToggle">
                         <i class="fas bi-moon-fill"></i>
                     </button>

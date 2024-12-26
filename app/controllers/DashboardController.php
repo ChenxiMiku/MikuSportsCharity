@@ -1,7 +1,7 @@
 <?php
 
-class AboutController extends Controller {
-    public function about() {
+class DashboardController extends Controller {
+    public function dashboard() {
         $title = $this->config('app')['title'];
         $email = $this->config('app')['email'];
         $phone = $this->config('app')['phone'];
@@ -9,8 +9,8 @@ class AboutController extends Controller {
         $addressLink = $this->config('app')['addressLink'];
         $description = $this->config('app')['description'];
 
-        $this->view('pages/about', [
-            'webTitle' => "About - " . $title,
+        $this->view('pages/dashboard', [
+            'webTitle' => "Dashboard - " . $title,
             'title' => $title,
             'email' => $email,
             'phone' => $phone,

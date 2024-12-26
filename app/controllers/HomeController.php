@@ -15,7 +15,8 @@ class HomeController extends Controller {
         $contactName = $this->config('app')['contactName'];
 
         $this->view('pages/index', [
-            'title' => "$title",
+            'webTitle' => "Home - " . $title,
+            'title' => $title,
             'email' => $email,
             'phone' => $phone,
             'address' => $address,

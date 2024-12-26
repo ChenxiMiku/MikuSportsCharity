@@ -1,49 +1,53 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.getElementById("loginForm");
+    const loginError = document.getElementById("loginError");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
 
-    function setLoginCookie() {
-        const expires = new Date();
-        expires.setDate(expires.getDate() + 7);
-        document.cookie = `isLoggedIn=true; expires=${expires.toUTCString()}; path=/;`;
+    function hideErrorMessage() {
+        loginError.textContent = "";
+        loginError.classList.add("d-none");
     }
 
-    loginForm.addEventListener("submit", function (event) {
-        event.preventDefault(); 
+    usernameInput.addEventListener("input", hideErrorMessage);
+    passwordInput.addEventListener("input", hideErrorMessage);
 
-        const submitButton = event.submitter; 
+    loginForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-        if (submitButton.id === "SigninBtn") {
+        const formData = new FormData(loginForm);
+        const username = formData.get("username");
+        const password = formData.get("password");
 
-            const formData = new FormData(loginForm);
-
-            fetch("common/login_handler.php", {
+        try {
+            const response = await fetch("../public/api/login", {
                 method: "POST",
-                body: formData,
-            })
-                .then((response) => response.json())
-                .then((data) => {
-                    if (data.success) {
-                        setLoginCookie();
-                        const previousPage = localStorage.getItem("previousPage");
-                        window.location.href = previousPage ? previousPage : data.redirect;
-                    } else {
-                        alert(data.message);
-                    }
-                })
-                .catch((error) => {
-                    console.error("Error:", error);
-                    alert("An error occurred. Please try again.");
-                });
-        } else if (submitButton.id === "googleSignIn") {
-            // Google 登录逻辑（可替换为真实的 Google 登录 API）
-            alert("Google login not implemented yet.");
-            setLoginCookie();
-            window.location.href = "dashboard.php";
-        } else if (submitButton.id === "githubSignIn") {
-            // GitHub 登录逻辑（可替换为真实的 GitHub 登录 API）
-            alert("GitHub login not implemented yet.");
-            setLoginCookie();
-            window.location.href = "dashboard.php";
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ username, password })
+            });
+
+            const data = await response.json();
+            console.log(data);
+
+            if (response.ok && data.success) {
+                console.log(localStorage.getItem("previousPage"));
+                if (localStorage.getItem("previousPage")) {
+                    console.log("Redirecting to previous page...");
+                    window.location.href = localStorage.getItem("previousPage");
+                    localStorage.removeItem("previousPage");
+                }
+                else{
+                    window.location.href = "../public/dashboard";
+                }
+            } else {
+                loginError.textContent = data.message || "Invalid username or password.";
+                loginError.classList.remove("d-none");
+            }
+        } catch (error) {
+            loginError.textContent = "An error occurred. Please try again.";
+            loginError.classList.remove("d-none");
         }
     });
 });

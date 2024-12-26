@@ -34,6 +34,7 @@ class VolunteerEvent {
     public function getUpcomingEvents($limit = 3) {
         $sql = "
             SELECT 
+                ve.event_id,
                 ve.event_name,
                 ve.event_date,
                 ve.event_location,

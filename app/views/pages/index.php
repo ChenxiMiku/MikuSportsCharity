@@ -56,7 +56,7 @@
 
                     <div class="col-lg-6 col-md-6 col-12 mb-4 mb-lg-0">
                         <div class="featured-block d-flex justify-content-center align-items-center">
-                            <a href="volunteer.html" class="d-block">
+                            <a href="../public/volunteer" class="d-block">
                                 <img src="../images/icons/hands.png" class="featured-block-image img-fluid" alt="">
 
                                 <p class="featured-block-text">Become a <strong>volunteer</strong></p>
@@ -157,21 +157,19 @@
                                             By <?php echo htmlspecialchars($donation['charity_name']) ?></a>
                                     </div>
 
-                                    <a href="donate.php?title=<?php echo urlencode($donation['title']) ?>"
+                                    <a href="donate?title=<?php echo urlencode($donation['title']) ?>"
                                         class="custom-btn btn">Donate now</a>
                                 </div>
                             </div>
                         </div>
                     <?php endforeach; ?>
 
-
-
                     <div class="col-lg-12 col-12 text-start mt-5 ms-4 mb-2">
                         <h5 class="fs-2">Volunteer</h5>
                     </div>
 
                     <?php foreach ($volunteerEvents as $event): ?>
-                        <div class="col-lg-4 col-md-6 col-12">
+                        <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="custom-block-wrap">
                                 <img src="../images/causes/pexels-photo-1263348.webp"
                                     class="custom-block-image img-fluid"
@@ -227,11 +225,11 @@
                     </div>
 
                     <div class="col-lg-3 col-12">
-                        <a href="#section_3" class="custom-btn btn smoothscroll">Make a donation</a>
+                        <a href="#donation" class="custom-btn btn smoothscroll">Make a donation</a>
                     </div>
 
                     <div class="col-lg-3 col-12">
-                        <a href="volunteer.html" class="custom-btn btn">Become a volunteer</a>
+                        <a href="../public/volunteer" class="custom-btn btn">Become a volunteer</a>
                     </div>
 
                 </div>

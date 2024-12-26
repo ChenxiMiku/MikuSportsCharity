@@ -11978,17 +11978,6 @@ CUSTOM TEXT BOX
     line-height: 30px;
 }
 
-
-/*---------------------------------------
-AVATAR IMAGE - TESTIMONIAL, AUTHOR               
------------------------------------------*/
-.avatar-image {
-    border-radius: var(--border-radius-large);
-    width: 65px;
-    height: 65px;
-    object-fit: cover;
-}
-
 /*---------------------------------------
 CUSTOM BUTTON               
 -----------------------------------------*/
@@ -12908,7 +12897,7 @@ CUSTOM FORM
     box-shadow: none;
     border: 0;
     color: var(--p-color);
-    margin-bottom: 24px;
+    margin-top: 24px;
     padding-top: 13px;
     padding-bottom: 13px;
     outline: none;
@@ -18253,4 +18242,3 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
 .width-270{
     width: 270px;
 }
-

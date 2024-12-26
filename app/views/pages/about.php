@@ -11,7 +11,7 @@
                     users to support charitable causes through donations and other engagement options. Our organization
                     aims to create a space that fosters community involvement and streamlines the donation process,
                     making it easier for individuals to contribute to causes they care about. Looking ahead, we envision
-                    expanding Spots Charity’s functionalities to include more interactive features and partnerships with
+                    expanding Spots Charity's functionalities to include more interactive features and partnerships with
                     charitable organizations, enhancing both user experience and impact.</p>
                 <p>Through various programs, we aim to empower young athletes and foster a sense of community. Join
                     us

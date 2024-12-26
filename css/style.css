@@ -11907,7 +11907,6 @@ CUSTOM BLOCK
     display: block;
 }
 
-
 /*---------------------------------------
 PROGRESS BAR               
 -----------------------------------------*/
@@ -12386,38 +12385,8 @@ ABOUT
 /*---------------------------------------
 Register             
 -----------------------------------------*/
-.event-block {
-    text-align: left;
-    transition: all 0.5s ease;
-    min-height: 128px;
-    padding: 15px;
-}
-
-.event-block:hover {
-    background: var(--bg-color);
-    border-radius: var(--border-radius-medium);
-    box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
-}
-
-.event-block:hover .event-block-image {
-    transform: scale(0.75);
-}
-
-.event-image {
-    display: block;
-    margin: auto;
-    transition: all 0.5s;
-}
-
-.event-block:hover .event-block-text {
-    margin-top: 0;
-}
-
-.event-block-text {
-    color: var(--primary-color);
-    font-size: var(--h5-font-size);
-    margin-top: 20px;
-    transition: all 0.5s;
+.event-block{
+    border: 1px solid var(--primary-color);
 }
 
 .slide-out-left {
@@ -13119,6 +13088,11 @@ Login Form
     padding: 50px;
     backdrop-filter: blur(0px);
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.register-form .form-control {
+    margin-top: 12px;
+    margin-bottom: 0;
 }
 
 .divider-wrapper {
@@ -14638,10 +14612,6 @@ RESPONSIVE STYLES
 /*---------------------------------------
 Dashboard and Admin Panel
 -----------------------------------------*/
-
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -14830,17 +14800,22 @@ div.loader h1 span {
 
 .sidebar {
     height: 100%;
+    width: 250px; /* 设置宽度 */
     background-color: var(--bg-color);
     padding: var(--third-padding);
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px 0px --main-color;
-    position: relative;
+    position: fixed;
     transition: transform 0.45s;
     -webkit-transition: transform 0.45s;
     -moz-transition: transform 0.45s;
     -ms-transition: transform 0.45s;
     -o-transition: transform 0.45s;
+}
+
+.main-content {
+    margin-left: 250px;
 }
 
 @media (max-width: 767px) {
@@ -15041,15 +15016,9 @@ main .main-content .title::after {
 }
 
 .main-content-boxes {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(300px, 0.9fr));
-    gap: var(--secondary-padding);
-}
+    display: flex;
+    padding: var(--main-padding);
 
-@media (max-width: 1200px) {
-    .main-content-boxes {
-        grid-template-columns: 1fr;
-    }
 }
 
 .main-content-boxes .box {
@@ -15058,10 +15027,6 @@ main .main-content .title::after {
     background-color: var(--bg-color);
     padding: var(--third-padding);
     border-radius: var(--first-radius);
-    -webkit-border-radius: var(--first-radius);
-    -moz-border-radius: var(--first-radius);
-    -ms-border-radius: var(--first-radius);
-    -o-border-radius: var(--first-radius);
     overflow: hidden;
 }
 
@@ -15880,10 +15845,6 @@ main .projects-box {
     padding: var(--secondary-padding);
     background-color: var(--bg-color);
     border-radius: var(--secondary-radius);
-    -webkit-border-radius: var(--secondary-radius);
-    -moz-border-radius: var(--secondary-radius);
-    -ms-border-radius: var(--secondary-radius);
-    -o-border-radius: var(--secondary-radius);
 }
 
 main .projects-box .projects-box-section2 {
@@ -18254,3 +18215,63 @@ main .projects-box .projects-box-section2 table tr td a.rejected {
     width: 270px;
 }
 
+.input-error {
+    border: 2px solid red !important;
+}
+
+/* Wrapper styling for alignment */
+.custom-checkbox-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Hide default checkbox */
+.custom-checkbox-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox design */
+.custom-checkbox-label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 32px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+/* Add a custom checkbox icon */
+.custom-checkbox-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 28px;
+    height: 28px;
+    border: 2px solid #ccc;
+    border-radius: 50%; /* 圆形 */
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+
+/* Add a checkmark for selected state */
+.custom-checkbox-input:checked + .custom-checkbox-label::before {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    content: "✓";
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* Optional: Hover effects */
+.custom-checkbox-label:hover::before {
+    border-color: #888;
+}
