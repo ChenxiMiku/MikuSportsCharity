@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../css/style.css">
-
 <footer class="site-footer">
     <div class="container">
         <div class="row">
@@ -9,10 +7,10 @@
             <div class="col-lg-4 col-md-6 col-12 mb-4">
                 <h5 class="site-footer-title mb-3">Quick Links</h5>
                 <ul class="footer-menu">
-                    <li class="footer-menu-item"><a href="about.html" class="footer-menu-link">About us</a></li>
-                    <li class="footer-menu-item"><a href="events.php" class="footer-menu-link">Charities</a></li>
-                    <li class="footer-menu-item"><a href="dashboard.php" class="footer-menu-link">Dashboard</a></li>
-                    <li class="footer-menu-item"><a href="volunteer.php" class="footer-menu-link">Become a volunteer</a></li>
+                    <li class="footer-menu-item"><a href="../public/about" class="footer-menu-link">About us</a></li>
+                    <li class="footer-menu-item"><a href="../public/charities" class="footer-menu-link">Charities</a></li>
+                    <li class="footer-menu-item"><a href="../public/profile" class="footer-menu-link">My profile</a></li>
+                    <li class="footer-menu-item"><a href="../public/volunteer" class="footer-menu-link">Become a volunteer</a></li>
                     <li class="footer-menu-item"><a href="#section_3" class="footer-menu-link">Make a donation</a></li>
                 </ul>
             </div>

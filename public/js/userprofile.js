@@ -1,50 +1,26 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const editButton = document.getElementById('editButton');
-    const editForm = document.getElementById('editForm');
-    const saveButton = document.getElementById('saveButton');
-    const cancelButton = document.getElementById('cancelButton');
+document.addEventListener("DOMContentLoaded", () => {
+    // 定义获取数据的函数
+    const fetchUserData = async () => {
+        try {
+            const response = await fetch('../public/api/getUserDetails');
+            const data = await response.json();
 
-    const userNameDisplay = document.getElementById('userName');
-    const emailDisplay = document.getElementById('email');
-    const phoneDisplay = document.getElementById('phone');
-    const dateOfJoinDisplay = document.getElementById('dateOfJoin');
-    const accountTypeDisplay = document.getElementById('accountType');
+            if (data.error) {
+                console.error(data.error);
+                return;
+            }
+            document.getElementById('userName1').textContent = data.user.username;
+            document.getElementById('name').textContent = data.user.name;
+            document.getElementById('email').textContent = data.user.email;
+            document.getElementById('phone').textContent = data.user.contact_number;
+            document.getElementById('dateOfJoin').textContent = data.user.created_at;
+            document.getElementById('accountType').textContent = data.user.role;
+            document.getElementById('userAvatar1').src = data.user.avatar_path ? data.user.avatar_path : 'images/test/testavatar.png';
 
-    const editOrganizationName = document.getElementById('editOrganizationName');
-    const editEmail = document.getElementById('editEmail');
-    const editPhone = document.getElementById('editPhone');
-    const editDateOfJoin = document.getElementById('editDateOfJoin');
-    const editAccountType = document.getElementById('editAccountType');
+        } catch (error) {
+            console.error('Error fetching data:', error);
+        }
+    };
 
-    const informationSection = document.getElementById('informationSection');
-    editForm.style.display = 'none';
-
-    editButton.addEventListener('click', function () {
-        informationSection.style.display = 'none';
-
-        editForm.style.display = 'block';
-
-        editUserName.value = userNameDisplay.textContent.trim();
-        editEmail.value = emailDisplay.textContent.trim();
-        editPhone.value = phoneDisplay.textContent.trim();
-        editDateOfJoin.value = dateOfJoinDisplay.textContent.trim();
-        editAccountType.value = accountTypeDisplay.textContent.trim();
-    });
-
-    saveButton.addEventListener('click', function () {
-
-        userNameDisplay.textContent = editUserName.value.trim() || userNameDisplay.textContent.trim();
-        emailDisplay.textContent = editEmail.value.trim() || emailDisplay.textContent.trim();
-        phoneDisplay.textContent = editPhone.value.trim() || phoneDisplay.textContent.trim();
-        dateOfJoinDisplay.textContent = editDateOfJoin.value.trim() || dateOfJoinDisplay.textContent.trim();
-        accountTypeDisplay.textContent = editAccountType.value.trim() || accountTypeDisplay.textContent.trim();
-
-        editForm.style.display = 'none';
-        informationSection.style.display = 'block'; 
-    });
-
-    cancelButton.addEventListener('click', function () {
-        editForm.style.display = 'none';
-        informationSection.style.display = 'block';  
-    });
+    fetchUserData();
 });

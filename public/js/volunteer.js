@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             if (data.success) {
                 document.getElementById("name").value = data.user.name || "";
                 document.getElementById("email").value = data.user.email || "";
-                
+
                 // Split phone into country code and number
                 const phone = data.user.contact_number || "";
                 const phoneMatch = phone.match(/^\+?(\d{1,4})\s*(.*)$/);
@@ -42,6 +42,33 @@ document.addEventListener("DOMContentLoaded", async function () {
             }
         } catch (error) {
             console.error("Error fetching user details:", error);
+        }
+    }
+
+    // Parse URL parameters
+    function getUrlParams() {
+        const params = {};
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        urlParams.forEach((value, key) => {
+            params[key] = decodeURIComponent(value);
+        });
+        return params;
+    }
+
+    // Automatically check the event based on URL parameter
+    function autoSelectEvent() {
+        const params = getUrlParams();
+        if (params.event) {
+            const eventCheckbox = Array.from(document.querySelectorAll('input[name="selected_events[]"]')).find(
+                checkbox => checkbox.closest(".custom-block").querySelector("h5").textContent.trim() === params.event
+            );
+            
+            if (eventCheckbox) {
+                eventCheckbox.checked = true;
+                updateNextButtonStatus();
+                updateSelectedEvents();
+            }
         }
     }
 
@@ -56,12 +83,12 @@ document.addEventListener("DOMContentLoaded", async function () {
 
         const selectedCheckboxes = document.querySelectorAll('input[name="selected_events[]"]:checked');
         const selectedEvents = [];
-        
+
         selectedCheckboxes.forEach(checkbox => {
             const eventId = checkbox.value;
             const timeSelect = document.querySelector(`[name="event${eventId}_time"]`);
             const time = timeSelect ? timeSelect.value : "";
-        
+
             if (time) {
                 selectedEvents.push({ event_id: eventId, time });
             }
@@ -225,4 +252,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             event.target.classList.remove("is-invalid");
         }
     });
+
+    // Auto-select event based on URL parameter
+    autoSelectEvent();
 });

@@ -1,7 +1,6 @@
 <?php
-
-class DashboardController extends Controller {
-    public function dashboard() {
+class CharityController extends Controller {
+    public function directory() {
         $title = $this->config('app')['title'];
         $email = $this->config('app')['email'];
         $phone = $this->config('app')['phone'];
@@ -9,8 +8,8 @@ class DashboardController extends Controller {
         $addressLink = $this->config('app')['addressLink'];
         $description = $this->config('app')['description'];
 
-        $this->view('pages/dashboard', [
-            'webTitle' => "Dashboard - " . $title,
+        $this->view('pages/charities', [
+            'webTitle' => "charities - " . $title,
             'title' => $title,
             'email' => $email,
             'phone' => $phone,
@@ -20,7 +19,8 @@ class DashboardController extends Controller {
         ]);
 
     }
-    public function profile() {
+
+    public function charity() {
         $title = $this->config('app')['title'];
         $email = $this->config('app')['email'];
         $phone = $this->config('app')['phone'];
@@ -28,8 +28,8 @@ class DashboardController extends Controller {
         $addressLink = $this->config('app')['addressLink'];
         $description = $this->config('app')['description'];
 
-        $this->view('pages/profile', [
-            'webTitle' => "Profile - " . $title,
+        $this->view('pages/charity', [
+            'webTitle' => "charities - " . $title,
             'title' => $title,
             'email' => $email,
             'phone' => $phone,
@@ -37,7 +37,6 @@ class DashboardController extends Controller {
             'addressLink' => $addressLink,
             'description' => $description,
         ]);
-        
+
     }
 }
-?>

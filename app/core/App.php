@@ -1,25 +1,21 @@
 <?php
 class App {
-    protected $controller = 'HomeController'; // 默认控制器
-    protected $method = 'index';             // 默认方法
-    protected $params = [];                  // URL 参数
-    protected $router = [];                  // 路由配置
+    protected $controller = 'HomeController'; 
+    protected $method = 'index';            
+    protected $params = [];             
+    protected $router = [];              
 
     public function __construct() {
-        $this->router = include('../app/config/router.php'); // 加载路由配置
+        $this->router = include('../app/config/router.php');
 
         try {
-            $url = $this->parseUrl(); // 解析 URL
-            $this->dispatch($url);    // 分发请求
+            $url = $this->parseUrl(); 
+            $this->dispatch($url); 
         } catch (Exception $e) {
             $this->handleError($e->getMessage());
         }
     }
 
-    /**
-     * 解析 URL
-     * @return array
-     */
     private function parseUrl() {
         if (isset($_GET['url'])) {
             return explode('/', filter_var(trim($_GET['url'], '/'), FILTER_SANITIZE_URL));
@@ -27,16 +23,8 @@ class App {
         return [];
     }
 
-    /**
-     * 分发请求
-     * 根据路由配置加载控制器和方法
-     * @param array $url
-     * @return void
-     * @throws Exception
-     */
     private function dispatch($url) {
-        $path = '/' . implode('/', $url); // 构造路径
-        //error_log("Request path: {$path}");
+        $path = '/' . implode('/', $url); 
 
         if (isset($this->router[$path])) {
             [$this->controller, $this->method] = explode('@', $this->router[$path]);
@@ -44,15 +32,10 @@ class App {
             throw new Exception("Route '{$path}' not defined.");
         }
 
-        $this->loadController(); // 加载控制器
-        $this->callMethod();     // 调用方法
+        $this->loadController(); 
+        $this->callMethod(); 
     }
 
-    /**
-     * 加载控制器
-     * @return void
-     * @throws Exception
-     */
     private function loadController() {
         $controllerPath = "../app/controllers/{$this->controller}.php";
 
@@ -69,11 +52,6 @@ class App {
         $this->controller = new $this->controller;
     }
 
-    /**
-     * 调用控制器的方法
-     * @return void
-     * @throws Exception
-     */
     private function callMethod() {
         if (!method_exists($this->controller, $this->method)) {
             throw new Exception("Method '{$this->method}' not found in controller '{$this->controller}'.");
@@ -82,11 +60,6 @@ class App {
         call_user_func_array([$this->controller, $this->method], $this->params);
     }
 
-    /**
-     * 错误处理
-     * @param string $error
-     * @return void
-     */
     private function handleError($error) {
         error_log($error);
         error_log("Error: " . $error);

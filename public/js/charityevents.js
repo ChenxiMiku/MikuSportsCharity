@@ -18,13 +18,13 @@ async function fetchEvents() {
 // Sample organizations data with mission and goal
 const organizations = [
     {
-        charityName: "Kisckstarter Foundation",
+        charityName: "Kickstart Hope",
         mission: "To empower communities through sustainable healthcare and education.",
         goal: "Provide resources and opportunities to underserved communities globally.",
         eventsData: [
             {
                 title: "Charity Run 2024",
-                url: "donate.html?charityName=Hope%20Foundation&eventName=Kickstart%20Hope&raisedAmount=18500&goalAmount=32000&eventImage=path_to_image.jpg",
+                url: "../public/volunteer",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Running", "Volunteer"],
                 date: "2024-05-01",
@@ -33,7 +33,7 @@ const organizations = [
             },
             {
                 title: "Football 2024",
-                url: "charity.html?organization=Run%20for%20Life",
+                url: "../public/donation",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Donation", "Children"],
                 date: "2024-06-01",
@@ -49,7 +49,7 @@ const organizations = [
         eventsData: [
             {
                 title: "Toy Donation Drive",
-                url: "charity.html",
+                url: "../public/donation",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Donation", "Children"],
                 date: "2024-07-15",
@@ -58,7 +58,7 @@ const organizations = [
             },
             {
                 title: "Summer Camp Fundraiser",
-                url: "charity.html",
+                url: "../public/volunteer",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Running", "Volunteer"],
                 date: "2024-08-10",
@@ -98,11 +98,11 @@ function renderCharityEvents(organizations) {
 
     // Create containers for "Donation" and "Volunteer" categories
     const donationContainer = document.createElement('div');
-    donationContainer.classList.add('category-container', 'donation-container');
+    donationContainer.classList.add('category-container');
     donationContainer.innerHTML = `<h2>Donation Events</h2>`;
     
     const volunteerContainer = document.createElement('div');
-    volunteerContainer.classList.add('category-container', 'volunteer-container');
+    volunteerContainer.classList.add('category-container');
     volunteerContainer.innerHTML = `<h2>Volunteer Events</h2>`;
 
     filteredOrganizations.forEach(organization => {

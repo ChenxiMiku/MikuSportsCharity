@@ -12,7 +12,7 @@ class Charity {
      * @return array
      */
     public function getAllCharities() {
-        $sql = "SELECT charity_id, charity_name, mission, goal FROM charity";
+        $sql = "SELECT charity_id, charity_name FROM charity";
         $stmt = $this->db->getConnection()->prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

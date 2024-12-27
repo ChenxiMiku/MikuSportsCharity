@@ -32,11 +32,12 @@
                             <!-- Password Field -->
                             <div class="col-lg-12 col-12">
                                 <input type="password" class="form-control" id="password" name="password"
-                                    placeholder="Password" aria-label="Password" required autocomplete="new-password">                                
-                                <div class="progress mt-4">
+                                    placeholder="Password" aria-label="Password" required autocomplete="new-password">
+                                    <small id="passwordFeedback" class="form-text">Password must be at least 8 characters long. Use upper and lower case letters, numbers and symbols for better security.</small>
+                                <div class="progress">
                                     <div id="password-strength" class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <small id="passwordFeedback" class="form-text text-muted">Strength</small>
+                                <small id="passwordStrengthFeedback" class="form-text text-muted">Password must be at least 8 characters long.</small>
                             </div>
 
                             <!-- Confirm Password Field -->

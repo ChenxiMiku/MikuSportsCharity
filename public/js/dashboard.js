@@ -1,98 +1,86 @@
-// DOM Element Selectors
-const getSideBar = document.querySelector(".sidebar");
-const getPageContent = document.querySelector(".page-content");
-const getLoader = document.querySelector(".loader");
-const getToggle = document.querySelectorAll(".toggle");
-const getHeart = document.querySelector(".heart");
+document.addEventListener("DOMContentLoaded", function () {
+    // 管理慈善机构
+    const charityForm = document.getElementById("addCharityForm");
+    const charityList = document.getElementById("charityList");
 
-// Page sections
-const sections = {
-    Dashboard: document.querySelector("#Dashboard"),
-    Profile: document.querySelector("#Profile"),
-    Donation: document.querySelector("#Donation"),
-    Events: document.querySelector("#Events"),
-};
+    charityForm.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-// State
-let displayedPage = sections.Dashboard; // Default displayed page is Dashboard
+        const charityName = document.getElementById("charityName").value.trim();
 
-// Functions
+        if (!charityName || !charityEmail || !charityPhone) {
+            alert("Please fill in all fields.");
+            return;
+        }
 
-// Switch Page
-function switchPage(page) {
-    if (displayedPage) displayedPage.hidden = true;
-    displayedPage = page;
-    displayedPage.hidden = false;
-}
+        const newRow = document.createElement("tr");
+        newRow.innerHTML = `
+            <td>${charityName}</td>
+            <td>
+                <button class="edit-btn btn btn-warning btn-sm">Edit</button>
+                <button class="delete-btn btn btn-danger btn-sm">Delete</button>
+            </td>`;
 
-// Avatar Upload
-function setupAvatarUpload(avatarInputId, avatars) {
-    const avatarInput = document.getElementById(avatarInputId);
-    avatars.forEach(avatar => {
-        avatar.onclick = () => avatarInput.click();
+        charityList.appendChild(newRow);
+        charityForm.reset();
+
+        alert("Charity added successfully.");
     });
 
-    avatarInput.onchange = (event) => {
-        const file = event.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                const uploadedImageUrl = e.target.result;
-                avatars.forEach(img => (img.src = uploadedImageUrl));
-            };
-            reader.readAsDataURL(file);
-        }
-    };
-}
+    charityList.addEventListener("click", function (e) {
+        if (e.target.classList.contains("edit-btn")) {
+            const row = e.target.closest("tr");
+            const nameCell = row.children[0];
+            const emailCell = row.children[1];
+            const phoneCell = row.children[2];
 
-// Heart Icon Toggle
-function setupHeartToggle(heartElement) {
-    heartElement?.addEventListener("click", () => {
-        const isRegular = heartElement.classList.contains("fa-regular");
-        heartElement.classList.toggle("fa-regular", !isRegular);
-        heartElement.classList.toggle("fa-solid", isRegular);
-        heartElement.style.color = isRegular ? "red" : "#888";
+            const newName = prompt("Edit Charity Name:", nameCell.textContent);
+            const newEmail = prompt("Edit Charity Email:", emailCell.textContent);
+            const newPhone = prompt("Edit Charity Phone:", phoneCell.textContent);
+
+            if (newName) nameCell.textContent = newName;
+            if (newEmail) emailCell.textContent = newEmail;
+            if (newPhone) phoneCell.textContent = newPhone;
+        } else if (e.target.classList.contains("delete-btn")) {
+            if (confirm("Are you sure you want to delete this charity?")) {
+                e.target.closest("tr").remove();
+            }
+        }
     });
-}
 
-// Close Sidebar on Outside Click or Scroll
-function closeSidebarOnOutsideClick() {
-    document.onclick = (e) => {
-        if (getSideBar.classList.contains("sidebar-active") &&
-            !e.target.closest(".sidebar, .brand, .brand-name")) {
-            getSideBar.classList.remove("sidebar-active");
+    // 发布活动
+    const activityForm = document.getElementById("publishActivityForm");
+
+    activityForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const activityTitle = document.getElementById("activityTitle").value.trim();
+        const activityDescription = document.getElementById("activityDescription").value.trim();
+        const activityType = document.getElementById("activityType").value.trim();
+        const activityDate = document.getElementById("activityDate").value.trim();
+        const activityLocation = document.getElementById("activityLocation").value.trim();
+
+        if (!activityTitle || !activityDescription || !activityType || !activityDate || !activityLocation) {
+            alert("Please fill in all fields.");
+            return;
         }
-    };
 
-    window.onscroll = () => {
-        if (getSideBar.classList.contains("sidebar-active")) {
-            getSideBar.classList.remove("sidebar-active");
-        }
-    };
-}
+        alert(`Activity published successfully:\nTitle: ${activityTitle}\nDescription: ${activityDescription}\nType: ${activityType}\nDate: ${activityDate}\nLocation: ${activityLocation}`);
+        activityForm.reset();
+    });
 
-// Loader Handling
-function handleLoader(loaderElement, pageContent) {
-    window.onload = () => {
-        if (loaderElement) loaderElement.style.display = "none";
-        if (pageContent) pageContent.style.display = "grid";
-    };
-}
+    // 选项卡功能
+    const tabs = document.querySelectorAll(".nav-link");
+    const tabContents = document.querySelectorAll(".tab-pane");
 
-// Initialization
-function initialize() {
-    // Avatar upload setup
-    setupAvatarUpload("avatarInput", document.querySelectorAll('img[id^="avatar"]'));
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+            tabs.forEach((t) => t.classList.remove("active"));
+            tabContents.forEach((content) => content.classList.remove("show", "active"));
 
-    // Heart toggle
-    setupHeartToggle(getHeart);
-
-    // Close sidebar on outside click or scroll
-    closeSidebarOnOutsideClick();
-
-    // Handle loader display
-    handleLoader(getLoader, getPageContent);
-}
-
-// Run Initialization
-document.addEventListener("DOMContentLoaded", initialize);
+            tab.classList.add("active");
+            const target = document.querySelector(tab.dataset.bsTarget);
+            target.classList.add("show", "active");
+        });
+    });
+});

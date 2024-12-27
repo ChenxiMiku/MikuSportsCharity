@@ -3,307 +3,142 @@
 <body>
     <?php include '../app/views/layouts/header.php'; ?>
     <?php include '../app/views/layouts/navbar.php'; ?>
-    <div class="sidebar">
-        <div class="brand">
-            <i class="fa-solid fa-xmark xmark"></i>
-            <p class="d-flex mb-0">
-                <a href="index.php">
-                    <img src="images/logo.png" class="logo-small img-fluid"
-                        alt="Miku Sports Charity Platform">
-                </a>
-            </p>
-
-        </div>
-        <ul>
-            <li id="Dashboard-Side">
-                <a class="sidebar-link">
-                    <i class="fa-regular bi-speedometer2 fa-fw"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-
-            <li id="Profile-Side">
-                <a class="sidebar-link">
-                    <i class="fa-regular bi-person fa-fw"></i><span>Profile</span>
-                </a>
-            </li>
-        </ul>
-        <div class="col-lg-12 col-md-12 col-12 text-center">
-            <p>Copyright © 2024 <br><a href="index.php">Miku Sports </a>Org.
-            </p>
-        </div>
-    </div>
     <main>
-        <section class="user-dashboard">
-            <div class="page-content index-page d-grid">
-                <main id="Dashboard">
-                    <div class="main-content d-grid">
-                        <div class="main-content-boxes d-grid col-lg-12 col-12 me-4">
-                            <div class="custom-block box first-box d-flex col-lg-6 col-12 me-4">
-                                <div class="box-section1"> 
-                                    <div class="box-title">
-                                        <h4>Welcome</h4>
-                                        <h4>Miku</h4>
-                                    </div>
-                                    <div class="box-image">
-                                        <img src="./images/welcome.png" alt="No image" />
-                                    </div>
-                                    <img src="./images/avatar.png" alt="No image" class="avatar" id="avatar2" />
-                                </div>
-                                <div class="box-section2 mx-4">
-                                    <p>Welcome to Miku Sports Charity Platform. Let the Fun of Sports Be Accessible
-                                        to
-                                        Everyone.</p>
-                                </div>
-                                <div class="box-section2 my-auto">
-                                    <ul>
-                                        <li>
-                                            <span>Miku</span>
-                                            <p>User</p>
-                                        </li>
-                                        <li>
-                                            <span>80</span>
-                                            <p>Volunteer</p>
-                                        </li>
-                                        <li>
-                                            <span>$8500</span>
-                                            <p>Donated</p>
-                                        </li>
-                                    </ul>
-                                </div>
+        <section class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="container">
+                        <h1 class="text-center mb-5">Charity Management Dashboard</h1>
+
+                        <ul class="nav nav-tabs" id="dashboardTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="manage-charities-tab" data-bs-toggle="tab" data-bs-target="#manage-charities" type="button" role="tab">Manage Charities</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="publish-activities-tab" data-bs-toggle="tab" data-bs-target="#publish-activities" type="button" role="tab">Publish Activities</button>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content mt-4" id="dashboardTabsContent">
+                            <!-- Manage Charities -->
+                            <div class="tab-pane fade show active" id="manage-charities" role="tabpanel">
+                                <h3>Manage Charities</h3>
+                                <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addCharityModal">Add New Charity</button>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="charityList">
+                                    </tbody>
+                                </table>
                             </div>
 
-                            <div class="box d-flex col-lg-6 col-12">
-                                <div class="box-section1">
-                                    <div class="box-title">
-                                        <h3>Latest Volunteer Events</h3>
+                            <!-- Publish Activities -->
+                            <div class="tab-pane fade" id="publish-activities" role="tabpanel">
+                                <h3>Publish New Activities</h3>
+                                <form id="publishActivityForm">
+                                    <div class="mb-3">
+                                        <label for="activityTitle" class="form-label">Title</label>
+                                        <input type="text" class="form-control" id="activityTitle" required>
                                     </div>
-                                </div>
-                                <div class="latest-news-section2">
-                                    <img src="./images/news-01.png" alt="" />
-                                    <div class="latest-news-section2-info">
-                                        <h4>Event 1</h4>
-                                        <p>Sample</p>
+                                    <div class="mb-3">
+                                        <label for="charityName" class="form-label">Charity Name</label>
+                                        <input type="text" class="form-control" id="charityName">
                                     </div>
-                                    <span>3 Days Ago</span>
-                                </div>
-
-                                <div class="latest-news-section2">
-                                    <img src="./images/news-02.png" alt="" />
-                                    <div class="latest-news-section2-info">
-                                        <h4>Event 2</h4>
-                                        <p>Sample</p>
+                                    <div class="mb-3">
+                                        <label for="activityDescription" class="form-label">Description</label>
+                                        <textarea class="form-control" id="activityDescription" rows="4" required></textarea>
                                     </div>
-                                    <span>5 Days Ago</span>
-                                </div>
-
-                                <div class="latest-news-section2">
-                                    <img src="./images/news-03.png" alt="" />
-                                    <div class="latest-news-section2-info">
-                                        <h4>Event 3</h4>
-                                        <p>Sample</p>
+                                    <div class="mb-3">
+                                        <label for="activityImage" class="form-label">Upload Image</label>
+                                        <input type="file" class="form-control" id="activityImage" accept="image/*" required>
                                     </div>
-                                    <span>7 Days Ago</span>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="main-content-boxes d-flex col-lg-12 col-12">
-                            <div class="box-section1">
-                                <div class="box-title">
-                                    <h3>Latest Donation</h3>
-                                </div>
-                            </div>
-                            <div class="donation-container">
-                                <div class="ViewWrapper donation-shadow">
-                                    <div class="ant-table-body">
-                                        <table class="ant-table">
-                                            <colgroup>
-                                                <col class="width-270">
-                                                <col class="width-250">
-                                                <col class="width-150">
-                                            </colgroup>
-                                            <thead class="ant-table-thead ant-table-row">
-                                                <tr>
-                                                    <th class="ant-table-cell">Bill ID</th>
-                                                    <th class="ant-table-cell">Beneficiary</th>
-                                                    <th class="ant-table-cell">Frequency</th>
-                                                    <th class="ant-table-cell">Amount</th>
-                                                    <th class="ant-table-cell">Status</th>
-                                                    <th class="ant-table-cell">Created At</th>
-                                                </tr>
-                                            </thead>
-                                        </table>
-                                        <table class="ant-table">
-                                            <colgroup>
-                                                <col class="width-270">
-                                                <col class="width-250">
-                                                <col class="width-150">
-                                            </colgroup>
-                                            <tbody class="ant-table-tbody">
-                                                <!-- Row 1 -->
-                                                <tr class="ant-table-row ant-table-row-level-0">
-                                                    <td class="ant-table-cell">
-                                                        2024102701103995789598385</td>
-                                                    <td class="ant-table-cell">Event1</td>
-                                                    <td class="ant-table-cell">Monthly</td>
-                                                    <td class="ant-table-cell">4.50</td>
-                                                    <td class="ant-table-cell">Canceled</td>
-                                                    </td>
-                                                    <td class="ant-table-cell">2024-10-27 01:35:39
-                                                    </td>
-                                                </tr>
-
-                                                <!-- Row 2 -->
-                                                <tr class="ant-table-row ant-table-row-level-0">
-                                                    <td class="ant-table-cell">
-                                                        2024101121102516150995191</td>
-                                                    <td class="ant-table-cell">Even2</td>
-                                                    <td class="ant-table-cell">One Time</td>
-                                                    <td class="ant-table-cell">1.00</td>
-                                                    <td class="ant-table-cell">Completed</td>
-                                                    <td class="ant-table-cell">2024-10-11 21:25:25
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <div class="mb-3">
+                                        <label for="activityType" class="form-label">Type</label>
+                                        <select class="form-select" id="activityType" required>
+                                            <option value="">Select Type</option>
+                                            <option value="donation">Donation</option>
+                                            <option value="volunteer">Volunteer</option>
+                                        </select>
                                     </div>
-                                </div>
-                            </div>
-
-                        </div>
-                </main>
-                <main id="Profile" hidden>
-                    <div class="main-content">
-                        <div class="profile-box">
-                            <div class="profile-info">
-                                <div class="change-avatar-container">
-                                    <img src="../images/avatar.png" id="avatar5" class="change-avatar"
-                                        alt="Avatar 5">
-
-                                    <div class="change-avatar-overlay">Change</div>
-                                </div>
-                                <input type="file" id="avatarInput" hidden accept="image/*">
-                                <h4>Miku</h4>
-                                <p>Level 20</p>
-                                <p>550 Ratings</p>
-                            </div>
-                            <div class="profile-info-section2">
-                                <div class="container" id="informationSection">
-                                    <div class="row mx-2 my-2">
-                                        <h3 class="d-flex justify-content-between align-items-center">
-                                            Information
-                                            <button id="editButton" class="btn edit-btn my-auto">Edit</button>
-                                        </h3>
-
-                                        <div class="col-lg-12 col-12 mb-1">
-                                            <h7>UserName:</h7>
-                                            <p class="fw-normal ms-2" id="userName">Miku</p>
-                                        </div>
-
-                                        <div class="col-lg-12 col-12 mb-1">
-                                            <h7>Email:</h7>
-                                            <p class="fw-normal ms-2" id="email">charity@mikufans.me</p>
-                                        </div>
-
-                                        <div class="col-lg-12 col-12 mb-1">
-                                            <h7>Phone:</h7>
-                                            <p class="fw-normal ms-2" id="phone">0123456789</p>
-                                        </div>
-
-                                        <div class="col-lg-12 col-12 mb-1">
-                                            <h7>Date of Join:</h7>
-                                            <p class="fw-normal ms-2" id="dateOfJoin">2020-11-13</p>
-                                        </div>
-
-                                        <div class="col-lg-12 col-12 mb-1">
-                                            <h7>Account Type:</h7>
-                                            <p class="fw-normal ms-2" id="accountType">Admin</p>
+                                    <!-- Donation-specific fields -->
+                                    <div id="donationFields" class="d-none">
+                                        <div class="mb-3">
+                                            <label for="fundingGoal" class="form-label">Funding Goal</label>
+                                            <input type="number" class="form-control" id="fundingGoal" min="0">
                                         </div>
                                     </div>
-                                </div>
-
-                                <div id="editForm" class="pt-2">
-                                    <div class="row mx-2 my-2">
-                                        <h3>Edit Information</h3>
-                                        <h7 class="mt-2">Userame</h7>
-                                        <div class="col-lg-12 col-12 mb-3">
-                                            <input type="text" class="form-control" id="editUserName" name="editUserName" placeholder="Enter username" required>
+                                    <!-- Volunteer-specific fields -->
+                                    <div id="volunteerFields" class="d-none">
+                                        <div class="mb-3">
+                                            <label for="eventDate" class="form-label">Event Date</label>
+                                            <input type="date" class="form-control" id="eventDate">
                                         </div>
-
-                                        <h7>Email</h7>
-                                        <div class="col-lg-12 col-12 mb-3">
-                                            <input type="email" class="form-control" id="editEmail" name="editEmail" placeholder="Enter your email" required>
+                                        <div class="mb-3">
+                                            <label for="eventLocation" class="form-label">Event Location</label>
+                                            <input type="text" class="form-control" id="eventLocation">
                                         </div>
-
-                                        <h7>Phone</h7>
-                                        <div class="col-lg-12 col-12 mb-3">
-                                            <input type="text" class="form-control" id="editPhone" name="editPhone" placeholder="Enter your phone number" required>
+                                        <div class="mb-3">
+                                            <label for="volunteerGoal" class="form-label">Volunteer Goal</label>
+                                            <input type="number" class="form-control" id="volunteerGoal" min="0">
                                         </div>
-
-                                        <h7>Date of Join</h7>
-                                        <div class="col-lg-12 col-12 mb-3">
-                                            <input type="date" class="form-control" id="editDateOfJoin" name="editDateOfJoin" required>
-                                        </div>
-
-                                        <h7>Account Type</h7>
-                                        <div class="col-lg-12 col-12 mb-3">
-                                            <input type="text" class="form-control" id="editAccountType" name="editAccountType" placeholder="Enter account type" required>
-                                        </div>
-
-                                        <div class="col-lg-12 col-12 mb-3">
-                                            <button id="saveButton" class="btn btn-primary ms-auto fs-6">Save Changes</button>
-                                            <button id="cancelButton" class="btn btn-secondary fs-6">Cancel</button>
+                                        <div class="mb-3">
+                                            <label for="timeSlots" class="form-label">Time Slots</label>
+                                            <div id="timeSlots">
+                                                <div class="time-slot">
+                                                    <small class="d-inline-block mx-2">Start time</small>
+                                                    <input type="time" class="form-control d-inline-block w-45 mb-3" required>
+                                                    <small class="d-inline-block mx-2">End time</small>
+                                                    <input type="time" class="form-control d-inline-block w-45 mb-3" required>
+                                                    <button type="button" class="btn btn-danger btn-sm " onclick="removeTimeSlot(this)">Remove</button>
+                                                </div>
+                                            </div>
+                                            <button type="button" class="btn btn-primary btn-sm mt-2" id="addTimeSlot">Add Time Slot</button>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="col-lg-12 col-12 mb-2 divider-wrapper"></div>
-                                <div class="container ">
-
-                                    <div class="row mx-2 my-2">
-
-                                        <h3>Change Password</h3>
-                                        <h7 class="mt-2">Old Password</h7>
-                                        <div class="col-lg-12 col-12 mb-3">
-                                            <input type="password" class="form-control" id="oldPasswd"
-                                                name="oldPasswd" placeholder="Enter your old password" required>
-                                        </div>
-                                        <h7>New Password</h7>
-                                        <div class="col-lg-12 col-12 mb-3">
-                                            <input type="password" class="form-control" id="newPasswd"
-                                                name="newPasswd" placeholder="Enter your old password" required>
-                                        </div>
-                                        <h7>Confirm New Password</h7>
-                                        <div class="col-lg-12 col-12 mb-3">
-                                            <input type="password" class="form-control" id="confirmPasswd"
-                                                name="confirmPasswd" placeholder="Confirm your new password"
-                                                required>
-                                        </div>
-                                        <div class="col-lg-12 col-12 mb-3">
-                                            <button class="changepasswd-btn btn ms-auto fs-6"
-                                                id="confirmButton">Change
-                                                Password</button>
-                                        </div>
+                                    <hr class="my-4">
+                                    <div class="col-lg-12 col-md-12 col-12 my-4 mb-lg-0 d-flex justify-content-center">
+                                        <button type="submit" class="col-lg-4 col-5 mb-4 custom-btn"
+                                            id="submitBtn">Submit</button>
                                     </div>
-
-                                </div>
-
+                                </form>
                             </div>
                         </div>
                     </div>
-                </main>
 
-            </div>
-            <div class="loader">
-                <h1>Loading<span>....</span></h1>
-            </div>
-
+                    <!-- Add Charity Modal -->
+                    <div class="modal fade" id="addCharityModal" tabindex="-1" aria-labelledby="addCharityModalLabel" inert>
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addCharityModalLabel">Add New Charity</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="addCharityForm">
+                                        <div class="mb-3">
+                                            <label for="charityName" class="form-label">Charity Name</label>
+                                            <input type="text" class="form-control" id="charityName" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Add Charity</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
     </main>
 
+    <?php include '../app/views/layouts/footer.php'; ?>
+    <?php include '../app/views/layouts/cookies.php'; ?>
     <?php include '../app/views/layouts/scroll.php'; ?>
-    <script src="../public/js/dashboard.js"></script>
+
+    <script src="js/dashboard.js"></script>
+    <script src="js/db1.js"></script>
+    <script src="js/db2.js"></script>
 </body>
 
 </html>

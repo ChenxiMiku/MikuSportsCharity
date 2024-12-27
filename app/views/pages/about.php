@@ -111,9 +111,9 @@
             </div>
         </section>
     </main>
+
     <?php include '../app/views/layouts/footer.php'; ?>
     <?php include '../app/views/layouts/scroll.php'; ?>
     <?php include '../app/views/layouts/cookies.php'; ?>
-</body>
 
-</html>
+</body>

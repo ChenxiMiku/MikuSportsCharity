@@ -1,23 +1,13 @@
 let selectedTags = []; 
 
-async function fetchEvents() {
-    try {
-        const response = await fetch('/api/events');
-        const organizations = await response.json();
-        renderCharityEvents(organizations);
-    } catch (error) {
-        console.error('获取事件时出错:', error);
-    }
-}
-
 // Sample organizations data
 const organizations = [
     {
-        charityName: "Kisckstarter Foundation",
+        charityName: "Kickstart Hope",
         eventsData: [
             {
                 title: "Charity Run 2024",
-                url: "charity.html?organization=Kisckstarter%20Foundation",
+                url: "../public/charity?organization=Kisckstarter%20Foundation",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Running", "Fundraising"],
                 date: "2024-05-01",
@@ -27,7 +17,7 @@ const organizations = [
             },
             {
                 title: "Football  2024",
-                url: "charity.html?organization=Kisckstarter%20Foundation",
+                url: "../public/charity?organization=Kisckstarter%20Foundation",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Donation", "Volunteering"],
                 date: "2024-06-01",
@@ -42,7 +32,7 @@ const organizations = [
         eventsData: [
             {
                 title: "Donation Drive",
-                url: "charity.html?organization=Run%20for%20Life",
+                url: "../public/charity?organization=Run%20for%20Life",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Donation", "Children"],
                 date: "2024-07-15",
@@ -52,7 +42,7 @@ const organizations = [
             },
             {
                 title: "Summer Camp Fundraiser",
-                url: "charity.html?organization=Run%20for%20Life",
+                url: "../public/charity?organization=Run%20for%20Life",
                 image: "images/hatsunemiku.JPG",
                 tags: ["Fundraising", "Summer Camp"],
                 date: "2024-08-10",
@@ -91,7 +81,7 @@ function renderCharityEvents(organizations) {
         const charityHeader = document.createElement('div');
         charityHeader.classList.add('charity-header');
         charityHeader.innerHTML = `
-            <a href="charity.html?organization=${charityName}" class="fs-1 fw-semibold">${charityName}</a>
+            <a href="charity?organization=${charityName}" class="fs-1 fw-semibold">${charityName}</a>
             <p>Here are the latest events organized by ${charityName}.</p>
         `;
         charityContainer.appendChild(charityHeader);

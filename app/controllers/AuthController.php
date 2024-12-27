@@ -71,7 +71,7 @@ class AuthController extends Controller
 
             setcookie("user_login", $token, time() + (30 * 24 * 60 * 60), "/", "", false, true);
 
-            echo json_encode(["success" => true, "redirect" => "../public/dashboard"]);
+            echo json_encode(["success" => true, "redirect" => "../public/profile"]);
         } else {
             echo json_encode(["success" => false, "message" => "Invalid username or password."]);
         }
@@ -83,13 +83,13 @@ class AuthController extends Controller
         $username = $input['username'] ?? '';
         $email = $input['email'] ?? '';
         $password = $input['password'] ?? '';
+        $avatarPath = '../upload/default.png'; 
 
         if (empty($username) || empty($email) || empty($password)) {
             echo json_encode(["success" => false, "message" => "All fields are required."]);
             return;
         }
 
-        // Check if username already exists
         $db = new Database();
         $pdo = $db->getConnection();
         $stmt = $pdo->prepare("SELECT * FROM user WHERE username = :username");
@@ -102,10 +102,12 @@ class AuthController extends Controller
         }
 
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-        $stmt = $pdo->prepare("INSERT INTO user (username, email, password) VALUES (:username, :email, :password)");
+        $stmt = $pdo->prepare("INSERT INTO user (username, email, password, avatar_path) VALUES (:username, :email, :password, :avatar_path)");
         $stmt->bindParam(":username", $username);
         $stmt->bindParam(":email", $email);
         $stmt->bindParam(":password", $hashedPassword);
+        $stmt->bindParam(":avatar_path", $avatarPath);
+
         if ($stmt->execute()) {
             echo json_encode(["success" => true, "redirect" => "../public/login"]);
         } else {

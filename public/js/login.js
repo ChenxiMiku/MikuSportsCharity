@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     localStorage.removeItem("previousPage");
                 }
                 else{
-                    window.location.href = "../public/dashboard";
+                    window.location.href = "../public/profile";
                 }
             } else {
                 loginError.textContent = data.message || "Invalid username or password.";

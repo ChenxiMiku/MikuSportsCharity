@@ -101,20 +101,18 @@
                                 <div class="d-flex align-items-center">
                                     <!-- Country Code Dropdown -->
                                     <select id="countryCode" class="form-select me-2" style="max-width: 120px;" required>
-                                        <option value="+1">+1 (US)</option>
-                                        <option value="+44">+44 (UK)</option>
-                                        <option value="+91">+91 (India)</option>
-                                        <option value="+86">+86 (China)</option>
-                                        <option value="+81">+81 (Japan)</option>
-                                        <option value="+33">+33 (France)</option>
+                                        <option value="+1" data-pattern="^\d{10}$">+1 (US)</option>
+                                        <option value="+44" data-pattern="^\d{10}$">+44 (UK)</option>
+                                        <option value="+91" data-pattern="^\d{10}$">+91 (India)</option>
+                                        <option value="+86" data-pattern="^\d{11}$">+86 (China)</option>
+                                        <option value="+81" data-pattern="^\d{10}$">+81 (Japan)</option>
+                                        <option value="+33" data-pattern="^\d{9}$">+33 (France)</option>
                                         <!-- Add more countries as needed -->
                                     </select>
 
                                     <!-- Phone Number Input -->
                                     <input type="tel" class="form-control" id="phone" required
-                                        pattern="^\d{4,15}$" maxlength="15"
-                                        title="Please enter a valid phone number (4 to 15 digits)."
-                                        placeholder="Enter phone number">
+                                        maxlength="15" placeholder="Enter phone number">
                                 </div>
                                 <small class="form-text text-muted">
                                     Select your country code and enter your phone number.

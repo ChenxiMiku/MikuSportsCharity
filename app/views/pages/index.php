@@ -87,7 +87,7 @@
                         <?php foreach ($charities as $charity): ?>
                             <div class="col-lg-3 col-md-4 col-6 my-4 mb-lg-0">
                                 <div class="custom-block-wrap">
-                                    <a href="charity.php?organization=<?php echo urlencode($charity['charity_name']) ?>">
+                                    <a href="charity?organization=<?php echo urlencode($charity['charity_name']) ?>">
                                         <div class="d-flex align-items-center justify-content-center my-4">
                                             <img src="../images/logo.png" alt="<?php echo htmlspecialchars($charity['charity_name']) ?> logo"
                                                 width="35" height="35" class="img-fluid me-2">
@@ -102,9 +102,10 @@
                     <?php endif; ?>
                     <div class="col-lg-3 col-md-4 col-6 my-4 mb-lg-0">
                         <div class="custom-block-wrap">
-                            <div class="d-flex align-items-center justify-content-center my-4">
-                                <h5 class="fs-3 my-auto">···</h5>
-                            </div>
+                            <a href="charities">
+                                <div class="d-flex align-items-center justify-content-center my-4">
+                                    <h5 class="fs-3 my-auto">···</h5>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -157,7 +158,7 @@
                                             By <?php echo htmlspecialchars($donation['charity_name']) ?></a>
                                     </div>
 
-                                    <a href="donate?title=<?php echo urlencode($donation['title']) ?>"
+                                    <a href="../public/donation?title=<?php echo urlencode($donation['title']) ?>"
                                         class="custom-btn btn">Donate now</a>
                                 </div>
                             </div>
@@ -207,7 +208,7 @@
                                         <a href="charity.php?organization=<?php echo urlencode($donation['charity_name']) ?>">
                                             By <?php echo htmlspecialchars($donation['charity_name']) ?></a>
                                     </div>
-                                    <a href="volunteer.php?event=<?= urlencode($event['event_name']); ?>"
+                                    <a href="volunteer?event=<?= urlencode($event['event_name']); ?>"
                                         class="custom-btn btn">Join Now</a>
                                 </div>
                             </div>
@@ -276,7 +277,7 @@
         </section>
 
 
-        <section class="section-padding section-bg" id="section_2">
+        <section class="section-padding section-bg">
             <div class="container">
                 <div class="row">
 
@@ -346,11 +347,10 @@
         </section>
 
 
-        <section class="contact-section section-padding" id="section_6">
+        <section class="contact-section section-padding">
             <div class="container">
                 <div class="row">
-
-                    <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
+                    <div class="col-lg-12 col-12 mb-5 mb-lg-0 justify-content-center">
                         <div class="contact-info-wrap">
                             <h2>Get in touch</h2>
 
@@ -390,35 +390,6 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-lg-5 col-12 mx-auto">
-                        <form class="custom-form contact-form" action="#" method="post" role="form">
-                            <h2>Contact form</h2>
-
-                            <p class="mb-4">Or, you can just send an email:
-                                <a href="mailto:<?php echo htmlspecialchars($email) ?>"><?php echo htmlspecialchars($email) ?></a>
-                            </p>
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="first-name" id="first-name" class="form-control"
-                                        placeholder="Hatsune" required>
-                                </div>
-
-                                <div class="col-lg-6 col-md-6 col-12">
-                                    <input type="text" name="last-name" id="last-name" class="form-control"
-                                        placeholder="Miku" required>
-                                </div>
-                            </div>
-
-                            <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*" class="form-control"
-                                placeholder="HatsuneMiku@mikufans.me" required>
-
-                            <textarea name="message" rows="5" class="form-control" id="message"
-                                placeholder="What can we help you?"></textarea>
-                            <button type="submit" class="form-control" id="send-button">Send Message</button>
-                        </form>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -426,8 +397,6 @@
     <?php include '../app/views/layouts/footer.php'; ?>
     <?php include '../app/views/layouts/cookies.php'; ?>
     <?php include '../app/views/layouts/scroll.php'; ?>
-    <script src="../js/carousel.js"></script>
-    <script src="../js/counter.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/counter.js"></script>
 </body>
-
-</html>

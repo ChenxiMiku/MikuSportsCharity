@@ -19,7 +19,7 @@
                 $navItems = [
                     '../public/' => 'Home',
                     '../public/about' => 'About',
-                    '../public/events' => 'Charities',
+                    '../public/charities' => 'Charities',
                     '../public/volunteer' => 'Volunteer',
                 ];
 
@@ -38,13 +38,15 @@
                     <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn" href="../public/login">Login</a>
                 </li>
                 <div id="userAvatar" class="dropdown me-4 d-none my-auto nav-item">
-                    <a class="dropdown-toggle my-auto" href="../public/dashboard" role="button" id="avatarDropdown">
-                            <p class="my-auto d-inline"><span id="userName"></span></p>
-                            <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="48" height="48" class="rounded-circle d-inline">
+                    <a class="dropdown-toggle my-auto" href="../public/profile" role="button" id="avatarDropdown">
+                        <p class="my-auto d-inline"><span id="userName"></span></p>
+                        <img id="avatarImg" src="images/test/testavatar.png" alt="User Avatar" width="48" height="48" class="rounded-circle d-inline">
                     </a>
-
                     <div class="dropdown-menu" aria-labelledby="avatarDropdown">
-                        <a class="dropdown-item align-items-center" href="../public/dashboard">
+                        <a class="dropdown-item align-items-center" href="../public/profile">
+                            <i class="bi-speedometer2 me-2"></i>Profile
+                        </a>
+                        <a class="dropdown-item align-items-center d-none" id="dashboardItem" href="../public/dashboard">
                             <i class="bi-speedometer2 me-2"></i>Dashboard
                         </a>
 

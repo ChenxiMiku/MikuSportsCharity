@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const userAvatar = document.getElementById("userAvatar");
     const userName = document.getElementById("userName");
     const loginOverlay = document.getElementById("loginOverlay");
+    const dashboardItem = document.getElementById("dashboardItem");
     loginBtn.style.display = "none";
     async function verifyLogin() {
         try {
@@ -23,19 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const userData = await verifyLogin();
 
         if (window.location.pathname.endsWith("/login") && userData) {
-            console.log("User is already logged in. Redirecting to home page...");
             window.location.href = "../public/";
         }
 
-        if (!userData && loginOverlay) {
-            loginOverlay.classList.remove("d-none");
-            document.body.style.pointerEvents = "auto"; 
-        }
-
         if (userData) {
+            if(loginOverlay) loginOverlay.style.display = "none";
+            if(userData.role === "admin" && dashboardItem) {
+                dashboardItem.classList.remove("d-none");
+            }
+
             if (userName) {
                 userName.textContent = userData.username;
-                console.log("User is logged in as", userData.username);
+                console.log("Welcome to Miku Sports Charity Platform,", userData.username);
             }
             if (userAvatar) {
                 userAvatar.src = userData.avatarUrl || "../public/images/avatar.png";
@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     async function redirectIfNotLoggedIn() {
         const userData = await verifyLogin();
-
         if (!userData) {
+            console.log("User is not logged in, redirecting to login page");
             if (loginOverlay) {
                 loginOverlay.style.display = "flex"; 
                 document.body.style.pointerEvents = "none";
@@ -85,5 +85,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.location.pathname.endsWith("/volunteer")) {
         redirectIfNotLoggedIn();
     }
+
     updateUI();
 });
