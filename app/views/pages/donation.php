@@ -16,7 +16,7 @@
                             <div id="event-info" class="alert alert-info">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <img id="event-image" src="images/event3.jpg" alt="Event Image" class="img-fluid rounded">
+                                        <img id="event-image" src="<?php echo htmlspecialchars($donations['image_path']) ?>" alt="Event Image" class="img-fluid rounded">
                                     </div>
                                     <div class="col-md-8">
                                         <h5 class="fs-5">Charity: <span id="charity-name"><?php echo htmlspecialchars($donations['charity_name']); ?></span></h5>

@@ -154,6 +154,7 @@
     <?php include '../app/views/layouts/footer.php'; ?>
     <?php include '../app/views/layouts/cookies.php'; ?>
     <?php include '../app/views/layouts/scroll.php'; ?>
+    <?php include '../app/views/layouts/overlay.php'; ?>
 
     <script src="js/dashboard.js"></script>
 </body>

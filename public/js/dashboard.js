@@ -32,8 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
         newRow.innerHTML = `
             <td>${charity.name}</td>
             <td class="text-end">
-                <button class="editBtn btn btn-primary btn-sm">Edit</button>
-                <button class="deleteDtn btn btn-danger btn-sm">Delete</button>
+                <button class="editBtn btn btn-primary me-3 btn-sm">Edit</button>
+                <button class="deleteBtn btn btn-danger btn-sm">Delete</button>
             </td>`;
         return newRow;
     }

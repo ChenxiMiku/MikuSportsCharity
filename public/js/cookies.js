@@ -9,6 +9,11 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("googleSignIn").disabled = true;
             document.getElementById("githubSignIn").disabled = true;
         }
+        if(document.getElementById("SignupBtn")){
+            document.getElementById("SignupBtn").disabled = true;
+            document.getElementById("googleSignUp").disabled = true;
+            document.getElementById("githubSignUp").disabled = true;
+        }
     }
 
     acceptBtn.addEventListener("click", function() {
@@ -17,6 +22,11 @@ document.addEventListener("DOMContentLoaded", function() {
             document.getElementById("SigninBtn").disabled = false;
             document.getElementById("googleSignIn").disabled = false;
             document.getElementById("githubSignIn").disabled = false;
+        }  
+        if(document.getElementById("SignupBtn")){
+            document.getElementById("SignupBtn").disabled = false;
+            document.getElementById("googleSignUp").disabled = false;
+            document.getElementById("githubSignUp").disabled = false;
         }
 
         cookieBanner.style.display = "none";

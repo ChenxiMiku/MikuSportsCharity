@@ -338,3 +338,7 @@ Stack trace:
 [28-Dec-2024 14:15:39 UTC] Error: Route '/fonts/bootstrap-icons.woff' not defined.
 [28-Dec-2024 14:15:39 UTC] URL: /KXO205/MikuSportsCharity/public/fonts/bootstrap-icons.woff?30af91bf14e37666a085fb8a161ff36d
 [28-Dec-2024 14:15:39 UTC] Method: GET
+[28-Dec-2024 15:01:32 UTC] Route '/prrofile' not defined.
+[28-Dec-2024 15:01:32 UTC] Error: Route '/prrofile' not defined.
+[28-Dec-2024 15:01:32 UTC] URL: /KXO205/MikuSportsCharity/public/prrofile
+[28-Dec-2024 15:01:32 UTC] Method: GET

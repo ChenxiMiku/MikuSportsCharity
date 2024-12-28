@@ -50,7 +50,7 @@
 
                             <!-- Register Button -->
                             <div class="col-lg-12 col-12 my-3 d-flex justify-content-center">
-                                <button type="submit" id="registerBtn" class="custom-btn btn" disabled>Sign Up</button>
+                                <button type="submit" id="SignupBtn" class="custom-btn btn" disabled>Sign Up</button>
                             </div>
 
                             <!-- Already have an account Link -->

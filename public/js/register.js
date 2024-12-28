@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const email = document.getElementById("email");
     const password = document.getElementById("password");
     const confirmPassword = document.getElementById("confirmPassword");
-    const registerBtn = document.getElementById("registerBtn");
+    const SignupBtn = document.getElementById("SignupBtn");
 
     const feedback = {
         username: document.getElementById("usernameFeedback"),
@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
             validateEmail() &&
             validatePasswordStrength(password.value) &&
             validateConfirmPassword();
-        registerBtn.disabled = !isFormValid;
+        SignupBtn.disabled = !isFormValid;
     }
     
     // Add event listeners to form fields

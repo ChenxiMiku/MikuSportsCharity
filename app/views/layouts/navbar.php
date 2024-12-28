@@ -37,6 +37,9 @@
                 <li id="userLogin" class="nav-item mx-3">
                     <a class="nav-link custom-btn custom-border-btn btn" id="loginBtn" href="../public/login">Login</a>
                 </li>
+                <li id="userRegister" class="nav-item mx-3">
+                    <a class="nav-link custom-btn custom-border-btn btn" id="registerBtn" href="../public/register">Register</a>
+                </li>
                 <div id="userAvatar" class="dropdown me-4 d-none my-auto nav-item">
                     <a class="dropdown-toggle my-auto" href="../public/profile" role="button" id="avatarDropdown">
                         <p class="my-auto d-inline"><span id="userName"></span></p>

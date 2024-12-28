@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const logoutButtons = document.querySelectorAll(".logoutBtn");
     const loginBtn = document.getElementById("loginBtn");
+    const registerBtn = document.getElementById("registerBtn");
     const userAvatar = document.getElementById("userAvatar");
     const userName = document.getElementById("userName");
     const loginOverlay = document.getElementById("loginOverlay");
     const dashboardItem = document.getElementById("dashboardItem");
     const publicCheckbox = document.getElementById("donation-public");
     loginBtn.style.display = "none";
+    registerBtn.style.display = "none";
     async function verifyLogin() {
         try {
             const response = await fetch("../public/api/verifyLogin", {
@@ -43,12 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 userAvatar.style.display = "block";
             }
             if (loginBtn) loginBtn.style.display = "none";
+            if (registerBtn) registerBtn.style.display = "none";
         } else {
             if (publicCheckbox) {
                 console.log("Public checkbox is visible");
                 publicCheckbox.classList.add("d-none");
             }
             if (loginBtn) loginBtn.style.display = "block";
+            if (registerBtn) registerBtn.style.display = "block";
             if (userAvatar) userAvatar.style.display = "none";
         }
     }
@@ -72,9 +76,8 @@ document.addEventListener("DOMContentLoaded", function () {
     async function redirectIfNotLoggedIn() {
         const userData = await verifyLogin();
         if (!userData) {
-            console.log("User is not logged in, redirecting to login page");
             if (loginOverlay) {
-                loginOverlay.style.display = "flex"; 
+                loginOverlay.classList.remove("d-none"); 
                 document.body.style.pointerEvents = "none";
             }
 
@@ -84,9 +87,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 window.location.href = "../public/login";
             }, 3000);
         }
+        if (userData && userData.role !== "admin" && window.location.pathname.endsWith("/dashboard")) {
+            alert("You are not a administrator. Please log in as a administrator to access this page.");
+            window.location.href = "../public/";
+        }
     }
 
-    if (window.location.pathname.endsWith("/volunteer")) {
+    if (window.location.pathname.endsWith("/volunteer") || window.location.pathname.endsWith("/dashboard")  || window.location.pathname.endsWith("/profile")) {
         redirectIfNotLoggedIn();
     }
 
