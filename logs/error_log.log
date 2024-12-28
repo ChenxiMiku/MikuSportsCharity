@@ -330,3 +330,11 @@ Stack trace:
 #3 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(13): App->__construct()
 #4 {main}
   thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 528
+[28-Dec-2024 14:15:39 UTC] Route '/fonts/bootstrap-icons.woff2' not defined.
+[28-Dec-2024 14:15:39 UTC] Error: Route '/fonts/bootstrap-icons.woff2' not defined.
+[28-Dec-2024 14:15:39 UTC] URL: /KXO205/MikuSportsCharity/public/fonts/bootstrap-icons.woff2?30af91bf14e37666a085fb8a161ff36d
+[28-Dec-2024 14:15:39 UTC] Method: GET
+[28-Dec-2024 14:15:39 UTC] Route '/fonts/bootstrap-icons.woff' not defined.
+[28-Dec-2024 14:15:39 UTC] Error: Route '/fonts/bootstrap-icons.woff' not defined.
+[28-Dec-2024 14:15:39 UTC] URL: /KXO205/MikuSportsCharity/public/fonts/bootstrap-icons.woff?30af91bf14e37666a085fb8a161ff36d
+[28-Dec-2024 14:15:39 UTC] Method: GET

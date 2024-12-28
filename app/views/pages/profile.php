@@ -111,6 +111,7 @@
         </section>
     </main>
     <?php include '../app/views/layouts/scroll.php'; ?>
+    <?php include '../app/views/layouts/cookies.php'; ?>
     <script src="js/userprofile.js"></script>
     <script src="js/changeprofile.js"></script>
     <script src="js/changepasswd.js"></script>

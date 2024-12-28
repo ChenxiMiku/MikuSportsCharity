@@ -156,7 +156,7 @@
     <?php include '../app/views/layouts/footer.php'; ?>
     <?php include '../app/views/layouts/cookies.php'; ?>
     <?php include '../app/views/layouts/overlay.php'; ?>
-    <script src="../public/js/volunteer.js"></script>
+    <script src="./js/volunteer.js"></script>
 </body>
 
 </html>

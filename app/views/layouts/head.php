@@ -13,8 +13,8 @@
 
     <title><?php echo htmlspecialchars($webTitle) ?></title>
 
-    <link href="../css/style.css" rel="stylesheet">
-    <link rel="icon" href="../public/favicon.png" type="/image/png">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="/image/png">
 
     <script src="js/cookies.js"></script>
     <script src="js/checklogin.js"></script>
