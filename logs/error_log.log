@@ -1,322 +1,332 @@
-[27-Dec-2024 17:44:18 UTC] PHP Warning:  Undefined array key "oldPassword" in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 374
-[27-Dec-2024 17:44:18 UTC] PHP Stack trace:
-[27-Dec-2024 17:44:18 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:44:18 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:44:18 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:44:18 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:44:18 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:44:18 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 374
-[27-Dec-2024 17:44:18 UTC] PHP Stack trace:
-[27-Dec-2024 17:44:18 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:44:18 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:44:18 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:44:18 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:44:18 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:44:18 UTC] PHP   6. trim($string = NULL) C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:374
-[27-Dec-2024 17:44:18 UTC] PHP Warning:  Undefined array key "newPassword" in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 375
-[27-Dec-2024 17:44:18 UTC] PHP Stack trace:
-[27-Dec-2024 17:44:18 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:44:18 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:44:18 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:44:18 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:44:18 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:44:18 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 375
-[27-Dec-2024 17:44:18 UTC] PHP Stack trace:
-[27-Dec-2024 17:44:18 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:44:18 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:44:18 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:44:18 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:44:18 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:44:18 UTC] PHP   6. trim($string = NULL) C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:375
-[27-Dec-2024 17:45:05 UTC] PHP Warning:  Undefined array key "oldPassword" in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 374
-[27-Dec-2024 17:45:05 UTC] PHP Stack trace:
-[27-Dec-2024 17:45:05 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:45:05 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:45:05 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:45:05 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:45:05 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:45:05 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 374
-[27-Dec-2024 17:45:05 UTC] PHP Stack trace:
-[27-Dec-2024 17:45:05 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:45:05 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:45:05 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:45:05 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:45:05 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:45:05 UTC] PHP   6. trim($string = NULL) C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:374
-[27-Dec-2024 17:45:05 UTC] PHP Fatal error:  Uncaught Error: Undefined constant "oldPassword" in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:376
+[28-Dec-2024 02:29:36 UTC] PHP Warning:  Undefined array key "event_name" in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php on line 42
+[28-Dec-2024 02:29:36 UTC] PHP Stack trace:
+[28-Dec-2024 02:29:36 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 02:29:36 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 02:29:36 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'pay']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 02:29:36 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 02:29:36 UTC] PHP   5. PayController->pay() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 02:29:36 UTC] PHP Deprecated:  htmlspecialchars(): Passing null to parameter #1 ($string) of type string is deprecated in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php on line 88
+[28-Dec-2024 02:29:36 UTC] PHP Stack trace:
+[28-Dec-2024 02:29:36 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 02:29:36 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 02:29:36 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'pay']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 02:29:36 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 02:29:36 UTC] PHP   5. PayController->pay() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 02:29:36 UTC] PHP   6. PayController->generatePaymentForm($url = 'https://mikupay.mikufans.me/', $params = ['pid' => '60226', 'type' => 'alipay', 'out_trade_no' => '2', 'notify_url' => 'https://mikusportscharity.mikufans.me/pay/notify', 'return_url' => 'https://mikusportscharity.mikufans.me/pay/success', 'name' => NULL, 'money' => '15', 'sign' => '5aac147fb3688bc2dd97d8a09d00c834', 'sign_type' => 'MD5']) C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php:63
+[28-Dec-2024 02:29:36 UTC] PHP   7. htmlspecialchars($string = NULL) C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php:88
+[28-Dec-2024 02:31:58 UTC] SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[28-Dec-2024 02:31:58 UTC] Error: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[28-Dec-2024 02:31:58 UTC] URL: /KXO205/MikuSportsCharity/public/api/pay
+[28-Dec-2024 02:31:58 UTC] Method: POST
+[28-Dec-2024 02:32:01 UTC] SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[28-Dec-2024 02:32:01 UTC] Error: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[28-Dec-2024 02:32:01 UTC] URL: /KXO205/MikuSportsCharity/public/api/pay
+[28-Dec-2024 02:32:01 UTC] Method: POST
+[28-Dec-2024 02:34:09 UTC] SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[28-Dec-2024 02:34:09 UTC] Error: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[28-Dec-2024 02:34:09 UTC] URL: /KXO205/MikuSportsCharity/public/api/pay
+[28-Dec-2024 02:34:09 UTC] Method: POST
+[28-Dec-2024 02:36:11 UTC] SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[28-Dec-2024 02:36:11 UTC] Error: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[28-Dec-2024 02:36:11 UTC] URL: /KXO205/MikuSportsCharity/public/api/pay
+[28-Dec-2024 02:36:11 UTC] Method: POST
+[28-Dec-2024 02:37:52 UTC] SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[28-Dec-2024 02:37:52 UTC] Error: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens
+[28-Dec-2024 02:37:52 UTC] URL: /KXO205/MikuSportsCharity/public/api/pay
+[28-Dec-2024 02:37:52 UTC] Method: POST
+[28-Dec-2024 02:39:44 UTC] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mikusportscharity`.`donation_records`, CONSTRAINT `fk_donate_record` FOREIGN KEY (`trade_id`) REFERENCES `donation` (`donation_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[28-Dec-2024 02:39:44 UTC] Error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mikusportscharity`.`donation_records`, CONSTRAINT `fk_donate_record` FOREIGN KEY (`trade_id`) REFERENCES `donation` (`donation_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[28-Dec-2024 02:39:44 UTC] URL: /KXO205/MikuSportsCharity/public/api/pay
+[28-Dec-2024 02:39:44 UTC] Method: POST
+[28-Dec-2024 02:42:34 UTC] SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[28-Dec-2024 02:42:34 UTC] Error: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined
+[28-Dec-2024 02:42:34 UTC] URL: /KXO205/MikuSportsCharity/public/api/pay
+[28-Dec-2024 02:42:34 UTC] Method: POST
+[28-Dec-2024 02:43:15 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php on line 30
+[28-Dec-2024 02:43:15 UTC] PHP Stack trace:
+[28-Dec-2024 02:43:15 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 02:43:15 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 02:43:15 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'pay']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 02:43:15 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 02:43:15 UTC] PHP   5. PayController->pay() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 02:43:15 UTC] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mikusportscharity`.`donation_records`, CONSTRAINT `fk_donate_record` FOREIGN KEY (`trade_id`) REFERENCES `donation` (`donation_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[28-Dec-2024 02:43:15 UTC] Error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mikusportscharity`.`donation_records`, CONSTRAINT `fk_donate_record` FOREIGN KEY (`trade_id`) REFERENCES `donation` (`donation_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[28-Dec-2024 02:43:15 UTC] URL: /KXO205/MikuSportsCharity/public/api/pay
+[28-Dec-2024 02:43:15 UTC] Method: POST
+[28-Dec-2024 02:44:22 UTC] SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mikusportscharity`.`donation_records`, CONSTRAINT `fk_donate_record` FOREIGN KEY (`trade_id`) REFERENCES `donation` (`donation_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[28-Dec-2024 02:44:22 UTC] Error: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`mikusportscharity`.`donation_records`, CONSTRAINT `fk_donate_record` FOREIGN KEY (`trade_id`) REFERENCES `donation` (`donation_id`) ON DELETE CASCADE ON UPDATE CASCADE)
+[28-Dec-2024 02:44:22 UTC] URL: /KXO205/MikuSportsCharity/public/api/pay
+[28-Dec-2024 02:44:22 UTC] Method: POST
+[28-Dec-2024 02:52:27 UTC] Route '/undefined' not defined.
+[28-Dec-2024 02:52:27 UTC] Error: Route '/undefined' not defined.
+[28-Dec-2024 02:52:27 UTC] URL: /KXO205/MikuSportsCharity/public/undefined
+[28-Dec-2024 02:52:27 UTC] Method: GET
+[28-Dec-2024 02:52:48 UTC] Route '/undefined' not defined.
+[28-Dec-2024 02:52:48 UTC] Error: Route '/undefined' not defined.
+[28-Dec-2024 02:52:48 UTC] URL: /KXO205/MikuSportsCharity/public/undefined
+[28-Dec-2024 02:52:48 UTC] Method: GET
+[28-Dec-2024 03:28:28 UTC] PHP Fatal error:  Constant expression contains invalid operations in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php on line 3
+[28-Dec-2024 03:28:28 UTC] PHP Stack trace:
+[28-Dec-2024 03:28:28 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 03:28:28 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 03:28:28 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'pay']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 03:28:28 UTC] PHP   4. App->loadController() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:35
+[28-Dec-2024 03:30:24 UTC] PHP Fatal error:  Constant expression contains invalid operations in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php on line 4
+[28-Dec-2024 03:30:24 UTC] PHP Stack trace:
+[28-Dec-2024 03:30:24 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 03:30:24 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 03:30:24 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'pay']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 03:30:24 UTC] PHP   4. App->loadController() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:35
+[28-Dec-2024 03:52:14 UTC] PHP Fatal error:  Uncaught TypeError: ksort(): Argument #1 ($array) must be of type array, null given in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php:102
 Stack trace:
-#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(60): ApiController->changePassword()
+#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php(102): ksort(NULL)
+#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php(94): PayController->getSign(Array)
+#2 C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php(84): PayController->buildRequestParam(Array)
+#3 C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php(74): PayController->pagePay(Array, 'Redirecting to ...')
+#4 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(60): PayController->pay()
+#5 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
+#6 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
+#7 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(13): App->__construct()
+#8 {main}
+  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php on line 102
+[28-Dec-2024 05:42:41 UTC] Route '/result' not defined.
+[28-Dec-2024 05:42:41 UTC] Error: Route '/result' not defined.
+[28-Dec-2024 05:42:41 UTC] URL: /KXO205/MikuSportsCharity/public/result
+[28-Dec-2024 05:42:41 UTC] Method: GET
+[28-Dec-2024 05:42:49 UTC] Route '/css/style.css' not defined.
+[28-Dec-2024 05:42:49 UTC] Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:42:49 UTC] Error: Route '/css/style.css' not defined.
+[28-Dec-2024 05:42:49 UTC] Error: Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:42:49 UTC] URL: /KXO205/MikuSportsCharity/public/css/style.css
+[28-Dec-2024 05:42:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/cookies.js
+[28-Dec-2024 05:42:49 UTC] Method: GET
+[28-Dec-2024 05:42:49 UTC] Method: GET
+[28-Dec-2024 05:42:49 UTC] Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:42:49 UTC] Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:42:49 UTC] Error: Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:42:49 UTC] Error: Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:42:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/checklogin.js
+[28-Dec-2024 05:42:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/darkmode.js
+[28-Dec-2024 05:42:49 UTC] Method: GET
+[28-Dec-2024 05:42:49 UTC] Method: GET
+[28-Dec-2024 05:42:49 UTC] Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:42:49 UTC] Error: Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:42:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/toggler.js
+[28-Dec-2024 05:42:49 UTC] Method: GET
+[28-Dec-2024 05:42:49 UTC] Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:42:49 UTC] Error: Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:42:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/images/test/testavatar.png
+[28-Dec-2024 05:42:49 UTC] Method: GET
+[28-Dec-2024 05:42:49 UTC] Route '/public/favicon.png' not defined.
+[28-Dec-2024 05:42:49 UTC] Error: Route '/public/favicon.png' not defined.
+[28-Dec-2024 05:42:49 UTC] URL: /KXO205/MikuSportsCharity/public/public/favicon.png
+[28-Dec-2024 05:42:49 UTC] Method: GET
+[28-Dec-2024 05:43:39 UTC] Route '/css/style.css' not defined.
+[28-Dec-2024 05:43:39 UTC] Error: Route '/css/style.css' not defined.
+[28-Dec-2024 05:43:39 UTC] URL: /KXO205/MikuSportsCharity/public/css/style.css
+[28-Dec-2024 05:43:39 UTC] Method: GET
+[28-Dec-2024 05:43:39 UTC] Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:43:39 UTC] Error: Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:43:39 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/checklogin.js
+[28-Dec-2024 05:43:39 UTC] Method: GET
+[28-Dec-2024 05:43:39 UTC] Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:43:39 UTC] Error: Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:43:39 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/toggler.js
+[28-Dec-2024 05:43:39 UTC] Method: GET
+[28-Dec-2024 05:43:39 UTC] Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:43:39 UTC] Error: Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:43:39 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/cookies.js
+[28-Dec-2024 05:43:39 UTC] Method: GET
+[28-Dec-2024 05:43:39 UTC] Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:43:39 UTC] Error: Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:43:39 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/darkmode.js
+[28-Dec-2024 05:43:39 UTC] Method: GET
+[28-Dec-2024 05:43:39 UTC] Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:43:39 UTC] Error: Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:43:39 UTC] URL: /KXO205/MikuSportsCharity/public/pay/images/test/testavatar.png
+[28-Dec-2024 05:43:39 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] Route '/css/style.css' not defined.
+[28-Dec-2024 05:43:49 UTC] Error: Route '/css/style.css' not defined.
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/css/style.css
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:43:49 UTC] Error: Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/cookies.js
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:43:49 UTC] Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:43:49 UTC] Error: Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:43:49 UTC] Error: Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/checklogin.js
+[28-Dec-2024 05:43:49 UTC] Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/toggler.js
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] Error: Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/darkmode.js
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:43:49 UTC] Error: Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/images/test/testavatar.png
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] Route '/css/style.css' not defined.
+[28-Dec-2024 05:43:49 UTC] Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:43:49 UTC] Error: Route '/css/style.css' not defined.
+[28-Dec-2024 05:43:49 UTC] Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:43:49 UTC] Error: Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/css/style.css
+[28-Dec-2024 05:43:49 UTC] Error: Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:43:49 UTC] Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/cookies.js
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/checklogin.js
+[28-Dec-2024 05:43:49 UTC] Error: Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/toggler.js
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:43:49 UTC] Error: Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/darkmode.js
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:49 UTC] Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:43:49 UTC] Error: Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:43:49 UTC] URL: /KXO205/MikuSportsCharity/public/pay/images/test/testavatar.png
+[28-Dec-2024 05:43:49 UTC] Method: GET
+[28-Dec-2024 05:43:55 UTC] Route '/css/style.css' not defined.
+[28-Dec-2024 05:43:55 UTC] Error: Route '/css/style.css' not defined.
+[28-Dec-2024 05:43:55 UTC] URL: /KXO205/MikuSportsCharity/public/css/style.css
+[28-Dec-2024 05:43:55 UTC] Method: GET
+[28-Dec-2024 05:44:25 UTC] Route '/css/style.css' not defined.
+[28-Dec-2024 05:44:25 UTC] Error: Route '/css/style.css' not defined.
+[28-Dec-2024 05:44:25 UTC] URL: /KXO205/MikuSportsCharity/public/css/style.css
+[28-Dec-2024 05:44:25 UTC] Method: GET
+[28-Dec-2024 05:44:25 UTC] Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:44:25 UTC] Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:44:25 UTC] Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:44:25 UTC] Error: Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:44:25 UTC] Error: Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:44:25 UTC] Error: Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:44:25 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/checklogin.js
+[28-Dec-2024 05:44:25 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/toggler.js
+[28-Dec-2024 05:44:25 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/cookies.js
+[28-Dec-2024 05:44:25 UTC] Method: GET
+[28-Dec-2024 05:44:25 UTC] Method: GET
+[28-Dec-2024 05:44:25 UTC] Method: GET
+[28-Dec-2024 05:44:25 UTC] Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:44:25 UTC] Error: Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:44:25 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/darkmode.js
+[28-Dec-2024 05:44:25 UTC] Method: GET
+[28-Dec-2024 05:44:25 UTC] Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:44:25 UTC] Error: Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:44:25 UTC] URL: /KXO205/MikuSportsCharity/public/pay/images/test/testavatar.png
+[28-Dec-2024 05:44:25 UTC] Method: GET
+[28-Dec-2024 05:44:57 UTC] Route '/css/style.css' not defined.
+[28-Dec-2024 05:44:57 UTC] Error: Route '/css/style.css' not defined.
+[28-Dec-2024 05:44:57 UTC] URL: /KXO205/MikuSportsCharity/public/css/style.css
+[28-Dec-2024 05:44:57 UTC] Method: GET
+[28-Dec-2024 05:44:57 UTC] Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:44:57 UTC] Error: Route '/pay/js/cookies.js' not defined.
+[28-Dec-2024 05:44:57 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/cookies.js
+[28-Dec-2024 05:44:57 UTC] Method: GET
+[28-Dec-2024 05:44:57 UTC] Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:44:57 UTC] Error: Route '/pay/js/checklogin.js' not defined.
+[28-Dec-2024 05:44:57 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/checklogin.js
+[28-Dec-2024 05:44:57 UTC] Method: GET
+[28-Dec-2024 05:44:57 UTC] Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:44:57 UTC] Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:44:57 UTC] Error: Route '/pay/js/darkmode.js' not defined.
+[28-Dec-2024 05:44:57 UTC] Error: Route '/pay/js/toggler.js' not defined.
+[28-Dec-2024 05:44:57 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/darkmode.js
+[28-Dec-2024 05:44:57 UTC] URL: /KXO205/MikuSportsCharity/public/pay/js/toggler.js
+[28-Dec-2024 05:44:57 UTC] Method: GET
+[28-Dec-2024 05:44:57 UTC] Method: GET
+[28-Dec-2024 05:44:57 UTC] Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:44:57 UTC] Error: Route '/pay/images/test/testavatar.png' not defined.
+[28-Dec-2024 05:44:57 UTC] URL: /KXO205/MikuSportsCharity/public/pay/images/test/testavatar.png
+[28-Dec-2024 05:44:57 UTC] Method: GET
+[28-Dec-2024 05:45:27 UTC] Route '/public' not defined.
+[28-Dec-2024 05:45:27 UTC] Error: Route '/public' not defined.
+[28-Dec-2024 05:45:27 UTC] URL: /KXO205/MikuSportsCharity/public/public/
+[28-Dec-2024 05:45:27 UTC] Method: GET
+[28-Dec-2024 05:45:51 UTC] Route '/css/style.css' not defined.
+[28-Dec-2024 05:45:51 UTC] Error: Route '/css/style.css' not defined.
+[28-Dec-2024 05:45:51 UTC] URL: /KXO205/MikuSportsCharity/public/css/style.css
+[28-Dec-2024 05:45:51 UTC] Method: GET
+[28-Dec-2024 11:29:05 UTC] PHP Fatal error:  Uncaught Error: Class "VolunteerEvent" not found in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:436
+Stack trace:
+#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(60): ApiController->volunteerEvents()
 #1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
 #2 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
-#3 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(15): App->__construct()
+#3 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(13): App->__construct()
 #4 {main}
-  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 376
-[27-Dec-2024 17:45:53 UTC] PHP Warning:  Undefined array key "oldPassword" in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 374
-[27-Dec-2024 17:45:53 UTC] PHP Stack trace:
-[27-Dec-2024 17:45:53 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:45:53 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:45:53 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:45:53 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:45:53 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:45:53 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 374
-[27-Dec-2024 17:45:53 UTC] PHP Stack trace:
-[27-Dec-2024 17:45:53 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:45:53 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:45:53 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:45:53 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:45:53 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:45:53 UTC] PHP   6. trim($string = NULL) C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:374
-[27-Dec-2024 17:45:53 UTC] PHP Warning:  Undefined array key "oldPassword" in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 376
-[27-Dec-2024 17:45:53 UTC] PHP Stack trace:
-[27-Dec-2024 17:45:53 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:45:53 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:45:53 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:45:53 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:45:53 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:45:53 UTC] PHP Deprecated:  trim(): Passing null to parameter #1 ($string) of type string is deprecated in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 376
-[27-Dec-2024 17:45:53 UTC] PHP Stack trace:
-[27-Dec-2024 17:45:53 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:45:53 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:45:53 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:45:53 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:45:53 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:45:53 UTC] PHP   6. trim($string = NULL) C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:376
-[27-Dec-2024 17:48:12 UTC] PHP Notice:  Only variables should be passed by reference in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 393
-[27-Dec-2024 17:48:12 UTC] PHP Stack trace:
-[27-Dec-2024 17:48:12 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:48:12 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:48:12 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:48:12 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:48:12 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:48:50 UTC] PHP Notice:  Only variables should be passed by reference in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 393
-[27-Dec-2024 17:48:50 UTC] PHP Stack trace:
-[27-Dec-2024 17:48:50 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:48:50 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:48:50 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:48:50 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:48:50 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:49:09 UTC] PHP Notice:  Only variables should be passed by reference in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 393
-[27-Dec-2024 17:49:09 UTC] PHP Stack trace:
-[27-Dec-2024 17:49:09 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:49:09 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:49:09 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:49:09 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:49:09 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:52:17 UTC] PHP Notice:  Only variables should be passed by reference in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 393
-[27-Dec-2024 17:52:17 UTC] PHP Stack trace:
-[27-Dec-2024 17:52:17 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:52:17 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:52:17 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:52:17 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:52:17 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 17:53:26 UTC] PHP Notice:  Only variables should be passed by reference in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 393
-[27-Dec-2024 17:53:26 UTC] PHP Stack trace:
-[27-Dec-2024 17:53:26 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 17:53:26 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 17:53:26 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 17:53:26 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 17:53:26 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 18:18:53 UTC] PHP Notice:  Only variables should be passed by reference in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 393
-[27-Dec-2024 18:18:53 UTC] PHP Stack trace:
-[27-Dec-2024 18:18:53 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 18:18:53 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 18:18:53 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 18:18:53 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 18:18:53 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 18:36:52 UTC] Route '/public/images/avatar.png' not defined.
-[27-Dec-2024 18:36:52 UTC] Error: Route '/public/images/avatar.png' not defined.
-[27-Dec-2024 18:36:52 UTC] URL: /KXO205/MikuSportsCharity/public/public/images/avatar.png
-[27-Dec-2024 18:36:52 UTC] Method: GET
-[27-Dec-2024 18:37:16 UTC] Route '/public/images/avatar.png' not defined.
-[27-Dec-2024 18:37:16 UTC] Error: Route '/public/images/avatar.png' not defined.
-[27-Dec-2024 18:37:16 UTC] URL: /KXO205/MikuSportsCharity/public/public/images/avatar.png
-[27-Dec-2024 18:37:16 UTC] Method: GET
-[27-Dec-2024 18:43:53 UTC] Route '/upload/default.png' not defined.
-[27-Dec-2024 18:43:53 UTC] Error: Route '/upload/default.png' not defined.
-[27-Dec-2024 18:43:53 UTC] URL: /KXO205/MikuSportsCharity/public/upload/default.png
-[27-Dec-2024 18:43:53 UTC] Method: GET
-[27-Dec-2024 19:06:39 UTC] Route '/api/changeAvatar' not defined.
-[27-Dec-2024 19:06:39 UTC] Error: Route '/api/changeAvatar' not defined.
-[27-Dec-2024 19:06:39 UTC] URL: /KXO205/MikuSportsCharity/public/api/changeAvatar
-[27-Dec-2024 19:06:39 UTC] Method: POST
-[27-Dec-2024 19:08:13 UTC] Route '/api/changeAvatar' not defined.
-[27-Dec-2024 19:08:13 UTC] Error: Route '/api/changeAvatar' not defined.
-[27-Dec-2024 19:08:13 UTC] URL: /KXO205/MikuSportsCharity/public/api/changeAvatar
-[27-Dec-2024 19:08:13 UTC] Method: POST
-[27-Dec-2024 19:08:18 UTC] Route '/api/changeAvatar' not defined.
-[27-Dec-2024 19:08:18 UTC] Error: Route '/api/changeAvatar' not defined.
-[27-Dec-2024 19:08:18 UTC] URL: /KXO205/MikuSportsCharity/public/api/changeAvatar
-[27-Dec-2024 19:08:18 UTC] Method: GET
-[27-Dec-2024 19:08:31 UTC] Route '/api/changeAvatar' not defined.
-[27-Dec-2024 19:08:31 UTC] Error: Route '/api/changeAvatar' not defined.
-[27-Dec-2024 19:08:31 UTC] URL: /KXO205/MikuSportsCharity/public/api/changeAvatar
-[27-Dec-2024 19:08:31 UTC] Method: POST
-[27-Dec-2024 19:09:57 UTC] Route '/upload/avatars/2_1735326538.png' not defined.
-[27-Dec-2024 19:09:57 UTC] Error: Route '/upload/avatars/2_1735326538.png' not defined.
-[27-Dec-2024 19:09:57 UTC] URL: /KXO205/MikuSportsCharity/public/upload/avatars/2_1735326538.png
-[27-Dec-2024 19:09:57 UTC] Method: GET
-[27-Dec-2024 19:19:50 UTC] Route '/upload/avatars/2_1735327028.png' not defined.
-[27-Dec-2024 19:19:50 UTC] Error: Route '/upload/avatars/2_1735327028.png' not defined.
-[27-Dec-2024 19:19:50 UTC] URL: /KXO205/MikuSportsCharity/public/upload/avatars/2_1735327028.png
-[27-Dec-2024 19:19:50 UTC] Method: GET
-[27-Dec-2024 19:19:58 UTC] Route '/upload/avatars/2_1735327028.png' not defined.
-[27-Dec-2024 19:19:58 UTC] Error: Route '/upload/avatars/2_1735327028.png' not defined.
-[27-Dec-2024 19:19:58 UTC] URL: /KXO205/MikuSportsCharity/public/upload/avatars/2_1735327028.png
-[27-Dec-2024 19:19:58 UTC] Method: GET
-[27-Dec-2024 19:19:59 UTC] Route '/upload/avatars/2_1735327028.png' not defined.
-[27-Dec-2024 19:19:59 UTC] Error: Route '/upload/avatars/2_1735327028.png' not defined.
-[27-Dec-2024 19:19:59 UTC] URL: /KXO205/MikuSportsCharity/public/upload/avatars/2_1735327028.png
-[27-Dec-2024 19:19:59 UTC] Method: GET
-[27-Dec-2024 19:20:07 UTC] Route '/upload/avatars/2_1735327028.png' not defined.
-[27-Dec-2024 19:20:07 UTC] Error: Route '/upload/avatars/2_1735327028.png' not defined.
-[27-Dec-2024 19:20:07 UTC] URL: /KXO205/MikuSportsCharity/public/upload/avatars/2_1735327028.png
-[27-Dec-2024 19:20:07 UTC] Method: GET
-[27-Dec-2024 19:20:13 UTC] Route '/upload/avatars/2_1735327028.png' not defined.
-[27-Dec-2024 19:20:13 UTC] Error: Route '/upload/avatars/2_1735327028.png' not defined.
-[27-Dec-2024 19:20:13 UTC] URL: /KXO205/MikuSportsCharity/public/upload/avatars/2_1735327028.png
-[27-Dec-2024 19:20:13 UTC] Method: GET
-[27-Dec-2024 19:35:58 UTC] Route '/charity.php' not defined.
-[27-Dec-2024 19:35:58 UTC] Error: Route '/charity.php' not defined.
-[27-Dec-2024 19:35:58 UTC] URL: /KXO205/MikuSportsCharity/public/charity.php?organization=Run+for+Life
-[27-Dec-2024 19:35:58 UTC] Method: GET
-[27-Dec-2024 19:53:27 UTC] PHP Fatal error:  Uncaught Error: Object of class ApiController could not be converted to string in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:57
+  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 436
+[28-Dec-2024 11:29:05 UTC] PHP Fatal error:  Uncaught Error: Class "Donation" not found in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:447
 Stack trace:
-#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
-#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
-#2 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(15): App->__construct()
-#3 {main}
-  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php on line 57
-[27-Dec-2024 19:53:35 UTC] PHP Fatal error:  Uncaught Error: Object of class ApiController could not be converted to string in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:57
+#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(60): ApiController->donations()
+#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
+#2 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
+#3 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(13): App->__construct()
+#4 {main}
+  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 447
+[28-Dec-2024 12:29:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Charity::getCharityIdByName() in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:481
 Stack trace:
-#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
-#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
-#2 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(15): App->__construct()
-#3 {main}
-  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php on line 57
-[27-Dec-2024 19:53:51 UTC] PHP Fatal error:  Uncaught Error: Object of class ApiController could not be converted to string in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:57
+#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(60): ApiController->updateEvent()
+#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
+#2 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
+#3 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(13): App->__construct()
+#4 {main}
+  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 481
+[28-Dec-2024 12:30:21 UTC] PHP Warning:  Undefined variable $eventId in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 485
+[28-Dec-2024 12:30:21 UTC] PHP Stack trace:
+[28-Dec-2024 12:30:21 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 12:30:21 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 12:30:21 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'updateEvent']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 12:30:21 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 12:30:21 UTC] PHP   5. ApiController->updateEvent() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 12:31:31 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Donation::updateDonation(), 4 passed in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 485 and exactly 5 expected in C:\wamp64\www\KXO205\MikuSportsCharity\app\models\Donation.php:82
 Stack trace:
-#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
-#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
-#2 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(15): App->__construct()
-#3 {main}
-  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php on line 57
-[27-Dec-2024 20:03:17 UTC] PHP Notice:  Only variables should be passed by reference in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 189
-[27-Dec-2024 20:03:17 UTC] PHP Stack trace:
-[27-Dec-2024 20:03:17 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 20:03:17 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 20:03:17 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 20:03:17 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 20:03:17 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 22:12:19 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:12:19 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:12:19 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:12:19 UTC] Method: GET
-[27-Dec-2024 22:15:44 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:15:44 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:15:44 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:15:44 UTC] Method: GET
-[27-Dec-2024 22:20:45 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:20:45 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:20:45 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:20:45 UTC] Method: GET
-[27-Dec-2024 22:20:55 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:20:55 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:20:55 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:20:55 UTC] Method: GET
-[27-Dec-2024 22:20:58 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:20:58 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:20:58 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:20:58 UTC] Method: GET
-[27-Dec-2024 22:21:31 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:21:31 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:21:31 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:21:31 UTC] Method: GET
-[27-Dec-2024 22:21:34 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:21:34 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:21:34 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:21:34 UTC] Method: GET
-[27-Dec-2024 22:22:30 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:22:30 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:22:30 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:22:30 UTC] Method: GET
-[27-Dec-2024 22:23:04 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:23:04 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:23:04 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:23:04 UTC] Method: GET
-[27-Dec-2024 22:23:09 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:23:09 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:23:09 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:23:09 UTC] Method: GET
-[27-Dec-2024 22:23:51 UTC] Route '/charity.html' not defined.
-[27-Dec-2024 22:23:51 UTC] Error: Route '/charity.html' not defined.
-[27-Dec-2024 22:23:51 UTC] URL: /KXO205/MikuSportsCharity/public/charity.html?organization=Kisckstarter%20Foundation
-[27-Dec-2024 22:23:51 UTC] Method: GET
-[27-Dec-2024 22:23:58 UTC] PHP Fatal error:  Uncaught Error: Object of class CharityController could not be converted to string in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:57
+#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php(485): Donation->updateDonation('test', 1, 'test', '10')
+#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(60): ApiController->updateEvent()
+#2 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
+#3 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
+#4 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(13): App->__construct()
+#5 {main}
+  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\models\Donation.php on line 82
+[28-Dec-2024 12:37:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function Donation::updateDonation(), 4 passed in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 485 and exactly 5 expected in C:\wamp64\www\KXO205\MikuSportsCharity\app\models\Donation.php:88
 Stack trace:
-#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
-#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
-#2 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(15): App->__construct()
-#3 {main}
-  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php on line 57
-[27-Dec-2024 22:24:37 UTC] PHP Fatal error:  Uncaught Error: Object of class CharityController could not be converted to string in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:57
+#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php(485): Donation->updateDonation('Kickstart Athle...', 1, 'Support aspirin...', '50000')
+#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(60): ApiController->updateEvent()
+#2 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
+#3 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
+#4 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(13): App->__construct()
+#5 {main}
+  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\models\Donation.php on line 88
+[28-Dec-2024 12:48:15 UTC] Route '/charity.php' not defined.
+[28-Dec-2024 12:48:15 UTC] Error: Route '/charity.php' not defined.
+[28-Dec-2024 12:48:15 UTC] URL: /KXO205/MikuSportsCharity/public/charity.php?organization=Kickstart+Hope
+[28-Dec-2024 12:48:15 UTC] Method: GET
+[28-Dec-2024 13:14:34 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\wamp64\www\KXO205\MikuSportsCharity\app\models\Charity.php on line 30
+[28-Dec-2024 13:14:34 UTC] PHP Stack trace:
+[28-Dec-2024 13:14:34 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 13:14:34 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 13:14:34 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'updateEvent']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 13:14:34 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 13:14:34 UTC] PHP   5. ApiController->updateEvent() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 13:14:34 UTC] PHP   6. Charity->getCharityIdByName($name = '') C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:474
+[28-Dec-2024 13:21:37 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\wamp64\www\KXO205\MikuSportsCharity\app\models\Charity.php on line 30
+[28-Dec-2024 13:21:37 UTC] PHP Stack trace:
+[28-Dec-2024 13:21:37 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 13:21:37 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 13:21:37 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'updateEvent']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 13:21:37 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 13:21:37 UTC] PHP   5. ApiController->updateEvent() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 13:21:37 UTC] PHP   6. Charity->getCharityIdByName($name = '') C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:474
+[28-Dec-2024 13:50:40 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method VolunteerEvent::deleteEventTimes() in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:528
 Stack trace:
-#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
-#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
-#2 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(15): App->__construct()
-#3 {main}
-  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php on line 57
-[27-Dec-2024 22:26:08 UTC] PHP Fatal error:  Uncaught Error: Object of class CharityController could not be converted to string in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:57
-Stack trace:
-#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
-#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
-#2 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(15): App->__construct()
-#3 {main}
-  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php on line 57
-[27-Dec-2024 22:27:04 UTC] Route '/js/chariyevents.js' not defined.
-[27-Dec-2024 22:27:04 UTC] Error: Route '/js/chariyevents.js' not defined.
-[27-Dec-2024 22:27:04 UTC] URL: /KXO205/MikuSportsCharity/public/js/chariyevents.js
-[27-Dec-2024 22:27:04 UTC] Method: GET
-[27-Dec-2024 22:27:12 UTC] Route '/js/chariyevents.js' not defined.
-[27-Dec-2024 22:27:12 UTC] Error: Route '/js/chariyevents.js' not defined.
-[27-Dec-2024 22:27:12 UTC] URL: /KXO205/MikuSportsCharity/public/js/chariyevents.js
-[27-Dec-2024 22:27:12 UTC] Method: GET
-[27-Dec-2024 22:27:55 UTC] Route '/js/chariyevents.js' not defined.
-[27-Dec-2024 22:27:55 UTC] Error: Route '/js/chariyevents.js' not defined.
-[27-Dec-2024 22:27:55 UTC] URL: /KXO205/MikuSportsCharity/public/js/chariyevents.js
-[27-Dec-2024 22:27:55 UTC] Method: GET
-[27-Dec-2024 22:28:18 UTC] Route '/charity.php' not defined.
-[27-Dec-2024 22:28:18 UTC] Error: Route '/charity.php' not defined.
-[27-Dec-2024 22:28:18 UTC] URL: /KXO205/MikuSportsCharity/public/charity.php?organization=Kickstart+Hope
-[27-Dec-2024 22:28:18 UTC] Method: GET
-[27-Dec-2024 22:42:15 UTC] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mission' in 'field list'
-[27-Dec-2024 22:42:15 UTC] Error: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'mission' in 'field list'
-[27-Dec-2024 22:42:15 UTC] URL: /KXO205/MikuSportsCharity/public/
-[27-Dec-2024 22:42:15 UTC] Method: GET
-[27-Dec-2024 22:56:02 UTC] PHP Warning:  include(./inc.php): Failed to open stream: No such file or directory in C:\wamp64\www\KXO205\MikuSportsCharity\app\views\pay\alipay.php on line 3
-[27-Dec-2024 22:56:02 UTC] PHP Stack trace:
-[27-Dec-2024 22:56:02 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 22:56:02 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 22:56:02 UTC] PHP   3. App->dispatch($url = [0 => 'alipay']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 22:56:02 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 22:56:02 UTC] PHP   5. PayController->alipay() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 22:56:02 UTC] PHP   6. Controller->view($view = 'pay/alipay', $data = ['webTitle' => 'Alipay - Miku Sports Charity Platform', 'title' => 'Miku Sports Charity Platform', 'email' => 'charity@mikufans.me', 'phone' => '+86 150-9864-6873', 'address' => '999 Hucheng Huanlu, Pudong New Area, Shanghai, China', 'addressLink' => 'https://www.google.com/maps/place/999+Hucheng+Huanlu,+Pudong+New+Area,+Shanghai,+China/@30.8868445,121.8956191,17z/data=!3m1!4b1!4m6!3m5!1s0x35ad768034588f11:0x89d232b593411ad6!8m2!3d30.88684!4d121.90049!16s%2Fg%2F11g4fj_p1x?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D', 'description' => 'Let the Fun of Sports Be Accessible to Everyone']) C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php:11
-[27-Dec-2024 22:56:02 UTC] PHP   7. include() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\Controller.php:17
-[27-Dec-2024 22:56:02 UTC] PHP Warning:  include(): Failed opening './inc.php' for inclusion (include_path='.;C:\php\pear') in C:\wamp64\www\KXO205\MikuSportsCharity\app\views\pay\alipay.php on line 3
-[27-Dec-2024 22:56:02 UTC] PHP Stack trace:
-[27-Dec-2024 22:56:02 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
-[27-Dec-2024 22:56:02 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:15
-[27-Dec-2024 22:56:02 UTC] PHP   3. App->dispatch($url = [0 => 'alipay']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
-[27-Dec-2024 22:56:02 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
-[27-Dec-2024 22:56:02 UTC] PHP   5. PayController->alipay() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
-[27-Dec-2024 22:56:02 UTC] PHP   6. Controller->view($view = 'pay/alipay', $data = ['webTitle' => 'Alipay - Miku Sports Charity Platform', 'title' => 'Miku Sports Charity Platform', 'email' => 'charity@mikufans.me', 'phone' => '+86 150-9864-6873', 'address' => '999 Hucheng Huanlu, Pudong New Area, Shanghai, China', 'addressLink' => 'https://www.google.com/maps/place/999+Hucheng+Huanlu,+Pudong+New+Area,+Shanghai,+China/@30.8868445,121.8956191,17z/data=!3m1!4b1!4m6!3m5!1s0x35ad768034588f11:0x89d232b593411ad6!8m2!3d30.88684!4d121.90049!16s%2Fg%2F11g4fj_p1x?entry=ttu&g_ep=EgoyMDI0MTAxNi4wIKXMDSoASAFQAw%3D%3D', 'description' => 'Let the Fun of Sports Be Accessible to Everyone']) C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php:11
-[27-Dec-2024 22:56:02 UTC] PHP   7. include() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\Controller.php:17
-[27-Dec-2024 22:56:02 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function showerror() in C:\wamp64\www\KXO205\MikuSportsCharity\app\views\pay\alipay.php:11
-Stack trace:
-#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\Controller.php(17): include()
-#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\PayController.php(11): Controller->view('pay/alipay', Array)
-#2 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(60): PayController->alipay()
-#3 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
-#4 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
-#5 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(15): App->__construct()
-#6 {main}
-  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\views\pay\alipay.php on line 11
+#0 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(60): ApiController->updateEvent()
+#1 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(36): App->callMethod()
+#2 C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php(13): App->dispatch(Array)
+#3 C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php(13): App->__construct()
+#4 {main}
+  thrown in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 528

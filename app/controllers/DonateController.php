@@ -8,9 +8,7 @@ class DonateController extends Controller {
         $address = $this->config('app')['address'];
         $addressLink = $this->config('app')['addressLink'];
         $description = $this->config('app')['description'];
-        //$charity = new Charity();
-        //$charities = $charity->getAllCharities();
-        //$totalCharities = $charity->getTotalCharities();
+        $DonationModel = $this->model('Donation');
 
         $this->view('pages/donation', [
             'webTitle' => "Donation - " . "$title",
@@ -20,8 +18,7 @@ class DonateController extends Controller {
             'address' => $address,
             'addressLink' => $addressLink,
             'description' => $description,
-//'charities' => $charities,
-            //'totalCharities' => $totalCharities,
+            'donations' => $DonationModel->getDonationByTitle($_GET['title']),
         ]);
     }
 }

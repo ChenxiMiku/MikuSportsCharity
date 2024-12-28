@@ -346,6 +346,7 @@ tfoot,
 th,
 thead,
 tr {
+    color: var(--p-color);
     border-color: inherit;
     border-style: solid;
     border-width: 0
@@ -2062,7 +2063,7 @@ progress {
 
 .table-striped>tbody>tr:nth-of-type(odd)>* {
     --bs-table-accent-bg: var(--bs-table-striped-bg);
-    color: var(--bs-table-striped-color)
+    color: var(--dark-color)
 }
 
 .table-striped-columns>:not(caption)>tr>:nth-child(2n) {
@@ -11562,8 +11563,6 @@ fieldset:disabled .btn {
         display: none !important
     }
 }
-
-/*# sourceMappingURL=bootstrap.min.css.map */
 
 @font-face {
     font-family: 'Metropolis';

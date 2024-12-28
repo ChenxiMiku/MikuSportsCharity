@@ -50,7 +50,7 @@
                             <i class="bi-speedometer2 me-2"></i>Dashboard
                         </a>
 
-                        <a class="dropdown-item align-items-center logoutBtn" href="../public/">
+                        <a class="dropdown-item align-items-center logoutBtn" href="../public/login">
                             <i class="bi-box-arrow-right me-2"></i>Log out
                         </a>
                     </div>

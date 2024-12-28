@@ -16,43 +16,18 @@
                             <div id="event-info" class="alert alert-info">
                                 <div class="row">
                                     <div class="col-md-4">
-                                        <img id="event-image" src="" alt="Event Image" class="img-fluid">
+                                        <img id="event-image" src="images/event3.jpg" alt="Event Image" class="img-fluid rounded">
                                     </div>
                                     <div class="col-md-8">
-                                        <h5 class="fs-5">Charity: <span id="charity-name"></span></h5>
-                                        <h5 class="fs-5">Event: <span id="event-name"></span></h5>
-                                        <p><strong class="fs-5">Goal:</strong> $<span id="event-goal"></span> | <strong
-                                                class="fs-5">Raised:</strong> $<span id="event-raised"></span></p>
+                                        <h5 class="fs-5">Charity: <span id="charity-name"><?php echo htmlspecialchars($donations['charity_name']); ?></span></h5>
+                                        <h5 class="fs-5">Event: <span id="event-name"><?php echo htmlspecialchars($donations['title']); ?></span></h5>
+                                        <p><strong class="fs-5">Goal:</strong> $<span id="event-goal"><?php echo htmlspecialchars($donations['funding_goal']); ?></span> |
+                                            <strong class="fs-5">Current:</strong> $<span id="event-current"><?php echo htmlspecialchars($donations['current_funding']); ?></span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-12 col-12">
-                                    <h5 class="mb-3">Donation Frequency</h5>
-                                </div>
-
-                                <div class="col-lg-6 col-6 form-check-group form-check-group-donation-frequency">
-                                    <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="DonationFrequency"
-                                            id="DonationFrequencyOne" checked>
-
-                                        <label class="form-check-label" for="DonationFrequencyOne">
-                                            One Time
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6 col-6 form-check-group form-check-group-donation-frequency">
-                                    <div class="form-check form-check-radio">
-                                        <input class="form-check-input" type="radio" name="DonationFrequency"
-                                            id="DonationFrequencyMonthly">
-
-                                        <label class="form-check-label" for="DonationFrequencyMonthly">
-                                            Monthly
-                                        </label>
-                                    </div>
-                                </div>
-
                                 <div class="col-lg-12 col-12">
                                     <h5 class="mt-2 mb-3">Select an amount</h5>
                                 </div>
@@ -128,17 +103,30 @@
 
                                 <div class="col-lg-12 col-12">
                                     <h5 class="mt-1">Personal Info</h5>
+                                    <small class="text-muted">You can choose to donate publicly if you log in.</small>
                                 </div>
 
-                                <div class="col-lg-6 col-12 mt-2">
-                                    <input type="text" name="donation-name" id="donation-name" class="form-control"
-                                        placeholder="Hatsune Miku" required>
+                                <div class="col-lg-12 col-12 mt-2" id="donation-public">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="donation-choice" id="donation-publicly" value="public">
+                                        <label class="form-check-label" for="donation-publicly">Donate publicly</label>
+                                    </div>
                                 </div>
 
-                                <div class="col-lg-6 col-12 mt-2">
-                                    <input type="email" name="donation-email" id="donation-email"
-                                        pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Jackdoe@gmail.com"
-                                        required>
+                                <div id="donationInfo" class="row d-none">
+                                    <div class="col-lg-6 col-12 mt-2">
+                                        <input type="text" name="donation-name" id="donation-name" class="form-control" placeholder="Name" required>
+                                    </div>
+                                    <div class="col-lg-6 col-12 mt-2">
+                                        <input type="email" name="donation-email" id="donation-email" pattern="[^ @]*@[^ @]*" class="form-control" placeholder="Email" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 col-12 mt-2" id="donation-anonymous">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="donation-choice" id="donation-anonymous-checkbox" value="anonymous" checked>
+                                        <label class="form-check-label" for="donation-anonymous-checkbox">Donate anonymously</label>
+                                    </div>
                                 </div>
 
                                 <div class="col-lg-12 col-12">
@@ -148,34 +136,7 @@
                                 <div class="col-lg-12 col-12 mt-2">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="DonationPayment"
-                                            id="flexRadioDefault9">
-                                        <label class="form-check-label" for="flexRadioDefault9">
-                                            <i class="bi-credit-card custom-icon ms-1"></i>
-                                            Debit or Credit card
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="DonationPayment"
-                                            id="flexRadioDefault10">
-                                        <label class="form-check-label" for="flexRadioDefault10">
-                                            <i class="bi-paypal custom-icon ms-1"></i>
-                                            Paypal
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="DonationPayment"
-                                            id="flexRadioDefault10">
-                                        <label class="form-check-label" for="flexRadioDefault10">
-                                            <i class="bi-currency-bitcoin custom-icon ms-1"></i>
-                                            BTC
-                                        </label>
-                                    </div>
-
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="DonationPayment"
-                                            id="flexRadioDefault10">
+                                            id="Wechat Pay">
                                         <label class="form-check-label" for="flexRadioDefault10">
                                             <i class="bi-wechat custom-icon ms-1"></i>
                                             Wechat Pay
@@ -184,10 +145,19 @@
 
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="DonationPayment"
-                                            id="flexRadioDefault10">
+                                            id="Alipay">
                                         <label class="form-check-label" for="flexRadioDefault10">
                                             <i class="bi-alipay custom-icon ms-1"></i>
                                             Alipay
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="DonationPayment"
+                                            id="Paypal">
+                                        <label class="form-check-label">
+                                            <i class="bi-paypal custom-icon ms-1"></i>
+                                            Paypal
                                         </label>
                                     </div>
 
@@ -205,7 +175,8 @@
 
     <?php include '../app/views/layouts/footer.php'; ?>
     <?php include '../app/views/layouts/cookies.php'; ?>
-    <?php include '../app/views/layouts/scroll.php'; ?>
+    <script src="js/donation.js"></script>
+    <script src="js/payment.js"></script>
 </body>
 
 </html>

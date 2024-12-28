@@ -1,6 +1,6 @@
 <?php
 
-class ApiController
+class ApiController extends Controller
 {
     // Get user ID from token
     private function getUserIdFromToken($pdo)
@@ -354,6 +354,192 @@ class ApiController
                 'success' => false,
                 'message' => $e->getMessage(),
             ]);
+        }
+    }
+
+    public function updateCharity()
+    {
+
+        $data = json_decode(file_get_contents('php://input'), true);
+        $action = $data['action'] ?? null;
+
+        if (!$action) {
+            echo json_encode(['success' => false, 'message' => 'Invalid action.']);
+            return;
+        }
+
+        try {
+            switch ($action) {
+                case 'add':
+                    $name = $data['name'] ?? '';
+                    if (empty($name)) {
+                        throw new Exception('Charity name is required.');
+                    }
+
+                    $id = $this->addCharityToDatabase($name);
+                    echo json_encode(['success' => true, 'charity' => ['id' => $id, 'name' => $name]]);
+                    break;
+
+                case 'edit':
+                    $id = $data['id'] ?? null;
+                    $name = $data['name'] ?? '';
+                    if (!$id || empty($name)) {
+                        throw new Exception('Charity ID and name are required.');
+                    }
+
+                    $this->updateCharityInDatabase($id, $name);
+                    echo json_encode(['success' => true]);
+                    break;
+
+                case 'delete':
+                    $id = $data['id'] ?? null;
+                    if (!$id) {
+                        throw new Exception('Charity ID is required.');
+                    }
+
+                    $this->deleteCharityFromDatabase($id);
+                    echo json_encode(['success' => true]);
+                    break;
+
+                default:
+                    echo json_encode(['success' => false, 'message' => 'Unknown action.']);
+            }
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'message' => $e->getMessage()]);
+        }
+    }
+
+    private function addCharityToDatabase($name)
+    {
+        $pdo = $this->getDatabaseConnection();
+        $stmt = $pdo->prepare("INSERT INTO charity (charity_name) VALUES (:name)");
+        $stmt->bindParam(':name', $name);
+        $stmt->execute();
+        return $pdo->lastInsertId();
+    }
+
+    private function updateCharityInDatabase($id, $name)
+    {
+        $pdo = $this->getDatabaseConnection();
+        $stmt = $pdo->prepare("UPDATE charity SET charity_name = :name WHERE charity_id = :id");
+        $stmt->bindParam(':name', $name);
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+    }
+
+    private function deleteCharityFromDatabase($id)
+    {
+        $pdo = $this->getDatabaseConnection();
+        $stmt = $pdo->prepare("DELETE FROM charity WHERE charity_id = :id");
+        $stmt->bindParam(':id', $id);
+        $stmt->execute();
+    }
+
+    public function volunteerEvents()
+    {
+        try {
+            $volunteerEventModel = $this->model('VolunteerEvent');
+            $events = $volunteerEventModel->getAllWithCharity();
+
+            echo json_encode(['success' => true, 'events' => $events]);
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'message' => $e->getMessage()]);
+        }
+    }
+
+    public function donations()
+    {
+        try {
+            $donationModel = $this->model('Donation');
+            $donations = $donationModel->getAllDonations();
+
+            echo json_encode(['success' => true, 'donations' => $donations]);
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'message' => $e->getMessage()]);
+        }
+    }
+
+    public function updateEvent()
+    {
+        try {
+            $data = json_decode(file_get_contents('php://input'), true);
+            $eventName = $data['title'] ?? '';
+            $charityName = $data['charityName'] ?? '';
+            $description = $data['description'] ?? '';
+            $location = $data['eventLocation'] ?? '';
+            $date = $data['eventDate'] ?? '';
+            $endTime = $data['end_time'] ?? '';
+            $fundingGoal = $data['fundingGoal'] ?? 0;
+            $type = $data['type'] ?? '';
+            $volunteerGoal = $data['volunteerGoal'] ?? 0;
+            $action = $data['action'] ?? '';
+            $image_path = $data['image_path'] ?? 'images/image.png';
+            $data['id'] = $data['id'] ?? null;
+
+            $timeSlots = $data['timeSlots'] ?? [];
+
+            $charityModel = $this->model('Charity');
+            $charityId = $charityModel->getCharityIdByName($charityName);
+
+            if ($type === 'donation') {
+                $donationModel = $this->model('Donation');
+                if ($action === 'create') {
+                    $donationModel->addDonation($eventName, $charityId, $description, $fundingGoal, $image_path);
+                } else if ($action === 'delete') {
+                    $donationId = $data['id'] ?? null;
+                    if (!$donationId) {
+                        throw new Exception('Donation ID is required.');
+                    }
+                    $donationModel->deleteDonation($donationId);
+                } else {
+                    $donationId = $data['id'] ?? null;
+                    if (!$donationId) {
+                        throw new Exception('Donation ID is required.');
+                    }
+                    $donationModel->updateDonation($donationId, $eventName, $charityId, $description, $fundingGoal);
+                }
+            } else {
+                $volunteerEventModel = $this->model('VolunteerEvent');
+                if ($action === 'create') {
+                    $newEventId = $volunteerEventModel->addEvent($eventName, $charityId, $description, $location, $date, $volunteerGoal);
+
+                    foreach ($timeSlots as $slot) {
+                        $startTime = $slot['startTime'] ?? null;
+                        $endTime = $slot['endTime'] ?? null;
+
+                        if ($startTime && $endTime) {
+                            $volunteerEventModel->addEventTime($newEventId, $startTime, $endTime);
+                        }
+                    }
+                } else if ($action === 'delete') {
+                    $eventId = $data['id'] ?? null;
+                    if (!$eventId) {
+                        throw new Exception('Event ID is required.');
+                    }
+                    $volunteerEventModel->deleteEvent($eventId);
+                } else {
+                    $eventId = $data['id'] ?? null;
+                    if (!$eventId) {
+                        throw new Exception('Event ID is required.');
+                    }
+                    $volunteerEventModel->updateEvent($eventId, $eventName, $charityId, $description, $location, $date, $volunteerGoal);
+
+                    // Delete existing timeSlots for this event and re-insert them
+                    $volunteerEventModel->deleteEventTimes($eventId);
+                    foreach ($timeSlots as $slot) {
+                        $startTime = $slot['startTime'] ?? null;
+                        $endTime = $slot['endTime'] ?? null;
+
+                        if ($startTime && $endTime) {
+                            $volunteerEventModel->addEventTime($eventId, $startTime, $endTime);
+                        }
+                    }
+                }
+            }
+
+            echo json_encode(['success' => true, 'message' => 'Event updated successfully.']);
+        } catch (Exception $e) {
+            echo json_encode(['success' => false, 'message' => $e->getMessage()]);
         }
     }
 }

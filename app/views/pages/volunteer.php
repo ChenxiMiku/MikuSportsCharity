@@ -58,7 +58,6 @@
                                             </a>
                                         </p>
                                     </div>
-                                    <!-- Checkbox instead of Join Now button -->
                                     <div class="custom-checkbox-wrapper d-flex justify-content-center align-items-center mb-5">
                                         <input type="checkbox" id="event<?= $event['event_id']; ?>" name="selected_events[]" value="<?= $event['event_id']; ?>" class="custom-checkbox-input">
                                         <label for="event<?= $event['event_id']; ?>" class="custom-checkbox-label"></label>

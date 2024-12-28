@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const userName = document.getElementById("userName");
     const loginOverlay = document.getElementById("loginOverlay");
     const dashboardItem = document.getElementById("dashboardItem");
+    const publicCheckbox = document.getElementById("donation-public");
     loginBtn.style.display = "none";
     async function verifyLogin() {
         try {
@@ -32,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if(userData.role === "admin" && dashboardItem) {
                 dashboardItem.classList.remove("d-none");
             }
-
             if (userName) {
                 userName.textContent = userData.username;
                 console.log("Welcome to Miku Sports Charity Platform,", userData.username);
@@ -44,6 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             if (loginBtn) loginBtn.style.display = "none";
         } else {
+            if (publicCheckbox) {
+                console.log("Public checkbox is visible");
+                publicCheckbox.classList.add("d-none");
+            }
             if (loginBtn) loginBtn.style.display = "block";
             if (userAvatar) userAvatar.style.display = "none";
         }

@@ -10,7 +10,6 @@ return [
     '/register' => 'AuthController@register', // 注册页面
     '/volunteer' => 'VolunteerController@volunteer', // 志愿者页面
     '/donation' => 'DonateController@donation', // 捐赠页面
-    '/alipay' => 'PayController@alipay', // 支付宝捐赠
     '/api/login' => 'AuthController@apiLogin', // 登录
     '/api/register' => 'AuthController@apiRegister', // 注册
     '/api/logout' => 'AuthController@apiLogout', // 登出
@@ -21,5 +20,12 @@ return [
     '/api/updateProfile' => 'ApiController@updateProfile', // 更新个人资料
     '/api/changeAvatar' => 'ApiController@changeAvatar', // 更改头像
     '/api/changePassword' => 'ApiController@changePassword', // 更改密码
+    '/api/updateCharity' => 'ApiController@updateCharity', // 更新慈善
+    '/api/volunteerevents' => 'ApiController@volunteerEvents', // 志愿者活动
+    '/api/updateEvent' => 'ApiController@updateEvent', // 更新活动
+    '/api/donations' => 'ApiController@donations', // 捐赠
+    '/api/pay' => 'PayController@pay', // 支付
+    '/pay/notify' => 'PayController@notify', // 通知
+    '/result' => 'PayController@returnUrl', // 结果
 ];
 ?>

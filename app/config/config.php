@@ -20,5 +20,14 @@ return [
         'dbName' => 'mikusportscharity',
         'dbCharset' => 'utf8mb4',
     ],
+
+    // Pay Configuration
+    'pay' => [
+        'apiUrl' => 'https://epay.mikufans.me/',
+        'apiPid' => '1000',
+        'apiKey' => '3w5202vv0Q5k3msQ0V003563Q3w034vM',
+        'notifyUrl' => '../public/pay/notify',
+        'returnUrl' => '../public/result',
+    ],
 ];
 ?>

@@ -15,7 +15,7 @@
                                 <button class="nav-link active" id="manage-charities-tab" data-bs-toggle="tab" data-bs-target="#manage-charities" type="button" role="tab">Manage Charities</button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="publish-activities-tab" data-bs-toggle="tab" data-bs-target="#publish-activities" type="button" role="tab">Publish Activities</button>
+                                <button class="nav-link" id="publish-activities-tab" data-bs-toggle="tab" data-bs-target="#manage-activities" type="button" role="tab">Manage Activities</button>
                             </li>
                         </ul>
 
@@ -23,7 +23,7 @@
                             <!-- Manage Charities -->
                             <div class="tab-pane fade show active" id="manage-charities" role="tabpanel">
                                 <h3>Manage Charities</h3>
-                                <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addCharityModal">Add New Charity</button>
+                                <button class="btn btn-primary mb-3" id="addCharityButton">Add New Charity</button>
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -31,14 +31,41 @@
                                         </tr>
                                     </thead>
                                     <tbody id="charityList">
+                                        <?php foreach ($charities as $charity): ?>
+                                            <tr data-id="<?= $charity['charity_id']; ?>">
+                                                <td><?= htmlspecialchars($charity['charity_name']); ?></td>
+                                                <td class="text-end">
+                                                    <button class="editBtn btn btn-primary me-3 btn-sm">Edit</button>
+                                                    <button class="deleteBtn btn btn-danger btn-sm">Delete</button>
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
 
-                            <!-- Publish Activities -->
-                            <div class="tab-pane fade" id="publish-activities" role="tabpanel">
-                                <h3>Publish New Activities</h3>
+                            <!-- Activities -->
+                            <div class="tab-pane fade" id="manage-activities" role="tabpanel">
+                                <h3>Manage Activities</h3>
+                                <!-- Activity List -->
+                                <table class="table table-striped mt-4" id="activityList">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                            <th>Charity Name</th>
+                                            <th>Type</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- Activity rows will be dynamically added here -->
+                                    </tbody>
+                                </table>
+
+                                <!-- Activity Form -->
+                                <h4 id="formTitle">Add New Activity</h4>
                                 <form id="publishActivityForm">
+                                    <input type="hidden" id="activityId" value="">
                                     <div class="mb-3">
                                         <label for="activityTitle" class="form-label">Title</label>
                                         <input type="text" class="form-control" id="activityTitle" required>
@@ -50,10 +77,6 @@
                                     <div class="mb-3">
                                         <label for="activityDescription" class="form-label">Description</label>
                                         <textarea class="form-control" id="activityDescription" rows="4" required></textarea>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="activityImage" class="form-label">Upload Image</label>
-                                        <input type="file" class="form-control" id="activityImage" accept="image/*" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="activityType" class="form-label">Type</label>
@@ -89,46 +112,42 @@
                                             <div id="timeSlots">
                                                 <div class="time-slot">
                                                     <small class="d-inline-block mx-2">Start time</small>
-                                                    <input type="time" class="form-control d-inline-block w-45 mb-3" required>
+                                                    <input type="time" class="form-control d-inline-block w-45 mb-3" name="start_time" required>
                                                     <small class="d-inline-block mx-2">End time</small>
-                                                    <input type="time" class="form-control d-inline-block w-45 mb-3" required>
-                                                    <button type="button" class="btn btn-danger btn-sm " onclick="removeTimeSlot(this)">Remove</button>
+                                                    <input type="time" class="form-control d-inline-block w-45 mb-3" name="end_time" required>
+                                                    <button type="button" class="btn btn-danger btn-sm" onclick="removeTimeSlot(this)">Remove</button>
                                                 </div>
                                             </div>
                                             <button type="button" class="btn btn-primary btn-sm mt-2" id="addTimeSlot">Add Time Slot</button>
                                         </div>
                                     </div>
                                     <hr class="my-4">
-                                    <div class="col-lg-12 col-md-12 col-12 my-4 mb-lg-0 d-flex justify-content-center">
-                                        <button type="submit" class="col-lg-4 col-5 mb-4 custom-btn"
-                                            id="submitBtn">Submit</button>
-                                    </div>
+                                    <button type="submit" class="btn btn-primary me-3" id="submitBtn">Save Activity</button>
+                                    <button type="button" class="btn btn-secondary" id="cancelBtn">Cancel</button>
                                 </form>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Add Charity Modal -->
-                    <div class="modal fade" id="addCharityModal" tabindex="-1" aria-labelledby="addCharityModalLabel" inert>
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="addCharityModalLabel">Add New Charity</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form id="addCharityForm">
-                                        <div class="mb-3">
-                                            <label for="charityName" class="form-label">Charity Name</label>
-                                            <input type="text" class="form-control" id="charityName" required>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Add Charity</button>
-                                    </form>
+                        <div class="modal" id="addCharityModal" tabindex="-1" style="display: none;">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="addCharityModalLabel">Add New Charity</h5>
+                                        <button type="button" class="btn-close" id="closeModalButton"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="addCharityForm">
+                                            <div class="mb-3">
+                                                <label for="charityNameInput" class="form-label">Charity Name</label>
+                                                <input type="text" class="form-control" id="charityNameInput" required>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Add Charity</button>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
         </section>
     </main>
 
@@ -137,8 +156,6 @@
     <?php include '../app/views/layouts/scroll.php'; ?>
 
     <script src="js/dashboard.js"></script>
-    <script src="js/db1.js"></script>
-    <script src="js/db2.js"></script>
 </body>
 
 </html>

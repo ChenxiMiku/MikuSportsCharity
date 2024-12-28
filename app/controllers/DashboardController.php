@@ -9,6 +9,8 @@ class DashboardController extends Controller {
         $addressLink = $this->config('app')['addressLink'];
         $description = $this->config('app')['description'];
 
+        $CharityModel = $this->model('Charity');
+
         $this->view('pages/dashboard', [
             'webTitle' => "Dashboard - " . $title,
             'title' => $title,
@@ -17,6 +19,7 @@ class DashboardController extends Controller {
             'address' => $address,
             'addressLink' => $addressLink,
             'description' => $description,
+            'charities' => $CharityModel->getAllCharities(),
         ]);
 
     }

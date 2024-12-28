@@ -56,7 +56,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         return params;
     }
 
-    // Automatically check the event based on URL parameter
     function autoSelectEvent() {
         const params = getUrlParams();
         if (params.event) {

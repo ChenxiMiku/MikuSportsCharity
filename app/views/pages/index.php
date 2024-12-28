@@ -154,7 +154,7 @@
                                             </p>
                                         </div>
 
-                                        <a href="charity.php?organization=<?php echo urlencode($donation['charity_name']) ?>">
+                                        <a href="charity?organization=<?php echo urlencode($donation['charity_name']) ?>">
                                             By <?php echo htmlspecialchars($donation['charity_name']) ?></a>
                                     </div>
 
@@ -205,8 +205,8 @@
                                             <?= htmlspecialchars($event['event_location']); ?>
                                         </p>
                                     
-                                        <a href="charity.php?organization=<?php echo urlencode($donation['charity_name']) ?>">
-                                            By <?php echo htmlspecialchars($donation['charity_name']) ?></a>
+                                        <a href="charity?organization=<?php echo urlencode($event['charity_name']) ?>">
+                                            By <?php echo htmlspecialchars($event['charity_name']) ?></a>
                                     </div>
                                     <a href="volunteer?event=<?= urlencode($event['event_name']); ?>"
                                         class="custom-btn btn">Join Now</a>
