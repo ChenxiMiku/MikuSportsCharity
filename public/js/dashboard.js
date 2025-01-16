@@ -1,4 +1,3 @@
-// Wait for the DOM to load
 document.addEventListener("DOMContentLoaded", function () {
     const charityForm = document.getElementById("addCharityForm");
     const charityList = document.getElementById("charityList");
@@ -133,10 +132,6 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Error updating event. Please try again.");
         }
     }
-
-
-
-
 
 
     const activityForm = document.getElementById("publishActivityForm");
@@ -445,10 +440,17 @@ document.addEventListener("DOMContentLoaded", function () {
         tab.addEventListener("click", function () {
             tabs.forEach((t) => t.classList.remove("active"));
             tabContents.forEach((content) => content.classList.remove("show", "active"));
-
+    
             tab.classList.add("active");
             const target = document.querySelector(tab.dataset.bsTarget);
             target.classList.add("show", "active");
+    
+            // Close the add charity modal if it's open
+            const addCharityModal = document.getElementById("addCharityModal");
+            if (addCharityModal.classList.contains("show")) {
+                addCharityModal.style.display = "none";
+                addCharityModal.classList.remove("show");
+            }
         });
     });
 

@@ -1,6 +1,6 @@
 <?php
 return [
-    // 应用相关配置
+    // App Configuration
     'app' => [
         'title' => 'Miku Sports Charity Platform',
         'description' => 'Let the Fun of Sports Be Accessible to Everyone',
@@ -12,7 +12,7 @@ return [
         'contactName' => 'Wentao Su',
     ],
 
-    // 数据库相关配置
+    // Database Configuration
     'db' => [
         'dbHost' => 'localhost',
         'dbUser' => 'root',

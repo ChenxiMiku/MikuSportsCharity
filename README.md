@@ -25,8 +25,18 @@ Miku Sports Charity Platform is a platform for raising donations and recruiting 
 
 2. Import the database:
 
-    - Create a new database in MySQL.
+    - Create a new database called `mikusportscharity` in phpMyAdmin.
     - Import the `database.sql` file into the new database.
+
+3. Project configuration:
+   
+    - Open the `app\config\config.php` file.
+    - Update the project configuration according to your environment.
+
+4. Config your ,htaccess file:
+
+    - Open the `public\.htaccess` file.
+    - Update the `RewriteBase` according to your project path. Be sure to include the `/public` directory in the path.
 
 ## Usage
 
@@ -36,7 +46,8 @@ Miku Sports Charity Platform is a platform for raising donations and recruiting 
 
 2. Access the project:
 
-    Open your browser and visit `http://localhost/MikuSportsCharity/public`.
+    - Accroding to your configuration in the `.htaccess` file, access the project through the browser.
+    - For example, if the `RewriteBase` is `/MikuSportsCharity/public`, you can access the project through `http://localhost/MikuSportsCharity/public`.
 
 ## Contributing
 

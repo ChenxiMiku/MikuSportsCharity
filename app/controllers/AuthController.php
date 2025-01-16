@@ -83,7 +83,8 @@ class AuthController extends Controller
         $username = $input['username'] ?? '';
         $email = $input['email'] ?? '';
         $password = $input['password'] ?? '';
-        $avatarPath = '../upload/default.png'; 
+        $avatarPath = '../upload/avatars/default.png'; 
+        $role = 'volunteer';
 
         if (empty($username) || empty($email) || empty($password)) {
             echo json_encode(["success" => false, "message" => "All fields are required."]);
@@ -102,11 +103,12 @@ class AuthController extends Controller
         }
 
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-        $stmt = $pdo->prepare("INSERT INTO user (username, email, password, avatar_path) VALUES (:username, :email, :password, :avatar_path)");
+        $stmt = $pdo->prepare("INSERT INTO user (username, email, password, role, avatar_path) VALUES (:username, :email, :password, :role, :avatar_path)");
         $stmt->bindParam(":username", $username);
         $stmt->bindParam(":email", $email);
         $stmt->bindParam(":password", $hashedPassword);
         $stmt->bindParam(":avatar_path", $avatarPath);
+        $stmt->bindParam(":role", $role);
 
         if ($stmt->execute()) {
             echo json_encode(["success" => true, "redirect" => "../public/login"]);

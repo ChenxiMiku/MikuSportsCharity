@@ -342,3 +342,42 @@ Stack trace:
 [28-Dec-2024 15:01:32 UTC] Error: Route '/prrofile' not defined.
 [28-Dec-2024 15:01:32 UTC] URL: /KXO205/MikuSportsCharity/public/prrofile
 [28-Dec-2024 15:01:32 UTC] Method: GET
+[28-Dec-2024 15:51:18 UTC] PHP Notice:  Only variables should be passed by reference in C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php on line 190
+[28-Dec-2024 15:51:18 UTC] PHP Stack trace:
+[28-Dec-2024 15:51:18 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 15:51:18 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 15:51:18 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'changePassword']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 15:51:18 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 15:51:18 UTC] PHP   5. ApiController->changePassword() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 15:54:28 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\wamp64\www\KXO205\MikuSportsCharity\app\models\Charity.php on line 30
+[28-Dec-2024 15:54:28 UTC] PHP Stack trace:
+[28-Dec-2024 15:54:28 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 15:54:28 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 15:54:28 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'updateEvent']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 15:54:28 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 15:54:28 UTC] PHP   5. ApiController->updateEvent() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 15:54:28 UTC] PHP   6. Charity->getCharityIdByName($name = 'Kickstart Hope') C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:482
+[28-Dec-2024 15:54:33 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\wamp64\www\KXO205\MikuSportsCharity\app\models\Charity.php on line 30
+[28-Dec-2024 15:54:33 UTC] PHP Stack trace:
+[28-Dec-2024 15:54:33 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 15:54:33 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 15:54:33 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'updateEvent']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 15:54:33 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 15:54:33 UTC] PHP   5. ApiController->updateEvent() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 15:54:33 UTC] PHP   6. Charity->getCharityIdByName($name = 'Kickstart Hope') C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:482
+[28-Dec-2024 15:54:39 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\wamp64\www\KXO205\MikuSportsCharity\app\models\Charity.php on line 30
+[28-Dec-2024 15:54:39 UTC] PHP Stack trace:
+[28-Dec-2024 15:54:39 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 15:54:39 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 15:54:39 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'updateEvent']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 15:54:39 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 15:54:39 UTC] PHP   5. ApiController->updateEvent() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 15:54:39 UTC] PHP   6. Charity->getCharityIdByName($name = 'Kickstart Hope') C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:482
+[28-Dec-2024 15:54:44 UTC] PHP Warning:  Trying to access array offset on value of type bool in C:\wamp64\www\KXO205\MikuSportsCharity\app\models\Charity.php on line 30
+[28-Dec-2024 15:54:44 UTC] PHP Stack trace:
+[28-Dec-2024 15:54:44 UTC] PHP   1. {main}() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:0
+[28-Dec-2024 15:54:44 UTC] PHP   2. App->__construct() C:\wamp64\www\KXO205\MikuSportsCharity\public\index.php:13
+[28-Dec-2024 15:54:44 UTC] PHP   3. App->dispatch($url = [0 => 'api', 1 => 'updateEvent']) C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:13
+[28-Dec-2024 15:54:44 UTC] PHP   4. App->callMethod() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:36
+[28-Dec-2024 15:54:44 UTC] PHP   5. ApiController->updateEvent() C:\wamp64\www\KXO205\MikuSportsCharity\app\core\App.php:60
+[28-Dec-2024 15:54:44 UTC] PHP   6. Charity->getCharityIdByName($name = 'Kickstart Hope') C:\wamp64\www\KXO205\MikuSportsCharity\app\controllers\ApiController.php:482
