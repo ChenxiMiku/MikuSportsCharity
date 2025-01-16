@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主机： 127.0.0.1:3306
--- 生成日期： 2024-12-31 02:43:05
--- 服务器版本： 8.2.0
--- PHP 版本： 8.2.13
+-- 生成日期： 2025-01-16 11:58:17
+-- 服务器版本： 9.1.0
+-- PHP 版本： 8.3.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -153,7 +153,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `avatar_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `username` (`username`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- 转存表中的数据 `user`
@@ -161,10 +161,11 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`user_id`, `username`, `password`, `email`, `role`, `name`, `contact_number`, `created_at`, `updated_at`, `token`, `avatar_path`) VALUES
 (1, 'test', 'test', 'test@test.com', 'admin', 'test', '18888888888', '2024-12-20 18:27:37', '2024-12-20 18:27:37', '', ''),
-(2, 'chenxi', '$2y$10$r9jDPK.Q3gh03klJhS4YvuF7kRvddy5UsQuUvh5vSGebWnzbl2CN.', '870402105@qq.com', 'admin', '闫城玮', '+86 15098646873', '2024-12-20 20:18:08', '2024-12-28 15:21:20', 'eb24400d102a168ee7abff287ee43189223458462cb9f08ca029b45fe9e60290', '../upload/avatars/2_1735330944.png'),
+(2, 'chenxi', '$2y$10$r9jDPK.Q3gh03klJhS4YvuF7kRvddy5UsQuUvh5vSGebWnzbl2CN.', '870402105@qq.com', 'admin', '闫城玮', '+86 15098646873', '2024-12-20 20:18:08', '2025-01-16 10:04:32', 'f1d36ff5a3b857c508cc483448b98e63a3ce194bf7790cc2203264eda96c36cd', '../upload/avatars/2_1735330944.png'),
 (4, 'user', '$2y$10$P6O7QKuLDL71V0rg.fmpGuQ9GP4oUF0BVHGm.87UNwOb4n3tHDKwW', 'user@user.com', 'volunteer', NULL, NULL, '2024-12-20 21:14:28', '2024-12-27 22:56:25', '3e28ced8ea6eae30366b3dc8a41ccc1dc2748effb5dec548b5e7cada1aabbe6e', '../upload/avatars/default.png'),
 (14, 'user2', '$2y$10$WdsuHp1ThKEWgKa1G4Yjuep7ro65Wouy0ZvTtJ6LEoa5oqifrOyj.', '870402105@qq.com', 'admin', 'ychw', '+86 15098646873', '2024-12-28 15:48:07', '2024-12-31 02:42:24', '0eaf9abe86cd085f19c2e2e5b5b4646fb5130b74b02d22d0d51a9053869d076d', '../upload/avatars/default.png'),
-(15, 'user3', '$2y$10$nZPCnKKZ3y8SlWJjAHiF0ugfW8Cyj6FWRb8nekQQVmV/zQiYFv8JO', 'testt@test.com', 'volunteer', NULL, NULL, '2024-12-31 02:38:32', '2024-12-31 02:42:27', 'c5fe681796cd919f2581effd7d0d1a0f554f3db0d43a9bcd510b93608d9460b2', '../upload/avatars/default.png');
+(15, 'user3', '$2y$10$nZPCnKKZ3y8SlWJjAHiF0ugfW8Cyj6FWRb8nekQQVmV/zQiYFv8JO', 'testt@test.com', 'volunteer', NULL, NULL, '2024-12-31 02:38:32', '2024-12-31 02:42:27', 'c5fe681796cd919f2581effd7d0d1a0f554f3db0d43a9bcd510b93608d9460b2', '../upload/avatars/default.png'),
+(16, 'bhzh', '$2y$10$gzpWo8P2MQKv5/5rzXQWdu.LuYlHb0mEl.n0PjY1APAX/4EcowEKu', '123@666.com', 'volunteer', NULL, NULL, '2025-01-16 10:03:17', '2025-01-16 10:03:27', '361582fdad16b1e1e2cc20fd651fbf95185ebc3b5bf9e48d4a0c7422c0638853', '../upload/avatars/default.png');
 
 -- --------------------------------------------------------
 
@@ -232,8 +233,8 @@ CREATE TABLE IF NOT EXISTS `volunteerevent` (
 --
 
 INSERT INTO `volunteerevent` (`event_id`, `event_name`, `event_date`, `event_location`, `description`, `created_at`, `updated_at`, `charity_id`, `image_path`, `current_volunteers`, `volunteer_goal`) VALUES
-(1, 'Community Football Match', '2025-01-03', 'Central Park Stadium', 'Join us as a volunteer for our Community Football Match, supporting underprivileged youth through football.', '2024-12-22 21:21:44', '2024-12-22 21:32:59', 1, 'image/image.png', 50, 100),
-(2, 'Charity Football League', '2025-01-10', 'Eastfield Sports Arena', 'Help us organize this exciting league where teams play to raise funds for community football programs.', '2024-12-22 21:21:44', '2024-12-22 21:33:05', 1, 'image/image.png', 30, 50);
+(1, 'Community Football Match', '2025-01-31', 'Central Park Stadium', 'Join us as a volunteer for our Community Football Match, supporting underprivileged youth through football.', '2024-12-22 21:21:44', '2025-01-16 09:59:35', 1, 'image/image.png', 50, 100),
+(2, 'Charity Football League', '2025-01-28', 'Eastfield Sports Arena', 'Help us organize this exciting league where teams play to raise funds for community football programs.', '2024-12-22 21:21:44', '2025-01-16 09:59:38', 1, 'image/image.png', 30, 50);
 
 --
 -- 限制导出的表
